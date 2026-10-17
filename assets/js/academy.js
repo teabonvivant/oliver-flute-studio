@@ -38,3 +38,10 @@
     build();
   });
 })();
+(() => {
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  const items=document.querySelectorAll('main .band > h2, main .section-intro, .bento > *, .route-list > a, .journal-card, .course-index article, .work-item, .topic-list a, .faq-list details, .teacher-intro > *, .enquiry-band, .home-tools a, .practice-timeline > div, .resource-directory article');
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -4% 0px'});
+  items.forEach(el=>{const sib=[...el.parentElement.children].indexOf(el);el.style.setProperty('--d',Math.min(sib%6,5)*.06+'s');el.setAttribute('data-r','');io.observe(el)});
+  if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.tilt').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(900px) rotateY(${x*5}deg) rotateX(${-y*5}deg)`});el.addEventListener('pointerleave',()=>el.style.transform='')});
+})();
