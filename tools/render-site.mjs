@@ -77,7 +77,8 @@ for(const p of posts){
 const helpers={posts,CATS,ART,art,card,esc,WA,BRAND,read,ORIGIN,BASE_PATH};
 const pages=await makePages(helpers);
 for(const p of pages)await write(p.file,shell(p));
-await write('assets/js/blog-index.js','window.BLOG_POSTS='+JSON.stringify(posts.map(({body,curated,note,diagram,sections,sources,...p})=>p))+';');
+await write('assets/js/blog-index.js','window.BLOG_POSTS='+JSON.stringify(posts.map(({body,curated,note,diagram,sections,sources,searchText,...p})=>p))+';');
+await write('assets/js/blog-search.js','window.BLOG_SEARCH='+JSON.stringify(Object.fromEntries(posts.map(p=>[p.slug,p.searchText])))+';');
 await write('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...pages.filter(p=>p.file!=='404.html'&&p.file!=='ai-seo-hub.html').map(p=>p.file),...posts.map(p=>p.url)].map(f=>`<url><loc>${ORIGIN}/${f==='index.html'?'':f}</loc><lastmod>${UPDATED_DATE}</lastmod></url>`).join('')}</urlset>`);
 await write('robots.txt',`User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 await write('llms.txt',`# ${BRAND}\n\n香港長笛、笛子、洞簫與空靈鼓學習網站。\n\n## 主要頁面\n${pages.filter(p=>!['404.html','ai-seo-hub.html'].includes(p.file)).map(p=>`- [${p.title}](${ORIGIN}/${p.file}): ${p.description}`).join('\n')}\n\n## 音樂手記\n${posts.map(p=>`- [${p.title}](${ORIGIN}/${p.url}): ${p.category}`).join('\n')}\n`);

@@ -14,7 +14,7 @@ await mkdir(assets, { recursive: true });
 for (const directory of ["blog", "assets/images/diagrams", "assets/fonts/site", "assets/fonts/manrope"]) {
   await cp(join(root, directory), join(assets, directory), { recursive: true });
 }
-const publicFiles=['assets/css/editorial.css','assets/css/studio.css','assets/js/studio.js','assets/js/academy.js','assets/js/journal.js','assets/js/blog-index.js','assets/fonts/fonts.css','assets/fonts/OFL.txt','assets/images/teacher-profile-original.png','assets/images/teacher-profile.webp','assets/images/brand-mark-original.png'];
+const publicFiles=['assets/css/editorial.css','assets/css/studio.css','assets/js/studio.js','assets/js/academy.js','assets/js/journal.js','assets/js/blog-index.js','assets/js/blog-search.js','assets/fonts/fonts.css','assets/fonts/OFL.txt','assets/images/teacher-profile-original.png','assets/images/teacher-profile.webp','assets/images/brand-mark-original.png'];
 for (const entry of await readdir(join(root,'assets/images/editorial'))) if(entry.endsWith('.webp'))publicFiles.push('assets/images/editorial/'+entry);
 for (const entry of await readdir(join(root,'assets/images/studio'))) publicFiles.push('assets/images/studio/'+entry);
 for (const file of publicFiles) {await mkdir(dirname(join(assets,file)),{recursive:true});await cp(join(root,file),join(assets,file));}
