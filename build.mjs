@@ -11,11 +11,12 @@ if (!dist.startsWith(resolve(root) + sep) || dist !== join(root, 'dist')) throw 
 await rm(dist, { recursive: true, force: true });
 await mkdir(assets, { recursive: true });
 
-for (const directory of ["blog", "assets/images/diagrams", "assets/fonts/site", "assets/fonts/manrope"]) {
+for (const directory of ["blog", "archive", "assets/images/diagrams", "assets/fonts/site", "assets/fonts/manrope"]) {
   await cp(join(root, directory), join(assets, directory), { recursive: true });
 }
-const publicFiles=['assets/css/editorial.css','assets/css/studio.css','assets/css/theme.css','assets/js/studio.js','assets/js/academy.js','assets/js/journal.js','assets/js/blog-index.js','assets/js/blog-search.js','assets/fonts/fonts.css','assets/fonts/OFL.txt','assets/images/teacher-profile-original.png','assets/images/teacher-profile.webp','assets/images/brand-mark-original.png'];
+const publicFiles=['assets/css/editorial.css','assets/css/studio.css','assets/css/theme.css','assets/css/legacy.css','assets/js/legacy.js','assets/js/studio.js','assets/js/academy.js','assets/js/journal.js','assets/js/blog-index.js','assets/js/blog-search.js','assets/fonts/fonts.css','assets/fonts/OFL.txt','assets/images/teacher-profile-original.png','assets/images/teacher-profile.webp','assets/images/brand-mark-original.png'];
 for (const entry of await readdir(join(root,'assets/images/editorial'))) if(entry.endsWith('.webp'))publicFiles.push('assets/images/editorial/'+entry);
+for (const entry of await readdir(join(root,'assets/images/legacy'))) publicFiles.push('assets/images/legacy/'+entry);
 for (const entry of await readdir(join(root,'assets/images/studio'))) publicFiles.push('assets/images/studio/'+entry);
 for (const file of publicFiles) {await mkdir(dirname(join(assets,file)),{recursive:true});await cp(join(root,file),join(assets,file));}
 
@@ -27,15 +28,18 @@ for (const entry of rootFiles) {
 }
 
 const redirects = {
-  aboutme: "about.html", "teaching-concept": "about.html", "teaching-organisation": "about.html", awards: "about.html", performance: "about.html", "class-potho": "about.html",
-  "flute-class": "flute-course.html", "dizi-class": "dizi-course.html", meditationdrum: "tongue-drum-course.html", drumclass: "tongue-drum-course.html", littledrum: "tongue-drum-course.html",
-  abrsm: "exam-guide.html", ccom: "exam-guide.html", "music-therapy": "courses.html", instrument: "blog.html", experience: "blog.html", "music-fun": "blog.html",
-  myvideo: "works.html", teach: "works.html", matserclass: "works.html", score: "works.html", "tongue-drum-score": "works.html", "class-socre": "works.html",
+  aboutme: "about.html", "teaching-concept": "about.html#concept", "teaching-organisation": "gallery.html#orgs", awards: "gallery.html#awards", performance: "gallery.html#performance", "class-potho": "gallery.html#class",
+  "flute-class": "flute-course.html", "dizi-class": "dizi-course.html", meditationdrum: "tongue-drum-course.html", drumclass: "tongue-drum-course.html", littledrum: "drum-accessories.html",
+  abrsm: "exam-guide.html", ccom: "exam-guide.html#ccom", "music-therapy": "courses.html", instrument: "archive.html", experience: "archive.html", "music-fun": "archive.html",
+  myvideo: "videos.html#perform", teach: "videos.html#teach", matserclass: "videos.html#masterclass", score: "scores.html#pop", "tongue-drum-score": "scores.html#drum", "class-socre": "scores.html#dizi",
   "ai-seo-hub": "learning-guide.html"
 };
-for (const [from, to] of Object.entries(redirects)) {
-  await writeFile(join(assets, from + ".html"), `<!doctype html><html lang="zh-Hant-HK"><head><meta charset="utf-8"><title>頁面已搬遷</title><meta name="robots" content="noindex"><link rel="canonical" href="${to}"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p>此頁已搬到 <a href="${to}">新位置</a>。</p></body></html>`, "utf8");
-}
+const stub = (to) => `<!doctype html><html lang="zh-Hant-HK"><head><meta charset="utf-8"><title>頁面已搬遷</title><meta name="robots" content="noindex"><link rel="canonical" href="${to}"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p>此頁已搬到 <a href="${to}">新位置</a>。</p></body></html>`;
+for (const [from, to] of Object.entries(redirects)) await writeFile(join(assets, from + ".html"), stub(to), "utf8");
+const oldPosts = JSON.parse(await readFile(join(root, "content/legacy-posts.json"), "utf8")).map((p) => p.slug);
+for (const slug of oldPosts) await writeFile(join(assets, "blog", slug + ".html"), stub("../archive/" + slug + ".html"), "utf8");
+const emptyPosts = { "2026": "flute-course.html", "abrsm-flute-exam-hong-kong-guide": "exam-guide.html", "adult-beginner-flute-lessons-hong-kong": "adult-beginner.html", "flute-lesson-price-hong-kong-2025": "flute-course.html", "flute-no-sound-beginner-embouchure-hong-kong": "flute-course.html" };
+for (const [slug, to] of Object.entries(emptyPosts)) await writeFile(join(assets, "blog", slug + ".html"), stub("../" + to), "utf8");
 await writeFile(join(assets, ".nojekyll"), "", "utf8");
 const covered = new Set(await readFile(join(root, "assets/fonts/site/coverage.txt"), "utf8"));
 const missing = new Set();

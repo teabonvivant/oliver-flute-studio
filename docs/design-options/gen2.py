@@ -1,0 +1,54 @@
+import os,re
+D=os.path.join(os.path.dirname(os.path.abspath(__file__)),"r2")
+src=open(os.path.join(D,"..","gen.py")).read()
+ns={"__file__":os.path.join(D,"..","gen.py")}
+exec(src.split("def page(")[0],ns)
+TOOLS,COURSES,ARTS,NAV,H1a,H1b,SUB,CRED=[ns[k] for k in("TOOLS","COURSES","ARTS","NAV","H1a","H1b","SUB","CRED")]
+# 名稱, 說明, 變數
+V={
+ "A":("晨光奶油金","奶油白底、蜂蜜金點綴、深咖啡字，04 的電影首屏配 10 的玻璃格，明亮暖和",
+  dict(bg="#fbf6ea",bg2="#f3e8cf",ink="#3a2c1c",mut="#7a6850",ac="#c58a1f",ac2="#e8b650",on="#fff",glass="#ffffffb8",line="#c58a1f33",wash="251,246,234",g1="#f4d78a55",g2="#f7b98a44")),
+ "B":("晴空淺藍","淡天藍白底、深墨藍字、珊瑚橙點綴，清爽通透，最不累眼",
+  dict(bg="#f2f8fd",bg2="#e0eefa",ink="#16324f",mut="#566f88",ac="#e4572e",ac2="#ff8a5c",on="#fff",glass="#ffffffc4",line="#3d7fc233",wash="242,248,253",g1="#9fd0f655",g2="#ffd2b855")),
+ "C":("薄荷白玉","薄荷白底、玉綠主色、香檳金輔助，像茶席與竹，柔和自然",
+  dict(bg="#f4faf6",bg2="#e1f0e6",ink="#173a2c",mut="#52715f",ac="#2f8f63",ac2="#c9a24a",on="#fff",glass="#ffffffc0",line="#2f8f6333",wash="244,250,246",g1="#a8e0c155",g2="#f1deaa66")),
+ "D":("暖杏蜜桃","杏色蜜桃底、陶土橙點綴，04 的暖調提亮，溫暖親切",
+  dict(bg="#fff5ee",bg2="#fde4d3",ink="#43271a",mut="#85604d",ac="#d4622f",ac2="#f09a6a",on="#fff",glass="#ffffffbb",line="#d4622f33",wash="255,245,238",g1="#ffc9a566",g2="#ffe3a066")),
+}
+def page(k,name,desc,v):
+    css=f'''
+:root{{--bg:{v["bg"]};--bg2:{v["bg2"]};--ink:{v["ink"]};--mut:{v["mut"]};--ac:{v["ac"]};--ac2:{v["ac2"]};--on:{v["on"]};--glass:{v["glass"]};--line:{v["line"]}}}
+*{{box-sizing:border-box;margin:0;padding:0}}img{{max-width:100%;display:block}}a{{color:inherit;text-decoration:none}}html{{scroll-behavior:smooth}}
+body{{background:var(--bg);color:var(--ink);font:17px/1.8 "Noto Sans TC",sans-serif;background-image:radial-gradient(circle at 10% 5%,{v["g1"]},transparent 40%),radial-gradient(circle at 90% 35%,{v["g2"]},transparent 40%);background-attachment:fixed}}
+header{{position:fixed;top:14px;left:4vw;right:4vw;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:10px 22px;border-radius:99px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);box-shadow:0 4px 20px #0000000d}}
+.lg{{font:900 19px "Noto Serif TC",serif;letter-spacing:.18em;color:var(--ac)}}nav a{{margin-left:20px;font-size:14px;color:var(--mut)}}nav a:hover{{color:var(--ac)}}
+.hero{{min-height:100vh;display:flex;align-items:center;padding:0 7vw;background:linear-gradient(90deg,rgba({v["wash"]},.97) 0,rgba({v["wash"]},.88) 38%,rgba({v["wash"]},.4) 72%,rgba({v["wash"]},.3) 100%),url(../img/concert-studio-hero.webp) 70% center/cover}}
+.hero h1{{font:900 clamp(38px,6vw,84px)/1.2 "Noto Serif TC",serif;max-width:760px}}.hero h1 em{{font-style:normal;color:var(--ac)}}
+.hero p.s{{max-width:520px;margin-top:20px;color:var(--mut)}}
+.btn{{display:inline-block;padding:13px 32px;border-radius:99px;margin:24px 12px 0 0;font-weight:700;border:1.5px solid var(--ac);color:var(--ac);transition:.2s}}.btn.f{{background:linear-gradient(90deg,var(--ac),var(--ac2));color:var(--on);border-color:transparent;box-shadow:0 8px 22px -8px var(--ac)}}.btn:hover{{transform:translateY(-2px)}}
+.cred{{display:inline-block;margin-top:26px;padding:6px 16px;border-radius:99px;background:var(--glass);border:1px solid var(--line);font-size:14px;color:var(--mut)}}
+section{{padding:9vh 5vw 4vh}}h2{{font-size:13px;letter-spacing:.4em;color:var(--ac);margin-bottom:26px;font-weight:700}}
+.bento{{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}}
+.b{{border-radius:26px;background:var(--glass);border:1px solid var(--line);padding:26px;position:relative;overflow:hidden;min-height:190px;box-shadow:0 6px 24px #0000000a;transition:.25s}}.b:hover{{transform:translateY(-3px);box-shadow:0 12px 30px #00000014}}
+.b h3{{font:700 22px "Noto Serif TC",serif}}.b p{{font-size:14px;color:var(--mut)}}.b .i{{font-size:12px;letter-spacing:.3em;color:var(--ac);margin-bottom:6px}}
+.b.ph{{color:#fff;display:flex;flex-direction:column;justify-content:flex-end}}.b.ph img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}}.b.ph:after{{content:"";position:absolute;inset:0;background:linear-gradient(transparent 15%,#000000c4)}}.b.ph>*{{position:relative;z-index:1}}.b.ph p{{color:#fffd}}
+.s2{{grid-column:span 2}}.s3{{grid-column:span 3}}.s4{{grid-column:span 4}}
+.big{{font:900 60px/1.1 "Noto Serif TC",serif;color:var(--ac)}}
+.quote{{margin:6vh 5vw 0;border-radius:32px;background:var(--bg2);text-align:center;padding:11vh 8vw;font:600 clamp(22px,3.2vw,40px)/1.7 "Noto Serif TC",serif}}.quote small{{display:block;font:400 14px "Noto Sans TC",sans-serif;margin-top:18px;color:var(--ac);letter-spacing:.3em}}
+footer{{text-align:center;padding:9vh 6vw;color:var(--mut)}}
+.tag{{position:fixed;left:12px;bottom:12px;z-index:99;background:#000c;color:#fff;font:12px/1 sans-serif;padding:8px 10px;border-radius:99px}}
+@media(max-width:800px){{.bento{{grid-template-columns:1fr 1fr}}.s2,.s3,.s4{{grid-column:span 2}}nav{{display:none}}.hero{{padding:0 6vw;background:linear-gradient(rgba({v["wash"]},.9),rgba({v["wash"]},.8)),url(../img/concert-studio-hero.webp) 70% center/cover}}}}'''
+    body=f'''<header><div class="lg">張老師音樂學院</div><nav>{"".join(f'<a href="#">{x}</a>' for x in NAV)}</nav></header>
+<div class="hero"><div><h1>{H1a}<br><em>{H1b}</em></h1><p class="s">{SUB}</p><div><a class="btn f" href="#">認識課程</a><a class="btn" href="#">進入練習室</a></div><span class="cred">{CRED}</span></div></div>
+<section><h2>COURSES ・ 課程</h2><div class="bento">{"".join(f'<div class="b ph s3" style="min-height:260px"><img src="../img/{c}.webp" alt=""><h3>{a}</h3><p>{b}</p></div>' for a,b,c in COURSES[:2])}{"".join(f'<div class="b ph s3" style="min-height:260px"><img src="../img/{c}.webp" alt=""><h3>{a}</h3><p>{b}</p></div>' for a,b,c in COURSES[2:])}</div></section>
+<div class="quote">「音樂的細節，常在一次示範、一句回應與每天的小練習裏慢慢建立。」<small>{CRED}</small></div>
+<section><h2>PRACTICE ・ 練習室</h2><div class="bento">{"".join(f'<div class="b s2"><div class="i">0{i+1}</div><h3>{a}</h3><p>{b}</p></div>' for i,(a,b) in enumerate(TOOLS[:3]))}{"".join(f'<div class="b s3"><div class="i">0{i+4}</div><h3>{a}</h3><p>{b}</p></div>' for i,(a,b) in enumerate(TOOLS[3:]))}<div class="b s2"><div class="big">200</div><h3>篇音樂手記</h3><p>樂器、樂理、陪練</p></div><div class="b s4"><div class="i">NOTES</div>{"".join(f'<p style="margin-top:6px"><b style="color:var(--ink)">{a}</b>　{b}</p>' for a,b in ARTS)}</div></div></section>
+<footer>WhatsApp 9809 6351</footer>'''
+    return f'''<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04×10 {k}｜{name}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"><style>{css}</style></head><body>{body}<a class="tag" href="index.html">← 04×10 {k}・{name}・返回</a></body></html>'''
+cards=""
+for k,(name,desc,v) in V.items():
+    open(f"{D}/{k}.html","w").write(page(k,name,desc,v))
+    cards+=f'<a class="k" href="{k}.html"><img src="shots/{k}.png" alt=""><b>{k}　{name}</b><span>{desc}</span></a>'
+open(f"{D}/index.html","w").write(f'''<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04×10 明亮版</title>
+<style>body{{font:16px/1.6 "Noto Sans TC",sans-serif;background:#f2f2f2;padding:4vw;color:#111}}h1{{margin-bottom:6px}}p.s{{margin-bottom:24px;opacity:.7}}.g{{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}}.k{{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px #0002;display:block;color:inherit;text-decoration:none}}.k img{{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;display:block}}.k b{{display:block;padding:12px 16px 0}}.k span{{display:block;padding:0 16px 14px;font-size:14px;opacity:.7}}</style></head><body><h1>04 × 10 明亮版｜4 個配色</h1><p class="s">版面同一套（04 的電影首屏＋10 的玻璃格子），只換配色。點入看完整首頁。</p><div class="g">{cards}</div></body></html>''')

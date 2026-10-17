@@ -15,7 +15,7 @@ root = Path(__file__).resolve().parent.parent
 out = root / 'assets/fonts/site'
 CORE = 700
 
-pages = [p for p in glob.glob(str(root / '*.html')) + glob.glob(str(root / 'blog/**/*.html'), recursive=True)]
+pages = [p for p in glob.glob(str(root / '*.html')) + glob.glob(str(root / 'blog/**/*.html'), recursive=True) + glob.glob(str(root / 'archive/**/*.html'), recursive=True)]
 df = collections.Counter()
 for p in pages:
     df.update(set(Path(p).read_text('utf8')))

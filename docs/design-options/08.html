@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>樣板08｜工具優先</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap">
+<style>*{box-sizing:border-box;margin:0;padding:0}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}html{scroll-behavior:smooth}body{background:#eef1f6;color:#172033;font:16px/1.6 "Noto Sans TC",sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 4vw;background:#fff;border-bottom:1px solid #dde3ee}.lg{font-weight:900}nav a{margin-left:18px;font-size:14px}nav a:nth-child(2){color:#0e7c66;font-weight:700}
+.wrap{max-width:1200px;margin:0 auto;padding:4vh 4vw}
+.hi h1{font-size:clamp(28px,4vw,48px);font-weight:900;line-height:1.25}.hi p{opacity:.7;margin-top:8px}
+.dash{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin-top:26px}
+.panel{background:#fff;border-radius:18px;padding:22px;box-shadow:0 2px 0 #dde3ee}
+.tuner{text-align:center;background:#0f2a30;color:#e6fff6}.tuner .note{font-size:96px;font-weight:900;line-height:1;color:#5df2c3}.tuner .hz{opacity:.7}
+.meter{position:relative;height:10px;background:#ffffff22;border-radius:9px;margin:20px 0}.meter:after{content:"";position:absolute;left:50%;top:-6px;width:4px;height:22px;background:#5df2c3;border-radius:2px}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.chip{background:#ffffff1c;border-radius:99px;padding:6px 14px;font-size:13px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px}.tile{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 0 #dde3ee}.tile b{display:block;font-size:18px}.tile span{font-size:13px;opacity:.65}
+.tile i{font-style:normal;display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#d8f5ec;color:#0e7c66;margin-bottom:8px;font-weight:700}
+h2{font-size:20px;margin:34px 0 14px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cc{background:#fff;border-radius:16px;overflow:hidden}.cc img{aspect-ratio:16/10;object-fit:cover;width:100%}.cc div{padding:14px}.cc small{opacity:.65}
+.btn{display:inline-block;background:#0e7c66;color:#fff;padding:11px 22px;border-radius:10px;margin-top:14px;font-weight:700}
+footer{text-align:center;padding:6vh;opacity:.7}
+@media(max-width:800px){.dash,.g4{grid-template-columns:1fr}nav{display:none}}
+.tag{position:fixed;left:12px;bottom:12px;z-index:99;background:#000c;color:#fff;font:12px/1 sans-serif;padding:8px 10px;border-radius:99px}</style></head><body><header><div class="lg">張老師音樂學院</div><nav><a href="#">課程</a><a href="#">練習室</a><a href="#">出品</a><a href="#">學習指南</a><a href="#">音樂手記</a><a href="#">聯絡</a></nav></header>
+<div class="wrap"><div class="hi"><h1>把一個音聽清楚，讓音樂慢慢走近。</h1><p>長笛、笛子、洞簫與空靈鼓。從自然的聲音、清楚的拍子，到一句有呼吸的旋律。</p><a class="btn" href="#">查詢課程</a></div>
+<div class="dash"><div class="panel tuner"><div class="hz">調音器・A=442 Hz</div><div class="note">A4</div><div class="hz">+2 音分・偏高一點點</div><div class="meter"></div><div class="row"><span class="chip">唱名 6</span><span class="chip">1=C</span><span class="chip">開始收音</span></div></div>
+<div class="tiles"><div class="tile"><i>1</i><b>調音器</b><span>音名、簡譜與音分</span></div><div class="tile"><i>2</i><b>節拍器</b><span>細分拍與逐步加速</span></div><div class="tile"><i>3</i><b>長笛指法表</b><span>三十四個基本指法</span></div><div class="tile"><i>4</i><b>譜間</b><span>簡譜打譜工作室</span></div><div class="tile"><i>5</i><b>長笛紙牌</b><span>網上翻卡先試玩</span></div></div></div>
+<h2>課程</h2><div class="g4"><div class="cc"><img src="img/flute.webp" alt=""><div><b>長笛課程</b><br><small>由第一個自然的音，走到有呼吸、有方向的旋律。</small></div></div><div class="cc"><img src="img/dizi.webp" alt=""><div><b>笛子課程</b><br><small>聽見竹聲的明亮，也學會其中的細節與分寸。</small></div></div><div class="cc"><img src="img/xiao.webp" alt=""><div><b>洞簫課程</b><br><small>從一道氣流開始，慢慢聽清一個音的來去。</small></div></div><div class="cc"><img src="img/tongue-drum.webp" alt=""><div><b>空靈鼓課程</b><br><small>讓每一下敲擊有位置，讓聲音之間有回應。</small></div></div></div>
+<h2>最新手記</h2><div class="g4" style="grid-template-columns:repeat(3,1fr)"><div class="panel"><small>長笛</small><br><b>打開笛盒之後：把練習的首五分鐘留給聲音</b></div><div class="panel"><small>樂理</small><br><b>拍子像腳步，節奏像說話</b></div><div class="panel"><small>家長陪練</small><br><b>陪練時少說一句「又錯了」，可以換成甚麼？</b></div></div></div>
+<footer>張家詠老師 · 二十年教學經驗 · 香港屯門・WhatsApp 9809 6351</footer>
+<a class="tag" href="index.html">← 樣板08・工具優先・返回總覽</a></body></html>

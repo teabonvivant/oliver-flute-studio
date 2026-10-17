@@ -28,6 +28,31 @@
 - [出品](https://teabonvivant.github.io/oliver-flute-studio/works.html): 張老師音樂學院的音樂出品：譜間簡譜打譜軟件、長笛紙牌、長笛演奏動畫及教學樂譜。
 - [譜間 · 簡譜打譜工作室](https://teabonvivant.github.io/oliver-flute-studio/pujian.html): 譜間是張家詠老師為音樂課堂開發的簡譜打譜軟件：數字鍵打譜、自動排版、空靈鼓跟敲、真實樂器音源試聽，匯出 PDF、MP3 及 MusicXML。
 - [長笛紙牌](https://teabonvivant.github.io/oliver-flute-studio/flute-cards.html): 長笛紙牌：張老師音樂學院籌備中的長笛學習紙牌，包括指法、音名、節奏及樂理卡。網上翻卡練習可即時試玩。
+- [相片集](https://teabonvivant.github.io/oliver-flute-studio/gallery.html): 張老師的教學留影、演出照片、學生得獎與考級成績，以及合作過的學校與機構。
+- [影片](https://teabonvivant.github.io/oliver-flute-studio/videos.html): 張老師的長笛、竹笛、洞簫、空靈鼓演奏，以及吹奏教學和長笛大師班分享。
+- [樂譜](https://teabonvivant.github.io/oliver-flute-studio/scores.html): 張老師教學使用的流行曲簡譜與五線譜、笛子班樂譜及空靈鼓曲譜，供學生課堂練習。
+- [舊站手記](https://teabonvivant.github.io/oliver-flute-studio/archive.html): 張老師在 oliverflute.com 寫過的音樂文章：長笛初學、呼吸、選笛、標準音、五聲音階、尺八、葫蘆絲、Trinity 與 ABRSM 考試等。
+- [初學 空靈鼓 - 玩樂器](https://teabonvivant.github.io/oliver-flute-studio/archive/2023p2.html): 2023 - 2024 華德中學 二年級。張老師在舊站 oliverflute.com 的文章：初學 空靈鼓 - 玩樂器。
+- [長笛及樂理試](https://teabonvivant.github.io/oliver-flute-studio/archive/abrsm.html): 張老師在舊站 oliverflute.com 的文章：長笛及樂理試。
+- [給準備學習長笛的你](https://teabonvivant.github.io/oliver-flute-studio/archive/beginners.html): 長笛初學Q&A。張老師在舊站 oliverflute.com 的文章：給準備學習長笛的你。
+- [真的愛你（簡單版）](https://teabonvivant.github.io/oliver-flute-studio/archive/beyondlove.html): 空靈鼓簡譜及演奏示範。張老師在舊站 oliverflute.com 的文章：真的愛你（簡單版）。
+- [長笛呼吸法的邏輯](https://teabonvivant.github.io/oliver-flute-studio/archive/breathe.html): 你懂了嗎?。張老師在舊站 oliverflute.com 的文章：長笛呼吸法的邏輯。
+- [長笛挑選ＡＢＣ](https://teabonvivant.github.io/oliver-flute-studio/archive/buyflute.html): 貴的不一定對　得心應手才是好樂器。張老師在舊站 oliverflute.com 的文章：長笛挑選ＡＢＣ。
+- [音樂冷知識](https://teabonvivant.github.io/oliver-flute-studio/archive/cold-knowledge.html): 音樂與生活息息相關。張老師在舊站 oliverflute.com 的文章：音樂冷知識。
+- [中國音樂只有五個音！？](https://teabonvivant.github.io/oliver-flute-studio/archive/f40a20b5bdc.html): 穿越過去了解五聲音階的迷思。張老師在舊站 oliverflute.com 的文章：中國音樂只有五個音！？。
+- [初學長笛的幾個誤區](https://teabonvivant.github.io/oliver-flute-studio/archive/flute-class01.html): 掌握基礎的長笛吹奏方法。張老師在舊站 oliverflute.com 的文章：初學長笛的幾個誤區。
+- [葫蘆絲](https://teabonvivant.github.io/oliver-flute-studio/archive/hulusi.html): 一件樂器滿足你三個願望。張老師在舊站 oliverflute.com 的文章：葫蘆絲。
+- [Jesus loves me](https://teabonvivant.github.io/oliver-flute-studio/archive/jesus-loves-me.html): 華德中學。張老師在舊站 oliverflute.com 的文章：Jesus loves me。
+- [Jesus you shine upon my life](https://teabonvivant.github.io/oliver-flute-studio/archive/jesus-you-shine-upon-my-life.html): 張老師在舊站 oliverflute.com 的文章：Jesus you shine upon my life。
+- [懂樂器 = 唱歌岩key?](https://teabonvivant.github.io/oliver-flute-studio/archive/key.html): 誰說學樂器就唱歌一定好聽的!。張老師在舊站 oliverflute.com 的文章：懂樂器 = 唱歌岩key?。
+- [世上只有媽媽好](https://teabonvivant.github.io/oliver-flute-studio/archive/mother.html): 空靈鼓簡譜及演奏示範。張老師在舊站 oliverflute.com 的文章：世上只有媽媽好。
+- [調音440HZ?](https://teabonvivant.github.io/oliver-flute-studio/archive/pitch.html): 聊聊關於國際標準音的傳說。張老師在舊站 oliverflute.com 的文章：調音440HZ?。
+- [最有效率的練笛方式](https://teabonvivant.github.io/oliver-flute-studio/archive/practise1.html): 練習很累卻很充實。張老師在舊站 oliverflute.com 的文章：最有效率的練笛方式。
+- [日本動漫配樂常用的樂器](https://teabonvivant.github.io/oliver-flute-studio/archive/shakuhachi.html): 日本尺八，你了解嗎？。張老師在舊站 oliverflute.com 的文章：日本動漫配樂常用的樂器。
+- [齊齊學唱歌](https://teabonvivant.github.io/oliver-flute-studio/archive/singtogether.html): 華德中學。張老師在舊站 oliverflute.com 的文章：齊齊學唱歌。
+- [Trinity 的演奏級到底要哪什麼?](https://teabonvivant.github.io/oliver-flute-studio/archive/trinity.html): 8級只是演奏的開始......。張老師在舊站 oliverflute.com 的文章：Trinity 的演奏級到底要哪什麼?。
+- [什麼！銀色的長笛屬於這個家族？](https://teabonvivant.github.io/oliver-flute-studio/archive/woodwinds.html): 五級樂理學生們的問題之一。張老師在舊站 oliverflute.com 的文章：什麼！銀色的長笛屬於這個家族？。
+- [空靈鼓配件](https://teabonvivant.github.io/oliver-flute-studio/drum-accessories.html): 張老師為學生代訂的空靈鼓配件：6 吋 11 音小鼓、鼓架、桌面支架及金屬支架，附學生訂購價。
 
 ## 音樂手記
 - [打開笛盒之後：把練習的首五分鐘留給聲音](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-21-first-five-minutes.html): 長笛

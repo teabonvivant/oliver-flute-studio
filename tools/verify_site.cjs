@@ -144,7 +144,7 @@ function verifyBlogIndex(posts) {
 function verifyArticles(posts) {
   const source = JSON.parse(fs.readFileSync(path.join(root, 'content', 'legacy-curated.json'), 'utf8'));
   const legacyBySlug = new Map(source.map((post) => [path.basename(post.url, '.html'), post]));
-  const filenames = listHtml(path.join(site, 'blog'));
+  const filenames = listHtml(path.join(site, 'blog')).filter((file) => !fs.readFileSync(path.join(site, 'blog', file), 'utf8').includes('頁面已搬遷'));
   assert.equal(filenames.length, 200, `Expected 200 article pages, found ${filenames.length}`);
   assert.equal(posts.length, 200, `Expected 200 index records, found ${posts.length}`);
   assert.equal(legacyBySlug.size, 100, 'Expected 100 source-dated legacy records');
@@ -209,14 +209,15 @@ function verifyArticles(posts) {
 }
 
 function verifyRoutesAndSitemap(htmlFiles) {
-  assert.equal(htmlFiles.length, 26, `Expected 26 top-level HTML routes, found ${htmlFiles.length}`);
+  assert.equal(htmlFiles.length, 31, `Expected 31 top-level HTML routes, found ${htmlFiles.length}`);
   const sitemap = read('sitemap.xml');
   const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
-  assert.equal(entries.length, htmlFiles.length - 1 + 200, 'Sitemap route count mismatch');
+  assert.equal(entries.length, htmlFiles.length - 1 + 200 + 20, 'Sitemap route count mismatch');
   assert(entries.every((entry) => entry.includes(`<lastmod>${revisedDate}</lastmod>`)), 'Sitemap lastmod values do not match the latest revision date');
   const urls = entries.map((entry) => firstMatch(entry, /<loc>([^<]+)<\/loc>/, 'Sitemap location'));
   assert.equal(new Set(urls).size, urls.length, 'Sitemap contains duplicate URLs');
   assert.equal(urls.filter((url) => url.includes('/blog/')).length, 200, 'Sitemap should list all 200 article pages');
+  assert.equal(urls.filter((url) => url.includes('/archive/')).length, 20, 'Sitemap should list all 20 archived legacy posts');
   assertHas(read('robots.txt'), /Sitemap: https:\/\/\S+\/sitemap\.xml/, 'Robots sitemap link');
   return { topLevelRoutes: htmlFiles.length, sitemapRoutes: entries.length, articleSitemapRoutes: 200 };
 }
@@ -232,6 +233,7 @@ function main() {
   const references = verifyReferences([
     ...htmlFiles,
     ...listHtml(path.join(site, 'blog')).map((file) => `blog/${file}`),
+    ...listHtml(path.join(site, 'archive')).map((file) => `archive/${file}`),
   ]);
   console.log(JSON.stringify({ ok: true, blog, articles, routes, references }, null, 2));
 }
