@@ -26,3 +26,9 @@ node tools/verify_site.cjs
 ```
 
 輸出在 `dist/assets/`。發布到 GitHub Pages：執行 `sh tools/deploy-pages.sh`，會重新建置、檢查，再把輸出推送到 `gh-pages` 分支。改用自訂網域時，以 `SITE_ORIGIN=https://www.oliverflute.com sh tools/deploy-pages.sh` 建置，令 canonical、sitemap 及 404 頁指向新網域。
+
+## 中文字型
+
+`assets/fonts/site/` 只收錄本站用到的字（Noto Serif TC 400／600，第 0 塊為最常用字並預載，其餘每 150 字一塊）。新增或修改文章後，如 `node build.mjs` 提示「字型未收錄」，下載 [Noto Serif TC 可變字型](https://github.com/google/fonts/raw/main/ofl/notoseriftc/NotoSerifTC%5Bwght%5D.ttf) 後執行 `python3 tools/build_fonts.py <檔案>`（需要 `pip install fonttools brotli`）。
+
+插圖 `assets/images/editorial/` 每張另有 `-640`、`-1024` 縮圖供手機使用，新增插圖時一併產生。
