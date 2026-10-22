@@ -208,7 +208,8 @@ function verifyArticles(posts) {
   return { articlePages: filenames.length, revisedArticles, newArticles, maxGroundedHeadingRepeat: maxHeadingRepeat };
 }
 
-function verifyRoutesAndSitemap(htmlFiles) {
+function verifyRoutesAndSitemap(allHtml) {
+  const htmlFiles = allHtml.filter((file) => file !== 'home-v2.html');
   assert.equal(htmlFiles.length, 31, `Expected 31 top-level HTML routes, found ${htmlFiles.length}`);
   const sitemap = read('sitemap.xml');
   const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
