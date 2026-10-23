@@ -275,8 +275,19 @@
 
   /* 動態編排 */
   const gsap = window.gsap, ST = window.ScrollTrigger;
-  if (reduce || !gsap || !ST) return;
+  if (reduce) return;
+  /* 手機及無 GSAP：用 IntersectionObserver 做同樣的進場，不載入動畫庫 */
+  if (!reduce && (!gsap || !ST)) {
+    const sel = '.facts > div, .route-list li, .tools li, .posts a, .metro, .finale p, .finale .acts, .voice-copy > *, .sec-head h2, .teacher blockquote .ln, .portrait, .arrange > div';
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in'); io.unobserve(e.target);
+    }), { rootMargin: '0px 0px -10% 0px' });
+    $$(sel).forEach((el) => { el.classList.add('will-in'); io.observe(el); });
+    return;
+  }
   gsap.registerPlugin(ST);
+  ST.config({ ignoreMobileResize: true, autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load' });
 
   let lenis = null;
   if (window.Lenis && matchMedia('(hover: hover) and (pointer: fine)').matches) {

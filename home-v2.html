@@ -276,9 +276,21 @@
   </div>
 </footer>
 
-<script src="assets/vendor/gsap.min.js" defer></script>
-<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-<script src="assets/vendor/lenis.min.js" defer></script>
-<script src="assets/js/home-v2.js" defer></script>
+<script>
+(() => {
+  const want = matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)').matches;
+  const add = (src) => new Promise((ok, bad) => {
+    const s = document.createElement('script');
+    s.src = src; s.async = false; s.onload = ok; s.onerror = bad;
+    document.head.appendChild(s);
+  });
+  if (!want) { add('assets/js/home-v2.js'); return; }
+  add('assets/vendor/gsap.min.js')
+    .then(() => add('assets/vendor/ScrollTrigger.min.js'))
+    .then(() => add('assets/vendor/lenis.min.js'))
+    .then(() => add('assets/js/home-v2.js'))
+    .catch(() => add('assets/js/home-v2.js'));
+})();
+</script>
 </body>
 </html>

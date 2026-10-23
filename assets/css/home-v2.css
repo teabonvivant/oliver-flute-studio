@@ -287,6 +287,9 @@ section { padding: clamp(80px, 12vw, 180px) 0 0; }
   .tools span { display: none; }
   .facts dt b { font-size: 40px; }
 }
+.will-in { opacity: 0; translate: 0 26px; transition: opacity .7s var(--ease), translate .7s var(--ease); }
+.will-in.in { opacity: 1; translate: 0 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+  .will-in { opacity: 1; translate: none; }
 }
