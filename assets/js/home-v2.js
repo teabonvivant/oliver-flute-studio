@@ -211,7 +211,12 @@
     const out = $('[data-bpm-out]', metro);
     const toggle = $('[data-metro-toggle]', metro);
     const dots = $$('.beats i', metro);
-    let bpm = 72, running = false, next = 0, beat = 0, timer = 0;
+    let bpm = 72, running = false, next = 0, beat = 0, timer = 0, meter = 4;
+    $$('[data-meter]', metro).forEach((b) => b.addEventListener('click', () => {
+      meter = Number(b.dataset.meter); beat = 0;
+      $$('[data-meter]', metro).forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      dots.forEach((d, i) => { d.hidden = i >= meter; });
+    }));
     const queue = [];
     const click = (t, accent) => {
       const o = ctx.createOscillator(), gn = ctx.createGain();
@@ -222,7 +227,7 @@
       o.connect(gn).connect(ctx.destination); o.start(t); o.stop(t + .07);
     };
     const schedule = () => {
-      while (next < ctx.currentTime + .12) { click(next, beat % 4 === 0); queue.push({ t: next, b: beat % 4 }); next += 60 / bpm; beat++; }
+      while (next < ctx.currentTime + .12) { click(next, beat % meter === 0); queue.push({ t: next, b: beat % meter }); next += 60 / bpm; beat++; }
       timer = setTimeout(schedule, 25);
     };
     const paint = () => {
@@ -309,7 +314,18 @@
     const track = $('[data-track]');
     $('.voices').classList.add('hscroll');
     const dist = () => track.scrollWidth - innerWidth;
-    const tween = gsap.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '.voices', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: .8, invalidateOnRefresh: true, anticipatePin: 1 } });
+    const names = $$('.vindex a'), bar = $('[data-vbar]');
+    const mark = (p) => { bar.style.transform = `scaleX(${p})`; const k = Math.round(p * 3); names.forEach((a, i) => a.classList.toggle('on', i === k)); };
+    const tween = gsap.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '.voices', start: 'top top', end: () => '+=' + dist() * .7, pin: true, scrub: .6, invalidateOnRefresh: true, anticipatePin: 1, onUpdate: (st) => mark(st.progress) } });
+    mark(0);
+    const jump = (e) => {
+      const i = names.indexOf(e.currentTarget), st = tween.scrollTrigger;
+      e.preventDefault(); e.stopImmediatePropagation();
+      const y = st.start + (st.end - st.start) * (i / 3) + 2;
+      lenis ? lenis.scrollTo(y) : scrollTo({ top: y, behavior: 'smooth' });
+      setTimeout(() => $('.play', $$('.voice')[i]).focus({ preventScroll: true }), 900);
+    };
+    names.forEach((a) => a.addEventListener('click', jump, true));
     $$('.voice').forEach((v) => {
       gsap.fromTo($('figure img', v), { xPercent: -6 }, { xPercent: 6, ease: 'none', scrollTrigger: { trigger: v, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true } });
       gsap.from($$('.voice-copy > *', v), { y: 40, opacity: 0, stagger: .06, duration: .8, ease: 'expo.out', scrollTrigger: { trigger: v, containerAnimation: tween, start: 'left 70%' } });
@@ -325,7 +341,7 @@
     });
     const move = (e) => { const r = routes.getBoundingClientRect(); px(e.clientX - r.left + 28); py(e.clientY - r.top - 100); };
     routes.addEventListener('pointermove', move);
-    return () => { $('.voices').classList.remove('hscroll'); routes.removeEventListener('pointermove', move); };
+    return () => { $('.voices').classList.remove('hscroll'); routes.removeEventListener('pointermove', move); names.forEach((a) => { a.removeEventListener('click', jump, true); a.classList.remove('on'); }); };
   });
   mm.add('(max-width: 900px)', () => {
     $$('.voice').forEach((v) => gsap.from($$('.voice-copy > *', v), { y: 30, opacity: 0, stagger: .06, duration: .8, ease: 'expo.out', scrollTrigger: { trigger: v, start: 'top 75%' } }));
