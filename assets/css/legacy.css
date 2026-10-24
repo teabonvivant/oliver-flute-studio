@@ -121,3 +121,29 @@ body.lb-lock { overflow: hidden; }
 .course-facts table { min-width: 0; width: 100%; }
 .course-facts th, .course-facts td { white-space: normal; }
 @media (max-width: 760px) { .course-facts th, .course-facts td { padding: 10px 10px; font-size: 14px; } }
+
+/* 信任證據（2026-10-24） */
+.real-figure { margin: 0; }
+.real-figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md, 14px); }
+.course-index .real-figure { margin-bottom: 26px; }
+.hero-wa { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 26px; }
+.hero-wa span { font-size: 15px; color: var(--muted); letter-spacing: .04em; }
+.teacher-card { display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center; padding: 26px; border: 1px solid var(--line); border-radius: var(--r-lg, 24px); background: var(--glass, #fff); }
+.teacher-card .tc-photo { margin: 0; }
+.teacher-card .tc-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: 50% 20%; border-radius: var(--r-md, 14px); }
+.tc-name { font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+.tc-name span { font-size: 14px; font-weight: 400; color: var(--muted); margin-left: 6px; }
+.teacher-card ul { margin: 0 0 12px; padding-left: 1.1em; }
+.teacher-card li { font-size: 16px; line-height: 1.8; color: var(--ink); }
+.real-strip .lb-grid { columns: 3 220px; }
+.reading-noimg .card-image { display: none; }
+.teach-strip { margin: 26px 0; }
+.real-figure.place { margin-top: 18px; max-width: 520px; }
+.real-figure.ccom-cover { width: 160px; margin: 0 0 22px; }
+.real-figure.ccom-cover img { aspect-ratio: auto; }
+@media (max-width: 760px) {
+  .teacher-card { grid-template-columns: 96px 1fr; gap: 16px; padding: 18px; }
+  .tc-name { font-size: 18px; }
+  .teacher-card li { font-size: 15px; }
+}
+.acc-fig.acc-tall img { object-fit: contain; background: #fff; }

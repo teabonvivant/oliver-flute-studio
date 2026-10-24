@@ -1,5 +1,6 @@
 import {addStudioPages} from './studio-pages.mjs';
 import {addLegacyPages} from './legacy-pages.mjs';
+import {addTrust} from './trust-pages.mjs';
 export async function makePages(h){
 const {posts,CATS,art,card,esc,WA,BRAND,read,ORIGIN}=h;
 const pages=[];
@@ -50,6 +51,7 @@ add('resources.html','延伸閱讀與正式資料','音樂考試大綱、香港�
 add('privacy.html','私隱與使用說明','了解本站查詢訊息、練習清單、外部連結及內容使用方式。',hero('私隱與使用說明','關於你在本站輸入的資料，以及閱讀內容的使用方式。')+band('查詢訊息',para('本頁的訊息整理功能在瀏覽器內運作，輸入內容不會由表單直接傳送至學院。選擇前往 WhatsApp 後，訊息會交由 WhatsApp 開啟，並由你確認是否發送。','與張老師聯絡時，請只提供課程安排所需資料。毋須在首次查詢傳送身分證、完整住址或其他不必要的敏感資料。'))+band('練習清單與瀏覽',para('練習清單的勾選狀態儲存在目前瀏覽器，方便下次繼續；按「重新開始」可清除。本站不在此功能記錄姓名或聯絡資料。','網站使用的字體與配圖由本站提供。託管及網絡服務可能保留基本運作紀錄，以維持網站服務。'))+band('練習室工具',para('調音器及長音練習會在你允許後使用咪高峰。聲音只在你的瀏覽器內即時分析音高，不會錄音、儲存或上載。','長音練習的秒數紀錄儲存在目前瀏覽器，按「清除紀錄」即可刪除。'))+band('外部連結與內容',para('WhatsApp、考試機構及其他外部網站各自有其私隱與使用條款。進入外部網站後，請按該服務的安排使用。','學習文章用作音樂教育閱讀。考試規則以所選機構的適用文件為準；具體吹奏與樂器保養，應配合自己的樂器、程度及導師建議。','引用本站文章時請註明來源並連回原頁。第三方資料、樂譜與錄音的權利由其持有人保留。'))+band('聯絡',`<p>對本站內容或資料使用有疑問，可經 <a href="${WA}">WhatsApp 聯絡張老師</a>。</p>`));
 addStudioPages({add,hero,band,link,cta,art,para,faq,WA});
 await addLegacyPages({pages,add,hero,band,link,cta,para,faq,esc,WA,read,BRAND});
+await addTrust({pages,esc,WA,read});
 add('404.html','找不到這一頁','返回學習指南或搜尋音樂手記，找到相關文章與課程。',hero('這一頁沒有找到。','可以回到音樂手記搜尋題目，或由學習指南繼續。',`<div class="hero-actions"><a class="btn primary" href="${h.BASE_PATH}blog.html">搜尋文章</a><a class="btn" href="${h.BASE_PATH}learning-guide.html">學習指南</a></div>`));
 return pages;
 }
