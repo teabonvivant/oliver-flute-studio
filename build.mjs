@@ -1,7 +1,7 @@
 import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { join, resolve, dirname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
-import './tools/render-site.mjs';
+import { navItems } from './tools/render-site.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const dist = resolve(root, "dist");
@@ -14,7 +14,7 @@ await mkdir(assets, { recursive: true });
 for (const directory of ["blog", "archive", "assets/images/diagrams", "assets/fonts/site", "assets/fonts/manrope"]) {
   await cp(join(root, directory), join(assets, directory), { recursive: true });
 }
-const publicFiles=['assets/css/editorial.css','assets/css/studio.css','assets/css/theme.css','assets/css/legacy.css','assets/js/legacy.js','assets/js/studio.js','assets/js/academy.js','assets/js/journal.js','assets/js/blog-index.js','assets/js/blog-search.js','assets/css/home-v2.css','assets/js/home-v2.js','assets/fonts/fonts.css','assets/vendor/gsap.min.js','assets/vendor/ScrollTrigger.min.js','assets/vendor/lenis.min.js','assets/fonts/OFL.txt','assets/images/teacher-profile-original.png','assets/images/teacher-profile.webp','assets/images/brand-mark-original.png'];
+const publicFiles=['assets/css/editorial.css','assets/css/studio.css','assets/css/theme.css','assets/css/legacy.css','assets/js/legacy.js','assets/js/studio.js','assets/js/academy.js','assets/js/journal.js','assets/js/blog-index.js','assets/js/blog-search.js','assets/css/home-v2.css','assets/js/home-v2.js','assets/js/subnav.js','assets/fonts/fonts.css','assets/vendor/gsap.min.js','assets/vendor/ScrollTrigger.min.js','assets/vendor/lenis.min.js','assets/fonts/OFL.txt','assets/images/teacher-profile-original.png','assets/images/teacher-profile.webp','assets/images/brand-mark-original.png'];
 for (const entry of await readdir(join(root,'assets/images/editorial'))) if(entry.endsWith('.webp'))publicFiles.push('assets/images/editorial/'+entry);
 for (const entry of await readdir(join(root,'assets/images/legacy'))) publicFiles.push('assets/images/legacy/'+entry);
 for (const entry of await readdir(join(root,'assets/images/studio'))) publicFiles.push('assets/images/studio/'+entry);
@@ -48,8 +48,13 @@ for (const [slug, to] of Object.entries(emptyPosts)) await writeFile(join(assets
   const homeCss = (await readFile(join(root, "assets/css/home-v2.css"), "utf8")).replaceAll("url(../", "url(assets/");
   const page = (await readFile(join(assets, "home-v2.html"), "utf8"))
     .replace('<link rel="stylesheet" href="assets/fonts/home/fonts.css">', () => `<style>${fontsCss}</style>`)
-    .replace('<link rel="stylesheet" href="assets/css/home-v2.css">', () => `<style>${homeCss}</style>`);
-  await writeFile(join(assets, "home-v2.html"), page, "utf8");
+    .replace('<link rel="stylesheet" href="assets/css/home-v2.css">', () => `<style>${homeCss}</style>`)
+    .replace(/(<nav class="links" id="nav" aria-label="主要導覽">)[\s\S]*?(<\/nav>)/, (_, a, b) => a + navItems("", "", "index.html") + b);
+  // home-v2 is the homepage: take canonical and JSON-LD from the generated index, keep the old page out of the build
+  const oldIndex = await readFile(join(assets, "index.html"), "utf8");
+  const keep = oldIndex.match(/<link rel="canonical"[^>]*>/)[0] + (oldIndex.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/) || [""])[0];
+  await writeFile(join(assets, "index.html"), page.replace('<meta name="robots" content="noindex,follow">', () => '<meta name="robots" content="index,follow,max-image-preview:large">' + keep), "utf8");
+  await writeFile(join(assets, "home-v2.html"), stub("./"), "utf8");
 }
 await writeFile(join(assets, ".nojekyll"), "", "utf8");
 const covered = new Set(await readFile(join(root, "assets/fonts/site/coverage.txt"), "utf8"));

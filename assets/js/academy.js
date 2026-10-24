@@ -1,8 +1,8 @@
 (() => {
   const toggle=document.querySelector('[data-nav-toggle]'),nav=document.querySelector('[data-nav]');
   if(toggle&&nav){
-    const close=()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','開啟選單')};
-    toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'關閉選單':'開啟選單')});
+    const close=()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','開啟選單');toggle.querySelector('span').textContent='選單'};
+    toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'關閉選單':'開啟選單');toggle.querySelector('span').textContent=open?'關閉':'選單'});
     nav.addEventListener('click',e=>{if(e.target.closest('a'))close()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();toggle.focus()}});
     document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!toggle.contains(e.target))close()});

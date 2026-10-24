@@ -301,3 +301,31 @@ section { padding: clamp(80px, 12vw, 180px) 0 0; }
 .students img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
 .students figcaption { margin-top: 8px; font-size: 14px; color: var(--ink-2); }
 @media (max-width: 900px) { .students { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+
+/* 主選單子選單（2026-10-24，結構同內頁 tools/render-site.mjs 的 NAV） */
+.links { align-items: center; }
+.nav-item { position: relative; display: flex; align-items: center; }
+.sub-toggle { display: inline-grid; place-items: center; width: 24px; height: 36px; padding: 0; border: 0; background: none; color: var(--ink-2); cursor: pointer; }
+.sub-toggle:hover, .has-sub.open .sub-toggle { color: var(--coral); }
+.sub-toggle svg { transition: transform .18s var(--ease); }
+.has-sub.open .sub-toggle svg { transform: rotate(180deg); }
+.sub { position: absolute; top: calc(100% + 12px); left: 50%; display: flex; gap: 34px; padding: 20px 26px 18px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 24px 50px -30px #1f2b2a66; opacity: 0; visibility: hidden; transform: translate(-50%, 6px); transition: opacity .16s, transform .16s var(--ease), visibility .16s; }
+.sub::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
+.has-sub.open .sub { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+@media (hover: hover) and (min-width: 901px) { .has-sub:hover .sub { opacity: 1; visibility: visible; transform: translate(-50%, 0); } .has-sub:hover .sub-toggle svg { transform: rotate(180deg); } }
+.sub-col { display: flex; flex-direction: column; min-width: 124px; }
+.sub-title { margin: 0 0 6px; font: 600 12px/1.6 var(--sans); letter-spacing: .14em; color: var(--ink-2); }
+.links .sub a { padding: 6px 0; font-size: 15px; letter-spacing: .04em; white-space: nowrap; }
+.links .sub a::after { display: none; }
+.links .sub a:hover, .links .sub a:focus-visible { color: var(--coral); }
+@media (max-width: 900px) {
+  .links { justify-content: flex-start; align-items: stretch; padding-top: 92px; padding-bottom: 40px; overflow-y: auto; }
+  .nav-item { flex-wrap: wrap; }
+  .nav-item > a { flex: 1; }
+  .sub-toggle { width: 48px; height: 56px; }
+  .sub { position: static; display: none; width: 100%; flex-direction: column; gap: 12px; padding: 0 0 14px 16px; background: none; border: 0; border-left: 1px solid var(--line); box-shadow: none; opacity: 1; visibility: visible; transform: none; transition: none; }
+  .sub::before { display: none; }
+  .has-sub.open .sub { display: flex; transform: none; }
+  .links .sub a { font-size: 17px; font-weight: 400; padding: 8px 0; }
+}
+@media (prefers-reduced-motion: reduce) { .sub, .sub-toggle svg { transition: none; } }

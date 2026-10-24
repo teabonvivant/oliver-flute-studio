@@ -19,7 +19,7 @@
   const onScroll = () => {
     const y = scrollY;
     bar.classList.toggle('scrolled', y > 40);
-    bar.classList.toggle('hide', y > innerHeight * .8 && y > lastY && !bar.classList.contains('open') && !bar.contains(document.activeElement));
+    bar.classList.toggle('hide', y > innerHeight * .8 && y > lastY && !bar.classList.contains('open') && !bar.contains(document.activeElement) && !bar.querySelector('.has-sub.open'));
     lastY = y;
   };
   addEventListener('scroll', onScroll, { passive: true });

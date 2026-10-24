@@ -216,3 +216,30 @@ th { background: var(--tint); }
   .mist { display: none; }
   .site-header, .page-hero, .home-hero, .journal-card { background: none; box-shadow: none; backdrop-filter: none; border: 0; }
 }
+
+/* 主選單子選單（2026-10-24） */
+.nav-item { position: relative; display: flex; align-items: center; }
+.sub-toggle { display: inline-grid; place-items: center; width: 26px; height: 40px; margin-left: 1px; padding: 0; border: 0; border-radius: 8px; background: none; color: var(--muted); cursor: pointer; }
+.sub-toggle:hover, .has-sub.open .sub-toggle { color: var(--accent); }
+.sub-toggle svg { transition: transform 180ms var(--ease-settle, ease); }
+.has-sub.open .sub-toggle svg { transform: rotate(180deg); }
+.sub { position: absolute; top: calc(100% + 14px); left: 50%; z-index: 5; display: flex; gap: 32px; padding: 20px 26px 18px; background: #fbfdfdf7; border: 1px solid var(--glass-edge); border-radius: var(--r-md); box-shadow: 0 24px 60px -28px #3f555480; opacity: 0; visibility: hidden; transform: translate(-50%, 6px); transition: opacity 160ms ease, transform 160ms ease, visibility 160ms; }
+.sub::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+.has-sub.open .sub { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+@media (hover: hover) and (min-width: 921px) { .has-sub:hover .sub { opacity: 1; visibility: visible; transform: translate(-50%, 0); } .has-sub:hover .sub-toggle svg { transform: rotate(180deg); } }
+.sub-col { display: flex; flex-direction: column; min-width: 128px; }
+.sub-title { margin: 0 0 6px; font-size: 12px; letter-spacing: .14em; color: var(--meta); }
+.main-nav .sub a { padding: 7px 0; font-size: 14px; color: var(--ink); letter-spacing: .04em; }
+.main-nav .sub a::after { display: none; }
+.main-nav .sub a:hover, .main-nav .sub a:focus-visible { color: var(--accent); }
+@media (max-width: 920px) {
+  .nav-item { flex-wrap: wrap; }
+  .nav-item > a { flex: 1; }
+  .sub-toggle { width: 44px; height: 44px; }
+  .sub { position: static; display: none; width: 100%; flex-direction: column; gap: 10px; padding: 0 4px 12px 14px; margin: 0; background: none; border: 0; border-left: 1px solid var(--line); border-radius: 0; box-shadow: none; opacity: 1; visibility: visible; transform: none; transition: none; }
+  .sub::before { display: none; }
+  .has-sub.open .sub { display: flex; transform: none; }
+  .main-nav .sub a { font-size: 15px; padding: 8px 4px; }
+}
+@media (prefers-reduced-motion: reduce) { .sub, .sub-toggle svg { transition: none; } }
+@media (max-width: 920px) { .main-nav { background: var(--white); } }
