@@ -148,3 +148,4 @@ body.lb-lock { overflow: hidden; }
   .teacher-card li { font-size: 15px; }
 }
 .acc-fig.acc-tall img { object-fit: contain; background: #fff; }
+@media (max-width: 680px) { .real-strip .lb-grid { columns: 2; column-gap: 10px; } }

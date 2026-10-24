@@ -1,7 +1,7 @@
 // 信任證據前移（2026-10-24）：課程頁換真實相片、張老師小卡、頁頂 WhatsApp、舊站未上頁的相片。
 const L='assets/images/legacy/';
 export const WA_TOPIC={'flute-course.html':'長笛課程','dizi-course.html':'笛子課程','xiao-course.html':'洞簫課程','tongue-drum-course.html':'空靈鼓課程','drum-accessories.html':'空靈鼓配件','parents.html':'小朋友的音樂課程','adult-beginner.html':'成人音樂課程','exam-guide.html':'考級課程'};
-export const waText=file=>file==='tongue-drum-course.html'
+export const waText=file=>file==='drum-accessories.html'?'張老師你好，我想訂購空靈鼓配件。\n想買：\n數量：\n取貨方式：':file==='tongue-drum-course.html'
   ?'張老師你好，我想查詢空靈鼓課程。\n想報：入門初班／體驗課\n可上課時間：'
   :`張老師你好，我想查詢${WA_TOPIC[file]||'音樂課程'}。\n${WA_TOPIC[file]?'':'想學樂器：\n'}學生年齡：\n學過樂器：\n可上課時間：`;
 

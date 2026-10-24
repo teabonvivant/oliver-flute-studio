@@ -39,6 +39,11 @@ const redirects = {
 };
 const stub = (to) => `<!doctype html><html lang="zh-Hant-HK"><head><meta charset="utf-8"><title>頁面已搬遷</title><meta name="robots" content="noindex"><link rel="canonical" href="${to}"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p>此頁已搬到 <a href="${to}">新位置</a>。</p></body></html>`;
 for (const [from, to] of Object.entries(redirects)) await writeFile(join(assets, from + ".html"), stub(to), "utf8");
+// old password-protected drum notes (content not migrated yet) and old blog category pages
+for (const from of ["drum-lesson1","drum-lesson2","drum-lesson3","drum-lesson4","drum-lesson5","drum-lesson6","drum-lesson7","drum-lesson8","drum-lesson61","mindruml1","mindruml2","mindruml5","2024mindrum","2","3","5","6","12"]) await writeFile(join(assets, from + ".html"), stub("tongue-drum-course.html"), "utf8");
+await writeFile(join(assets, "blog", "categories.html"), stub("../archive.html"), "utf8");
+await mkdir(join(assets, "blog", "categories"), { recursive: true });
+for (const c of ["音樂雜談","樂器與考試","練習心得","空靈鼓"]) await writeFile(join(assets, "blog", "categories", c + ".html"), stub("../../archive.html"), "utf8");
 const oldPosts = JSON.parse(await readFile(join(root, "content/legacy-posts.json"), "utf8")).map((p) => p.slug);
 for (const slug of oldPosts) await writeFile(join(assets, "blog", slug + ".html"), stub("../archive/" + slug + ".html"), "utf8");
 const emptyPosts = { "2026": "flute-course.html", "abrsm-flute-exam-hong-kong-guide": "exam-guide.html", "adult-beginner-flute-lessons-hong-kong": "adult-beginner.html", "flute-lesson-price-hong-kong-2025": "flute-course.html", "flute-no-sound-beginner-embouchure-hong-kong": "flute-course.html" };

@@ -329,3 +329,4 @@ section { padding: clamp(80px, 12vw, 180px) 0 0; }
   .links .sub a { font-size: 17px; font-weight: 400; padding: 8px 0; }
 }
 @media (prefers-reduced-motion: reduce) { .sub, .sub-toggle svg { transition: none; } }
+h2 { text-wrap: balance; }
