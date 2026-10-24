@@ -243,3 +243,5 @@ th { background: var(--tint); }
 }
 @media (prefers-reduced-motion: reduce) { .sub, .sub-toggle svg { transition: none; } }
 @media (max-width: 920px) { .main-nav { background: var(--white); } }
+.brand img { width: 58px; height: auto; }
+@media (max-width: 680px) { .brand img { width: 48px; } }
