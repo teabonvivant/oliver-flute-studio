@@ -111,7 +111,7 @@
       const span2 = this.kind === 'hero' ? 560 : 300;
       const gainY = h * .4 * Math.min(1, this.level * 9 + .15);
       g.lineWidth = this.analyser ? 1.6 : 1;
-      g.strokeStyle = this.analyser ? (this.light ? '#e0846f' : '#b04f3c') : (this.light ? '#f3f1ea66' : '#1f2b2a');
+      g.strokeStyle = this.analyser ? (this.light ? '#e0846f' : '#a34530') : (this.light ? '#f3f1ea66' : '#1f2b2a');
       let peak = 0, start = 0;
       if (data) {
         for (let k = 1; k < 1024; k++) if (data[k - 1] < 0 && data[k] >= 0) { start = k; break; }
