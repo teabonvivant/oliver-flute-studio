@@ -1,19 +1,20 @@
 # 張老師音樂學院 · 新版網站
 
-長笛、笛子、洞簫與空靈鼓學習網站，在原有 200 篇音樂手記及課程頁之上，加入「練習室」及「出品」兩個部分。
+長笛、笛子、洞簫與空靈鼓學習網站，在音樂手記及課程頁之上，加入「練習室」及「出品」兩個部分。
 
 **預覽：** https://teabonvivant.github.io/oliver-flute-studio/
 
 ## 內容
 
-- 原有課程、學習指南、常見問題、聯絡頁及 200 篇音樂手記（源自 `teabonvivant/oliver-flute-academy`）。
+- 原有課程、學習指南、常見問題、聯絡頁及音樂手記。手記原稿是 `content/notes/*.md`（68 篇長文），舊站 20 篇在 `content/legacy-posts.json`，都發布到 `blog/`。
+- 舊 200 條文章網址由 frontmatter 的 `replaces` 自動生成轉向（meta refresh＋canonical），舊 `archive/<slug>.html` 轉到 `blog/<slug>.html`。`content/new-*.md`、`legacy-curated.json`、`legacy-examples.txt` 是合併前的舊稿，建置不再使用。
 - 練習室：調音器（`tuner.html`）、節拍器（`metronome.html`）、長笛指法表（`flute-fingering.html`）、長音練習（`long-tone.html`）。全部在瀏覽器運行，咪高峰聲音只在本機分析。
 - 出品：譜間打譜軟件（`pujian.html`）、長笛紙牌及網上翻卡練習（`flute-cards.html`）、長笛演奏動畫試作及教學樂譜（`works.html`）。
 - oliverflute.com 舊網址（例如 `/aboutme`、`/flute-class`）會轉到對應新頁。
 
 ## 結構
 
-- `tools/render-site.mjs`、`tools/site-pages.mjs`：原有頁面及文章生成。
+- `tools/render-site.mjs`、`tools/site-pages.mjs`：原有頁面及文章生成。文章寫法：開場段 → `## 小標題 {#錨點}` → `## 常見問題 {#faq}`（`### 問題`）；目錄和 FAQ schema 自動生成，只支援段落、清單、連結、粗體，其他語法會令建置失敗。
 - `tools/studio-pages.mjs`：練習室及出品頁面內容。
 - `assets/js/studio.js`：音高偵測、節拍器、指法資料（C4–A6 基本指法，依 Woodwind Fingering Guide）、長音計時、翻卡練習。
 - `assets/css/studio.css`：新增區塊樣式，沿用 `editorial.css` 的色彩與字體。

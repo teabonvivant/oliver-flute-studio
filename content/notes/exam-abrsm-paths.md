@@ -17,7 +17,7 @@ replaces:
 
 ## 兩種考試，評核甚麼？ {#practical-vs-performance}
 
-[實用考試](https://www.abrsm.org/en-gb/practical-grades)一般包括曲目、音階與琶音、視奏及聽覺等部分。[演奏考試](https://www.abrsm.org/en-gb/about-performance-grades)則以錄影演奏曲目及整體表現為重點。在香港，實用考試是面試，由考評局代辦；演奏考試是數碼考試，不設考期，錄好影片上載。
+[實用考試](https://www.abrsm.org/en-gb/about-practical-grades)一般包括曲目、音階與琶音、視奏及聽覺等部分。[演奏考試](https://www.abrsm.org/en-gb/about-performance-grades)則以錄影演奏曲目及整體表現為重點。在香港，實用考試是面試，由考評局代辦；演奏考試是數碼考試，不設考期，錄好影片上載。
 
 具體內容和可用曲目，要按適用的考試大綱核對。
 
@@ -39,7 +39,7 @@ replaces:
 
 曾取得相關資格的話，提早查看機構列出的認可替代資格、紀錄核實方式，以及是否需要提供證明。
 
-資格是否適用，要按考試類別和報考時的[規例](https://www.abrsm.org/en-gb/about-our-exams/exam-regulations)確認。舊證書不一定自動符合。
+資格是否適用，要按考試類別和報考時的[規例](https://www.abrsm.org/en-gb/about-our-exams/exam-regulations)確認。1994 年 1 月 1 日或之後考獲的成績，ABRSM 可自行核對紀錄；更早的要在報考時交證書副本。
 
 樂理也不只是報名門檻。調性、節奏、音程和作品結構，都直接影響讀譜和詮釋。
 

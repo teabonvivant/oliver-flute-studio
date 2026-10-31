@@ -6,6 +6,8 @@ node build.mjs
 node tools/verify_site.cjs > /dev/null
 tmp=$(mktemp -d)
 cp -R dist/assets/. "$tmp"
+git fetch -q origin gh-pages
+git archive origin/gh-pages hero-options | tar -x -C "$tmp"
 cd "$tmp"
 git init -q -b gh-pages
 git add -A
