@@ -18,6 +18,7 @@ const publicFiles=['assets/css/editorial.css','assets/css/studio.css','assets/cs
 for (const entry of await readdir(join(root,'assets/images/editorial'))) if(entry.endsWith('.webp'))publicFiles.push('assets/images/editorial/'+entry);
 for (const entry of await readdir(join(root,'assets/images/legacy'))) publicFiles.push('assets/images/legacy/'+entry);
 for (const entry of await readdir(join(root,'assets/images/studio'))) publicFiles.push('assets/images/studio/'+entry);
+for (const entry of await readdir(join(root,'assets/images/notes'))) publicFiles.push('assets/images/notes/'+entry);
 for (const entry of await readdir(join(root,'assets/fonts/home'))) publicFiles.push('assets/fonts/home/'+entry);
 for (const entry of await readdir(join(root,'assets/images/home'))) publicFiles.push('assets/images/home/'+entry);
 for (const entry of await readdir(join(root,'assets/audio/home'))) publicFiles.push('assets/audio/home/'+entry);
@@ -41,6 +42,7 @@ const stub = (to) => `<!doctype html><html lang="zh-Hant-HK"><head><meta charset
 for (const [from, to] of Object.entries(redirects)) await writeFile(join(assets, from + ".html"), stub(to), "utf8");
 // old password-protected drum notes (content not migrated yet) and old blog category pages
 for (const from of ["drum-lesson1","drum-lesson2","drum-lesson3","drum-lesson4","drum-lesson5","drum-lesson6","drum-lesson7","drum-lesson8","drum-lesson61","mindruml1","mindruml2","mindruml5","2024mindrum","2","3","5","6","12"]) await writeFile(join(assets, from + ".html"), stub("tongue-drum-course.html"), "utf8");
+await writeFile(join(assets, "1.html"), stub("./"), "utf8");
 await writeFile(join(assets, "blog", "categories.html"), stub("../archive.html"), "utf8");
 await mkdir(join(assets, "blog", "categories"), { recursive: true });
 for (const c of ["音樂雜談","樂器與考試","練習心得","空靈鼓"]) await writeFile(join(assets, "blog", "categories", c + ".html"), stub("../../archive.html"), "utf8");

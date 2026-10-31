@@ -1,7 +1,7 @@
 ---
 code: E8
 title: ABRSM：實用考試、演奏考試與樂理資格
-seo_title: ABRSM 實用考試與演奏考試分別、六至八級樂理資格｜香港考級
+seo_title: ABRSM 實用考試與演奏考試分別、六至八級樂理
 description: ABRSM Practical Grades 和 Performance Grades 有甚麼分別？六至八級的先修資格要何時安排？這篇幫你分清評核內容，把音樂準備和報考條件排成清單，適合考級學生和家長。
 url: blog/exam-abrsm-paths.html
 category: 考級

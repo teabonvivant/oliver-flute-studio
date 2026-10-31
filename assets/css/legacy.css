@@ -149,3 +149,25 @@ body.lb-lock { overflow: hidden; }
 }
 .acc-fig.acc-tall img { object-fit: contain; background: #fff; }
 @media (max-width: 680px) { .real-strip .lb-grid { columns: 2; column-gap: 10px; } }
+
+/* 文章標題不斷在詞中間；文章尾 WhatsApp 老師卡；主題頁（2026-10-31） */
+.article-heading h1, .journal-card h2, .journal-card h3 { word-break: keep-all; overflow-wrap: anywhere; }
+.article-meta a { color: inherit; }
+.ask-card { display: grid; grid-template-columns: 148px 1fr; gap: 24px; align-items: center; margin-top: 54px; padding: 24px; border: 1px solid var(--line); border-radius: var(--r-lg, 24px); background: rgba(255, 255, 255, .62); }
+.ask-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 50% 20%; border-radius: var(--r-md, 14px); }
+.ask-card p { margin: 0 0 14px; font-size: 16px; line-height: 1.8; }
+.ask-card .ask-name { margin-bottom: 4px; font-family: var(--serif); font-size: 20px; }
+.ask-card .text-link { display: inline-block; margin-left: 18px; }
+.topic-links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; margin: -18px 0 34px; font-size: 15px; }
+.topic-links span { color: var(--muted); }
+.topic-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.topic-count { color: var(--muted); font-size: 15px; }
+@media (max-width: 640px) {
+  .ask-card { grid-template-columns: 1fr; gap: 16px; padding: 18px; }
+  .ask-card img { width: 112px; }
+  .ask-card .btn { display: flex; justify-content: center; }
+  .ask-card .text-link { display: block; margin: 14px 0 0; }
+}
+.journal-card h2 { font-size: 23px; line-height: 1.8; margin-bottom: 18px; letter-spacing: .025em; }
+.journal-card h2 a { color: var(--ink); text-decoration: none; }
+.journal-card h2 a:hover { color: var(--accent); text-decoration: underline; }

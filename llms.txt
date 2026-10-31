@@ -33,6 +33,15 @@
 - [樂譜](https://teabonvivant.github.io/oliver-flute-studio/scores.html): 張老師教學使用的流行曲簡譜與五線譜、笛子班樂譜及空靈鼓曲譜，供學生課堂練習。
 - [舊站手記](https://teabonvivant.github.io/oliver-flute-studio/archive.html): 張老師在 oliverflute.com 寫過的音樂文章：長笛初學、呼吸、選笛、標準音、五聲音階、尺八、葫蘆絲、Trinity 與 ABRSM 考試等。
 - [空靈鼓配件](https://teabonvivant.github.io/oliver-flute-studio/drum-accessories.html): 張老師為學生代訂的空靈鼓配件：6 吋 11 音小鼓、鼓架、桌面支架及金屬支架，附學生訂購價。
+- [長笛文章](https://teabonvivant.github.io/oliver-flute-studio/topic-flute.html): 由自然發聲、氣息與音準，走向有方向的樂句。張老師的長笛文章共 13 篇，可由〈選第一支長笛：成人與兒童〉和〈長笛呼吸：支撐、換氣與樂句〉讀起。
+- [笛子文章](https://teabonvivant.github.io/oliver-flute-studio/topic-dizi.html): 認識口風、笛膜、指法與竹笛的語氣。張老師的笛子文章共 12 篇，可由〈竹笛入門：筒音、簡譜與第一個音〉和〈笛膜：貼法與聲音〉讀起。
+- [洞簫文章](https://teabonvivant.github.io/oliver-flute-studio/topic-xiao.html): 在長音、氣口與留白之間，把聲音聽得更細。張老師的洞簫文章共 8 篇，可由〈洞簫的氣：第一個音、口風與呼吸〉和〈洞簫長音與慢板〉讀起。
+- [空靈鼓文章](https://teabonvivant.github.io/oliver-flute-studio/topic-tongue-drum.html): 由回彈和拍點出發，學習分句、即興與合作。張老師的空靈鼓文章共 9 篇，可由〈買空靈鼓之前：調式、音域與手碟分別〉和〈空靈鼓入門：手、槌、回彈與雙手〉讀起。
+- [樂理文章](https://teabonvivant.github.io/oliver-flute-studio/topic-theory.html): 把拍號、音程與記譜，連到耳朵和實際演奏。張老師的樂理文章共 4 篇，可由〈拍子與節奏：三拍、四拍、6/8 與切分〉和〈時值記號：休止符、延音線、附點與簡譜〉讀起。
+- [練習方法文章](https://teabonvivant.github.io/oliver-flute-studio/topic-practice.html): 短時間、明確目標與錄音，讓每次練習有下文。張老師的練習方法文章共 5 篇，可由〈練習時間怎樣安排〉和〈慢練、分段與節拍器〉讀起。
+- [家長陪練文章](https://teabonvivant.github.io/oliver-flute-studio/topic-parents.html): 陪孩子建立習慣，也保留彼此願意聆聽的空間。張老師的家長陪練文章共 3 篇，可由〈開始學音樂之前，家長可以準備甚麼〉和〈陪練的日常〉讀起。
+- [聆聽與合奏文章](https://teabonvivant.github.io/oliver-flute-studio/topic-listening.html): 聽見聲音的細節，學會與另一個人共同開始。張老師的聆聽與合奏文章共 3 篇，可由〈怎樣聽一首曲〉和〈第一次聽現場，與在家演奏一首曲〉讀起。
+- [考級文章](https://teabonvivant.github.io/oliver-flute-studio/topic-exam.html): 看清制度、安排練習，完整準備一場演奏。張老師的考級文章共 11 篇，可由〈考級路線圖：一至八級與報考時機〉和〈考級三項：音階、視奏、聽覺〉讀起。
 
 ## 音樂手記
 - [選第一支長笛：成人與兒童](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-first-flute.html): 長笛

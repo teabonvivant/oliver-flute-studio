@@ -1,0 +1,342 @@
+{
+"flute-first-flute": {
+"photo": "perf-035",
+"alt": "老師手持長笛的合照",
+"y": 0.2
+},
+"flute-breathing": {
+"photo": "class-051",
+"alt": "學生對着譜架吹奏長笛",
+"y": 0.3
+},
+"flute-tone": {
+"photo": "teach-001",
+"alt": "長笛吹口與嘴唇的特寫",
+"y": 0.5
+},
+"flute-daily-practice": {
+"photo": "class-079",
+"alt": "學生在練習室吹奏長笛",
+"y": 0.3
+},
+"flute-registers": {
+"photo": "class-062",
+"alt": "學生在練習室吹奏長笛",
+"y": 0.4
+},
+"flute-fingers": {
+"photo": "perf-008",
+"alt": "演奏者按長笛按鍵的特寫",
+"y": 0.6
+},
+"flute-intonation": {
+"photo": "class-091",
+"alt": "學生對着譜架吹奏長笛",
+"y": 0.3
+},
+"flute-expression": {
+"photo": "perf-018",
+"alt": "長笛演奏者在台上演奏",
+"y": 0.3
+},
+"flute-first-repertoire": {
+"photo": "class-048",
+"alt": "小朋友吹奏長笛",
+"y": 0.3
+},
+"flute-care": {
+"photo": "class-087",
+"alt": "學生手持長笛在練習室吹奏",
+"y": 0.3
+},
+"flute-adult": {
+"photo": "class-004",
+"alt": "成人學生與張老師在課堂合照",
+"y": 0.3
+},
+"flute-ensemble": {
+"photo": "perf-019",
+"alt": "樂團中的長笛聲部",
+"y": 0.5
+},
+"flute-choose-teacher": {
+"photo": "class-014",
+"alt": "學生在課室吹奏長笛",
+"y": 0.3
+},
+"dizi-start": {
+"photo": "class-111",
+"alt": "學生坐在課室吹奏竹笛",
+"y": 0.3
+},
+"dizi-membrane": {
+"photo": "class-044",
+"alt": "學生對着樂譜吹奏竹笛",
+"y": 0.3
+},
+"dizi-air": {
+"photo": "class-101",
+"alt": "學生在練習室吹奏竹笛",
+"y": 0.2
+},
+"dizi-fingers": {
+"photo": "class-083",
+"alt": "學生吹奏竹笛的手部姿勢",
+"y": 0.5
+},
+"dizi-phrasing": {
+"photo": "class-098",
+"alt": "學生對着譜架吹奏竹笛",
+"y": 0.4
+},
+"dizi-schools": {
+"photo": "perf-005",
+"alt": "張老師在樂團中演奏竹笛",
+"y": 0.3
+},
+"dizi-first-dizi": {
+"photo": "class-109",
+"alt": "學生手持竹笛吹奏",
+"y": 0.3
+},
+"dizi-vs-xiao": {
+"photo": "class-103",
+"alt": "學生吹奏竹笛，牆上掛着多支竹製樂器",
+"y": 0.4
+},
+"dizi-learning-hk": {
+"photo": "class-045",
+"alt": "張老師與學生吹奏竹笛",
+"y": 0.3
+},
+"bamboo-care": {
+"photo": "class-097",
+"alt": "牆上掛着多支竹製樂器的練習室",
+"y": 0.3
+},
+"dizi-repertoire": {
+"photo": "class-054",
+"alt": "學生對着樂譜吹奏竹笛",
+"y": 0.4
+},
+"bamboo-on-stage": {
+"photo": "perf-032",
+"alt": "演奏者在咪高峰前吹奏洞簫",
+"y": 0.3
+},
+"xiao-breath": {
+"photo": "class-080",
+"alt": "學生直持洞簫吹奏",
+"y": 0.2
+},
+"xiao-long-note": {
+"photo": "class-088",
+"alt": "學生直持洞簫吹奏",
+"y": 0.2
+},
+"xiao-intonation": {
+"photo": "class-106",
+"alt": "學生直持洞簫吹奏",
+"y": 0.1
+},
+"xiao-restraint": {
+"photo": "perf-030",
+"alt": "張老師手持洞簫",
+"y": 0.2
+},
+"xiao-first-xiao": {
+"photo": "class-106",
+"alt": "學生手持洞簫",
+"y": 0.25
+},
+"xiao-adult": {
+"photo": "perf-007",
+"alt": "張老師在樂團中吹奏洞簫",
+"y": 0.3
+},
+"xiao-learn-piece": {
+"photo": "class-080",
+"alt": "學生對着譜架吹奏洞簫",
+"y": 0.35
+},
+"xiao-with-others": {
+"photo": "perf-032",
+"alt": "樂團中吹奏洞簫的演奏者",
+"y": 0.3
+},
+"drum-before-buying": {
+"photo": "class-005",
+"alt": "放在桌上的空靈鼓與學員",
+"y": 0.4
+},
+"drum-start": {
+"photo": "class-031",
+"alt": "學員圍坐桌前學敲空靈鼓",
+"y": 0.5
+},
+"drum-pulse": {
+"photo": "class-035",
+"alt": "學員在課堂上敲空靈鼓",
+"y": 0.3
+},
+"drum-improvise": {
+"photo": "class-008",
+"alt": "學員手持空靈鼓合照",
+"y": 0.3
+},
+"drum-arrangement": {
+"photo": "class-013",
+"alt": "學員手持不同顏色的空靈鼓",
+"y": 0.3
+},
+"drum-groups": {
+"photo": "class-016",
+"alt": "團體空靈鼓班合照",
+"y": 0.4
+},
+"drum-recording": {
+"photo": "class-015",
+"alt": "學員與空靈鼓合照",
+"y": 0.3
+},
+"drum-care": {
+"photo": "class-010",
+"alt": "課室內學員處理空靈鼓",
+"y": 0.4
+},
+"drum-performing": {
+"photo": "class-022",
+"alt": "空靈鼓班學員合照",
+"y": 0.5
+},
+"exam-roadmap": {
+"photo": "class-056",
+"alt": "學生手持考級證書",
+"y": 0.25
+},
+"exam-supporting-tests": {
+"photo": "class-084",
+"alt": "學生伏案書寫",
+"y": 0.4
+},
+"exam-pieces": {
+"photo": "class-065",
+"alt": "學生手持考級證書",
+"y": 0.3
+},
+"exam-accompanist": {
+"photo": "perf-015",
+"alt": "鋼琴與演奏者在音樂廳台上",
+"y": 0.6
+},
+"exam-mock-and-nerves": {
+"photo": "class-082",
+"alt": "學生手持考級證書與樂器",
+"y": 0.3
+},
+"exam-video": {
+"photo": "class-066",
+"alt": "學生手持證書站在練習室",
+"y": 0.55
+},
+"exam-review": {
+"photo": "class-069",
+"alt": "張老師與學生及證書合照",
+"y": 0.5
+},
+"exam-abrsm-paths": {
+"photo": "class-077",
+"alt": "張老師與學生及證書合照",
+"y": 0.5
+},
+"exam-vs-competition": {
+"photo": "class-038",
+"alt": "學生手持獎狀與老師合照",
+"y": 0.5
+},
+"exam-cross-instrument": {
+"photo": "class-073",
+"alt": "學生手持獎狀與張老師合照",
+"y": 0.4
+},
+"exam-adult": {
+"photo": "class-034",
+"alt": "學員手持證書與竹製樂器",
+"y": 0.5
+},
+"listening-how": {
+"photo": "perf-036",
+"alt": "由舞台望向音樂廳的燈光",
+"y": 0.5
+},
+"listening-live": {
+"photo": "perf-012",
+"alt": "學校禮堂內聽音樂會的學生",
+"y": 0.4
+},
+"ensemble-basics": {
+"photo": "perf-009",
+"alt": "樂團合奏",
+"y": 0.5
+},
+"parents-before-start": {
+"photo": "class-026",
+"alt": "張老師與小學生合照",
+"y": 0.4
+},
+"parents-daily": {
+"photo": "class-075",
+"alt": "小學生在課室吹奏",
+"y": 0.5
+},
+"parents-performance": {
+"photo": "class-033",
+"alt": "學生在禮堂台上合奏",
+"y": 0.5
+},
+"practice-time": {
+"photo": "class-107",
+"alt": "學生對着譜架練習",
+"y": 0.4
+},
+"practice-slow": {
+"photo": "class-089",
+"alt": "學生對着樂譜慢練",
+"y": 0.4
+},
+"practice-recording": {
+"photo": "class-072",
+"alt": "兩名學生一起練習",
+"y": 0.3
+},
+"practice-log": {
+"photo": "class-108",
+"alt": "學生在譜上做記號",
+"y": 0.3
+},
+"practice-ask": {
+"photo": "class-024",
+"alt": "張老師在課室與學生討論",
+"y": 0.4
+},
+"theory-pulse": {
+"photo": "class-096",
+"alt": "學生在課室看譜吹奏",
+"y": 0.5
+},
+"theory-duration": {
+"photo": "perf-027",
+"alt": "樂團演奏時譜架上的樂譜",
+"y": 0.5
+},
+"theory-pitch": {
+"photo": "perf-028",
+"alt": "譜架上的樂譜",
+"y": 0.5
+},
+"theory-expression": {
+"photo": "class-032",
+"alt": "張老師與學生在課室上課",
+"y": 0.5
+}
+}

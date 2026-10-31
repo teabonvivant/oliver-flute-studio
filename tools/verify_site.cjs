@@ -168,7 +168,7 @@ function verifyArticles(posts) {
     const schema = articleSchema(html, file);
     assert.equal(schema['@type'], 'Article', `${file} schema type mismatch`);
     assert.equal(schema.headline, post.title, `${file} schema headline mismatch`);
-    assert.equal(schema.author?.name, brand, `${file} author identity mismatch`);
+    assert.equal(schema.author?.name, '張家詠', `${file} author identity mismatch`);
     assert.equal(schema.publisher?.name, brand, `${file} publisher identity mismatch`);
     assert.equal(schema.dateModified, revisedDate, `${file} schema revision date mismatch`);
     assert(/^\d{4}-\d{2}-\d{2}$/.test(schema.datePublished), `${file} publication date`);
@@ -194,7 +194,7 @@ function verifyArticles(posts) {
 
 function verifyRoutesAndSitemap(allHtml) {
   const htmlFiles = allHtml.filter((file) => file !== 'home-v2.html');
-  assert.equal(htmlFiles.length, 31, `Expected 31 top-level HTML routes, found ${htmlFiles.length}`);
+  assert.equal(htmlFiles.length, 40, `Expected 40 top-level HTML routes, found ${htmlFiles.length}`);
   const sitemap = read('sitemap.xml');
   const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
   assert.equal(entries.length, htmlFiles.length - 1 + 88, 'Sitemap route count mismatch');

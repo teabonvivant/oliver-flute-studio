@@ -7,6 +7,7 @@
 ## 內容
 
 - 原有課程、學習指南、常見問題、聯絡頁及音樂手記。手記原稿是 `content/notes/*.md`（68 篇長文），舊站 20 篇在 `content/legacy-posts.json`，都發布到 `blog/`。
+- 手記封面由真實相片裁出：`content/note-covers.json`（相片、裁切、alt）→ `python3 tools/build_note_covers.py`。主題頁 `topic-<slug>.html`（9 個）。舊站純譜文章的說明在 `content/legacy-intros.json`。
 - 舊 200 條文章網址由 frontmatter 的 `replaces` 自動生成轉向（meta refresh＋canonical），舊 `archive/<slug>.html` 轉到 `blog/<slug>.html`。`content/new-*.md`、`legacy-curated.json`、`legacy-examples.txt` 是合併前的舊稿，建置不再使用。
 - 練習室：調音器（`tuner.html`）、節拍器（`metronome.html`）、長笛指法表（`flute-fingering.html`）、長音練習（`long-tone.html`）。全部在瀏覽器運行，咪高峰聲音只在本機分析。
 - 出品：譜間打譜軟件（`pujian.html`）、長笛紙牌及網上翻卡練習（`flute-cards.html`）、長笛演奏動畫試作及教學樂譜（`works.html`）。
