@@ -57,7 +57,7 @@ drum:['歡樂頌','小蜜蜂','友誼萬歲','帝女花','搖籃曲','生日歌'
 
 const ARCHIVE_NOTE='這是舊站 oliverflute.com 的文章，內容保留原貌，只修正排版。其中的考試日期、價錢和課程安排屬寫作當時的資料，請以現行公布為準。';
 
-export async function addLegacyPages({pages,add,hero,band,link,cta,para,faq,esc,WA,read,BRAND}){
+export async function addLegacyPages({pages,add,hero,band,link,cta,para,faq,esc,WA,read,BRAND,posts,LEGACY_LINKS}){
 const MEDIA=JSON.parse(await read('content/legacy-media.json'));
 const POSTS=JSON.parse(await read('content/legacy-posts.json'));
 const patch=(file,fn)=>{const p=pages.find(x=>x.file===file);if(!p)throw Error('legacy: missing page '+file);p.body=fn(p.body)};
@@ -109,16 +109,17 @@ cta('想學某一首曲？','告訴張老師你喜歡的歌，可以一起看看
 
 // 舊站手記
 const archiveDate=d=>d?d.replaceAll('-',' / '):'';
-const postsMeta=POSTS.map(p=>({...p,file:`archive/${p.slug}.html`,tag:(p.tags&&p.tags[0])||'舊站手記'}));
+const postsMeta=POSTS.map(p=>({...p,file:`blog/${p.slug}.html`,tag:(p.tags&&p.tags[0])||'舊站手記'}));
 const cardImg=p=>{const b=p.blocks.find(x=>x[0]==='img');return b?`<img src="${L}post-${b[1]}.webp" width="${b[2][2]}" height="${b[2][3]}" alt="" loading="lazy" decoding="async">`:''};
 add('archive.html','舊站手記','張老師在 oliverflute.com 寫過的音樂文章：長笛初學、呼吸、選笛、標準音、五聲音階、尺八、葫蘆絲、Trinity 與 ABRSM 考試等。',
 hero('舊站手記','來自 oliverflute.com 的二十篇文章，保留當年的寫法。')+tabs('archive.html')+
-`<section class="band archive-band"><p class="score-note">${ARCHIVE_NOTE}想讀整理後的新文章，可以看<a href="blog.html">200 篇音樂手記</a>。</p><div class="archive-list">${postsMeta.map(p=>`<a class="archive-card" href="${p.file}"><span class="archive-img">${cardImg(p)}</span><span class="archive-text"><small>${esc(p.tag)}${p.date?' · '+archiveDate(p.date):''}</small><strong>${esc(p.title)}</strong>${p.sub?`<em>${esc(p.sub)}</em>`:''}</span></a>`).join('')}</div></section>`,'gallery.html');
+`<section class="band archive-band"><p class="score-note">${ARCHIVE_NOTE}想讀整理後的新文章，可以看<a href="blog.html">音樂手記</a>。</p><div class="archive-list">${postsMeta.map(p=>`<a class="archive-card" href="${p.file}"><span class="archive-img">${cardImg(p)}</span><span class="archive-text"><small>${esc(p.tag)}${p.date?' · '+archiveDate(p.date):''}</small><strong>${esc(p.title)}</strong>${p.sub?`<em>${esc(p.sub)}</em>`:''}</span></a>`).join('')}</div></section>`,'gallery.html');
 
+const s_=x=>x.url.replace('blog/','');
 for(const p of postsMeta){
   const body=p.blocks.map(b=>b[0]==='img'?`<figure class="legacy-figure"><img src="../${L}post-${b[1]}.webp" width="${b[2][2]}" height="${b[2][3]}" alt="" loading="lazy" decoding="async"></figure>`:b[1].split('\n').map(x=>x.trim()).filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join('')).join('\n');
   add(p.file,p.title,(p.sub?p.sub+'。':'')+'張老師在舊站 oliverflute.com 的文章：'+p.title+'。',
-  `<div class="article-heading"><nav class="breadcrumb" aria-label="所在位置"><a href="../index.html">首頁</a><span>/</span><a href="../archive.html">舊站手記</a>${p.tags&&p.tags[0]?`<span>/</span><span>${esc(p.tags[0])}</span>`:''}</nav><h1>${esc(p.title)}</h1>${p.sub?`<p class="article-deck">${esc(p.sub)}</p>`:''}<p class="article-meta">${BRAND} · 舊站文章${p.date?' · '+archiveDate(p.date):''}</p></div><div class="article-shell"><aside class="article-side"><p>舊站文章</p><a href="../archive.html">全部舊站手記</a><a href="../blog.html">200 篇音樂手記</a><a href="../courses.html">課程</a></aside><article class="article-body legacy-post"><p class="legacy-note">${ARCHIVE_NOTE}</p>${body}<div class="article-end"><p>想把這些方法用在自己身上？</p><a class="btn primary" href="../contact.html">與張老師討論學習安排</a><a class="text-link" href="../archive.html">返回舊站手記</a></div></article></div>`,'gallery.html');
+  `<div class="article-heading"><nav class="breadcrumb" aria-label="所在位置"><a href="../index.html">首頁</a><span>/</span><a href="../blog.html">音樂手記</a><span>/</span><a href="../archive.html">舊站手記</a></nav><h1>${esc(p.title)}</h1>${p.sub?`<p class="article-deck">${esc(p.sub)}</p>`:''}<p class="article-meta">${BRAND} · 舊站文章${p.date?' · '+archiveDate(p.date):''}</p></div><div class="article-shell"><aside class="article-side"><p>舊站文章</p><a href="../archive.html">全部舊站手記</a><a href="../blog.html">音樂手記</a><a href="../courses.html">課程</a></aside><article class="article-body legacy-post"><p class="legacy-note">${ARCHIVE_NOTE}</p>${body}${(LEGACY_LINKS[p.slug]||[]).length?`<section class="article-sources"><h2>整理後的相關文章</h2><ul>${LEGACY_LINKS[p.slug].map(s=>posts.find(x=>x.slug===s)).map(x=>`<li><a href="${s_(x)}">${esc(x.title)}</a></li>`).join('')}</ul></section>`:''}<div class="article-end"><p>想把這些方法用在自己身上？</p><a class="btn primary" href="../contact.html">與張老師討論學習安排</a><a class="text-link" href="../archive.html">返回舊站手記</a></div></article></div>`,'blog.html');
 }
 
 // 空靈鼓配件

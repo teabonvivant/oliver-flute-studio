@@ -45,3 +45,5 @@
   items.forEach(el=>{const sib=[...el.parentElement.children].indexOf(el);el.style.setProperty('--d',Math.min(sib%6,5)*.06+'s');el.setAttribute('data-r','');io.observe(el)});
   if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.tilt').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(900px) rotateY(${x*5}deg) rotateX(${-y*5}deg)`});el.addEventListener('pointerleave',()=>el.style.transform='')});
 })();
+
+(()=>{const links=[...document.querySelectorAll('.article-side a[href^="#"]')];if(!links.length||!('IntersectionObserver'in window))return;const mark=id=>links.forEach(a=>a.getAttribute('href')==='#'+id?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'));const io=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting)mark(e.target.id)},{rootMargin:'-15% 0px -75% 0px'});for(const a of links){const t=document.getElementById(a.getAttribute('href').slice(1));if(t)io.observe(t)}})();

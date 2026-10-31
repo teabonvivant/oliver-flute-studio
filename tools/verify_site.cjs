@@ -7,8 +7,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const site = path.join(root, 'dist', 'assets');
-const revisedDate = '2026-09-24';
-const newPostsDate = '2026-09-22';
+const revisedDate = '2026-10-31';
 const brand = '張老師音樂學院';
 
 function read(file) {
@@ -142,70 +141,55 @@ function verifyBlogIndex(posts) {
 }
 
 function verifyArticles(posts) {
-  const source = JSON.parse(fs.readFileSync(path.join(root, 'content', 'legacy-curated.json'), 'utf8'));
-  const legacyBySlug = new Map(source.map((post) => [path.basename(post.url, '.html'), post]));
-  const filenames = listHtml(path.join(site, 'blog')).filter((file) => !fs.readFileSync(path.join(site, 'blog', file), 'utf8').includes('頁面已搬遷'));
-  assert.equal(filenames.length, 200, `Expected 200 article pages, found ${filenames.length}`);
-  assert.equal(posts.length, 200, `Expected 200 index records, found ${posts.length}`);
-  assert.equal(legacyBySlug.size, 100, 'Expected 100 source-dated legacy records');
-
-  const repeatedHeadings = new Map();
-  let revisedArticles = 0;
-  let newArticles = 0;
-  for (const filename of filenames) {
+  const blogFiles = listHtml(path.join(site, 'blog'));
+  const stubs = blogFiles.filter((file) => read(`blog/${file}`).includes('此頁已併入'));
+  const pagesOnly = blogFiles.filter((file) => !read(`blog/${file}`).includes('頁面已搬遷'));
+  assert.equal(stubs.length, 200, `Expected 200 old-URL redirects, found ${stubs.length}`);
+  assert.equal(pagesOnly.length, 88, `Expected 88 article pages, found ${pagesOnly.length}`);
+  assert.equal(posts.length, 88, `Expected 88 index records, found ${posts.length}`);
+  for (const file of stubs) {
+    const html = read(`blog/${file}`);
+    const to = firstMatch(html, /url=([^"]+)"/, `blog/${file} refresh target`);
+    const [target, anchor] = to.split('#');
+    assert(anchor, `blog/${file} should jump to a section`);
+    assertHas(read(`blog/${target}`), new RegExp(`<h2 id="${anchor}"`), `blog/${file} anchor ${anchor}`);
+    assertHas(html, new RegExp(`canonical" href="https?://[^"]+/blog/${target}"`), `blog/${file} canonical`);
+  }
+  let notes = 0;
+  for (const filename of pagesOnly) {
     const slug = path.basename(filename, '.html');
     const file = `blog/${filename}`;
     const html = read(file);
     const post = posts.find((item) => item.slug === slug);
     assert(post, `${file} is not in the blog index`);
+    assert(!/待核實|編輯備註/.test(html), `${file} leaks editorial notes`);
+    if (post.category === '舊站手記') continue;
+    notes += 1;
     const schema = articleSchema(html, file);
     assert.equal(schema['@type'], 'Article', `${file} schema type mismatch`);
     assert.equal(schema.headline, post.title, `${file} schema headline mismatch`);
-    assert.equal(schema.author?.['@type'], 'Organization', `${file} must use an organization byline`);
     assert.equal(schema.author?.name, brand, `${file} author identity mismatch`);
-    assert.equal(schema.publisher?.['@type'], 'Organization', `${file} publisher type mismatch`);
     assert.equal(schema.publisher?.name, brand, `${file} publisher identity mismatch`);
     assert.equal(schema.dateModified, revisedDate, `${file} schema revision date mismatch`);
-    assert.equal((html.match(new RegExp(`${brand} · `, 'g')) || []).length, 1, `${file} visible byline should identify the school once`);
-    assertHas(html, /張老師音樂學院 · (?:發表於|修訂於) 2026 \/ 09 \/ (?:22|24)/, `${file} visible date`);
+    assert(/^\d{4}-\d{2}-\d{2}$/.test(schema.datePublished), `${file} publication date`);
+    const faq = JSON.parse(firstMatch(html, /<script type="application\/ld\+json">(\{"@context":"https:\/\/schema.org","@type":"FAQPage"[\s\S]*?)<\/script>/, `${file} FAQ schema`));
+    assert(faq.mainEntity.length >= 3 && faq.mainEntity.every((q) => q.name && q.acceptedAnswer.text), `${file} FAQ entries`);
     const title = stripTags(firstMatch(html, /<h1\b[^>]*>([\s\S]*?)<\/h1>/, `${file} H1`));
     assert.equal(title, post.title, `${file} H1 title mismatch`);
     const body = firstMatch(html, /<article class="article-body">([\s\S]*?)<\/article>/, `${file} article body`);
     const sectionHeadings = [...body.matchAll(/<h2\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)];
-    assert(sectionHeadings.length > 0, `${file} has no body section headings`);
+    assert(sectionHeadings.length >= 3, `${file} has too few sections`);
     const toc = firstMatch(html, /<aside class="article-side">([\s\S]*?)<\/aside>/, `${file} table of contents`);
-    const legacy = legacyBySlug.get(slug);
-    if (legacy) assert.deepEqual(sectionHeadings.map((match) => match[1]), ['focus', 'practice'], `${file} legacy TOC anchor IDs changed`);
     for (const [, id, headingHtml] of sectionHeadings) {
-      const heading = stripTags(headingHtml);
-      assert(heading.length > 0, `${file} has an empty section heading`);
       const tocEntry = toc.match(new RegExp(`<a href="#${id}">([^<]+)<\\/a>`));
       assert(tocEntry, `${file} table of contents entry for ${id}`);
-      assert.equal(stripTags(tocEntry[1]), heading, `${file} table of contents label mismatch for ${id}`);
-      if (legacy) {
-        const key = `${id}:${heading}`;
-        repeatedHeadings.set(key, (repeatedHeadings.get(key) || 0) + 1);
-      }
+      assert.equal(stripTags(tocEntry[1]), stripTags(headingHtml), `${file} table of contents label mismatch for ${id}`);
     }
-    const illustrations = [...body.matchAll(/<img\b[^>]*>/g)];
-    assert.equal(illustrations.length, 2, `${file} should contain one editorial illustration and one diagram`);
-    for (const image of illustrations) assertHas(image[0], /\balt="[^"]+"/, `${file} illustration alt text`);
-
-    if (legacy) {
-      revisedArticles += 1;
-      assert.equal(schema.datePublished, legacy.date, `${file} original publication date mismatch`);
-      assertHas(html, /張老師音樂學院 · 修訂於 2026 \/ 09 \/ 24/, `${file} revised visible date`);
-    } else {
-      newArticles += 1;
-      assert.equal(schema.datePublished, newPostsDate, `${file} publication date mismatch`);
-      assertHas(html, /張老師音樂學院 · 發表於 2026 \/ 09 \/ 22/, `${file} published visible date`);
-    }
+    assert.equal(new Set(sectionHeadings.map((m) => m[1])).size, sectionHeadings.length, `${file} duplicate anchors`);
+    for (const image of body.matchAll(/<img\b[^>]*>/g)) assertHas(image[0], /\balt="[^"]+"/, `${file} illustration alt text`);
   }
-  assert.equal(revisedArticles, 100, `Expected 100 revised articles, found ${revisedArticles}`);
-  assert.equal(newArticles, 100, `Expected 100 newly published articles, found ${newArticles}`);
-  const maxHeadingRepeat = Math.max(...repeatedHeadings.values());
-  assert(maxHeadingRepeat <= 2, `Grounded section headings repeat more than twice (max ${maxHeadingRepeat})`);
-  return { articlePages: filenames.length, revisedArticles, newArticles, maxGroundedHeadingRepeat: maxHeadingRepeat };
+  assert.equal(notes, 68, `Expected 68 merged articles, found ${notes}`);
+  return { articlePages: pagesOnly.length, mergedArticles: notes, redirects: stubs.length };
 }
 
 function verifyRoutesAndSitemap(allHtml) {
@@ -213,14 +197,14 @@ function verifyRoutesAndSitemap(allHtml) {
   assert.equal(htmlFiles.length, 31, `Expected 31 top-level HTML routes, found ${htmlFiles.length}`);
   const sitemap = read('sitemap.xml');
   const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
-  assert.equal(entries.length, htmlFiles.length - 1 + 200 + 20, 'Sitemap route count mismatch');
+  assert.equal(entries.length, htmlFiles.length - 1 + 88, 'Sitemap route count mismatch');
   assert(entries.every((entry) => entry.includes(`<lastmod>${revisedDate}</lastmod>`)), 'Sitemap lastmod values do not match the latest revision date');
   const urls = entries.map((entry) => firstMatch(entry, /<loc>([^<]+)<\/loc>/, 'Sitemap location'));
   assert.equal(new Set(urls).size, urls.length, 'Sitemap contains duplicate URLs');
-  assert.equal(urls.filter((url) => url.includes('/blog/')).length, 200, 'Sitemap should list all 200 article pages');
-  assert.equal(urls.filter((url) => url.includes('/archive/')).length, 20, 'Sitemap should list all 20 archived legacy posts');
+  assert.equal(urls.filter((url) => url.includes('/blog/')).length, 88, 'Sitemap should list the 68 merged articles and 20 old-site posts');
+  assert.equal(urls.filter((url) => url.includes('/archive/')).length, 0, 'Archive stubs stay out of the sitemap');
   assertHas(read('robots.txt'), /Sitemap: https:\/\/\S+\/sitemap\.xml/, 'Robots sitemap link');
-  return { topLevelRoutes: htmlFiles.length, sitemapRoutes: entries.length, articleSitemapRoutes: 200 };
+  return { topLevelRoutes: htmlFiles.length, sitemapRoutes: entries.length, articleSitemapRoutes: 88 };
 }
 
 function main() {

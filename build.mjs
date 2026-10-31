@@ -1,7 +1,7 @@
 import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { join, resolve, dirname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
-import { navItems } from './tools/render-site.mjs';
+import { navItems, REDIRECTS } from './tools/render-site.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const dist = resolve(root, "dist");
@@ -11,7 +11,7 @@ if (!dist.startsWith(resolve(root) + sep) || dist !== join(root, 'dist')) throw 
 await rm(dist, { recursive: true, force: true });
 await mkdir(assets, { recursive: true });
 
-for (const directory of ["blog", "archive", "assets/images/diagrams", "assets/fonts/site", "assets/fonts/manrope"]) {
+for (const directory of ["blog", "archive", "assets/fonts/site", "assets/fonts/manrope"]) {
   await cp(join(root, directory), join(assets, directory), { recursive: true });
 }
 const publicFiles=['assets/css/editorial.css','assets/css/studio.css','assets/css/theme.css','assets/css/legacy.css','assets/js/legacy.js','assets/js/studio.js','assets/js/academy.js','assets/js/journal.js','assets/js/blog-index.js','assets/js/blog-search.js','assets/css/home-v2.css','assets/js/home-v2.js','assets/js/subnav.js','assets/fonts/fonts.css','assets/vendor/gsap.min.js','assets/vendor/ScrollTrigger.min.js','assets/vendor/lenis.min.js','assets/fonts/OFL.txt','assets/images/teacher-profile-original.png','assets/images/teacher-profile.webp','assets/images/brand-mark-original.png'];
@@ -44,8 +44,6 @@ for (const from of ["drum-lesson1","drum-lesson2","drum-lesson3","drum-lesson4",
 await writeFile(join(assets, "blog", "categories.html"), stub("../archive.html"), "utf8");
 await mkdir(join(assets, "blog", "categories"), { recursive: true });
 for (const c of ["音樂雜談","樂器與考試","練習心得","空靈鼓"]) await writeFile(join(assets, "blog", "categories", c + ".html"), stub("../../archive.html"), "utf8");
-const oldPosts = JSON.parse(await readFile(join(root, "content/legacy-posts.json"), "utf8")).map((p) => p.slug);
-for (const slug of oldPosts) await writeFile(join(assets, "blog", slug + ".html"), stub("../archive/" + slug + ".html"), "utf8");
 const emptyPosts = { "2026": "flute-course.html", "abrsm-flute-exam-hong-kong-guide": "exam-guide.html", "adult-beginner-flute-lessons-hong-kong": "adult-beginner.html", "flute-lesson-price-hong-kong-2025": "flute-course.html", "flute-no-sound-beginner-embouchure-hong-kong": "flute-course.html" };
 for (const [slug, to] of Object.entries(emptyPosts)) await writeFile(join(assets, "blog", slug + ".html"), stub("../" + to), "utf8");
 {
@@ -54,6 +52,7 @@ for (const [slug, to] of Object.entries(emptyPosts)) await writeFile(join(assets
   const page = (await readFile(join(assets, "home-v2.html"), "utf8"))
     .replace('<link rel="stylesheet" href="assets/fonts/home/fonts.css">', () => `<style>${fontsCss}</style>`)
     .replace('<link rel="stylesheet" href="assets/css/home-v2.css">', () => `<style>${homeCss}</style>`)
+    .replace(/blog\/([a-z0-9-]+)\.html/g, (x, slug) => REDIRECTS[slug] ? "blog/" + REDIRECTS[slug] : x)
     .replace(/(<nav class="links" id="nav" aria-label="主要導覽">)[\s\S]*?(<\/nav>)/, (_, a, b) => a + navItems("", "", "index.html") + b);
   // home-v2 is the homepage: take canonical and JSON-LD from the generated index, keep the old page out of the build
   const oldIndex = await readFile(join(assets, "index.html"), "utf8");
