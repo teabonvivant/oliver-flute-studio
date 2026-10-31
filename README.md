@@ -34,3 +34,7 @@ node tools/verify_site.cjs
 `assets/fonts/site/` 只收錄本站用到的字（Noto Serif TC 400／600，第 0 塊為最常用字並預載，其餘每 150 字一塊）。新增或修改文章後，如 `node build.mjs` 提示「字型未收錄」，下載 [Noto Serif TC 可變字型](https://github.com/google/fonts/raw/main/ofl/notoseriftc/NotoSerifTC%5Bwght%5D.ttf) 後執行 `python3 tools/build_fonts.py <檔案>`（需要 `pip install fonttools brotli`）。
 
 插圖 `assets/images/editorial/` 每張另有 `-640`、`-1024` 縮圖供手機使用，新增插圖時一併產生。
+
+## 音樂手記文內插圖
+
+144 張仿 2015 年手機相的插圖（`assets/images/notes/<slug>-<序號>[-640].webp`），插入位置在 `content/note-figures.json`（`after`＝段落開頭文字，找不到段落時建置會報錯）。改了文章段落開頭要同步改這個檔。提示詞、濾鏡及驗收記錄不放公開 repo，見本機 `_team_runs/note-illustrations-20261031/` 及私人 repo `oliver-flute-academy` 分支 `note-illustrations-20261031`。
