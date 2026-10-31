@@ -1,0 +1,883 @@
+{
+"flute-adult": [
+{
+"id": "flute-adult-1",
+"after": "用錄音代替印象。錄一小段，下次",
+"alt": "下班後穿恤衫的成人在飯廳吹長笛，手機靠杯錄音"
+},
+{
+"id": "flute-adult-2",
+"after": "舊笛盒的扣子仍很熟悉，手指卻比記憶",
+"alt": "中年人的雙手打開放了多年的舊笛盒，三節長笛躺在盒內"
+}
+],
+"flute-breathing": [
+{
+"id": "flute-breathing-1",
+"after": "先自然吸氣，用舒服的長度吹一個音",
+"alt": "中學生背影站着吹長笛，肩膊自然放低"
+},
+{
+"id": "flute-breathing-2",
+"after": "用鉛筆把可能的換氣位圈起來，寫成逗",
+"alt": "譜架托邊放着鉛筆，譜紙斜放等着標換氣位"
+}
+],
+"flute-care": [
+{
+"id": "flute-care-1",
+"after": "逐節拆開時，握住管身合適的位置，不要",
+"alt": "雙手握着管身無鍵處拆開長笛，旁邊放着清潔棒和軟布"
+},
+{
+"id": "flute-care-2",
+"after": "抹過水氣的濕布，不要和笛一起悶在盒",
+"alt": "關好的笛盒放在書枱，濕布搭在椅背上，窗外下雨"
+}
+],
+"flute-choose-teacher": [
+{
+"id": "flute-choose-teacher-1",
+"after": "上第一堂時，留意老師示範之後有沒有",
+"alt": "老師把長笛放在膝上，看着學生試吹並用手勢解釋"
+},
+{
+"id": "flute-choose-teacher-2",
+"after": "地點和時間會影響能否持續上課。再好",
+"alt": "放學的孩子坐在巴士上，膝上抱着長笛盒望向窗外"
+}
+],
+"flute-daily-practice": [
+{
+"id": "flute-daily-practice-1",
+"after": "這段時間不必追求音域寬廣。站穩，把",
+"alt": "清晨窗邊，一手調高譜架，另一手垂下握着長笛"
+},
+{
+"id": "flute-daily-practice-2",
+"after": "休息不等於離開音樂。放下長笛後，可以",
+"alt": "放下長笛，坐在梳化聽手機錄音，手指在腿上輕拍"
+}
+],
+"flute-ensemble": [
+{
+"id": "flute-ensemble-1",
+"after": "休息數小節後，先認出鋼琴的和聲或節奏",
+"alt": "長笛手站在鋼琴旁放低長笛，等候鋼琴的提示"
+},
+{
+"id": "flute-ensemble-2",
+"after": "把長笛拿到舒服的位置，手指預先放好",
+"alt": "校園樂團排練時，長笛手已舉好笛等候入口"
+},
+{
+"id": "flute-ensemble-3",
+"after": "譜架放在既能看譜、也看得見伙伴的位置",
+"alt": "兩張椅成 V 字相向，譜架放低放在外側"
+}
+],
+"flute-expression": [
+{
+"id": "flute-expression-1",
+"after": "可以在譜上畫一條簡單曲線，標出最想",
+"alt": "老師在綠黑板用粉筆畫一條慢慢升高的曲線"
+},
+{
+"id": "flute-expression-2",
+"after": "初學者常把顫音做得太密或太平均。可以",
+"alt": "琴頂的木殼節拍器擺動中，旁邊有人持着長笛"
+}
+],
+"flute-fingers": [
+{
+"id": "flute-fingers-1",
+"after": "不吹奏也可以觀察。用自然手型輕輕交替",
+"alt": "學生坐着把長笛放低，不吹奏，只看手指"
+}
+],
+"flute-first-flute": [
+{
+"id": "flute-first-flute-1",
+"after": "試吹前準備三樣東西：一段熟悉的短句、",
+"alt": "成人在樂器店試音間，逐支拿起長笛比較"
+},
+{
+"id": "flute-first-flute-3",
+"after": "老師吹得出而自己吹不出的音，多半要回到",
+"alt": "修理枱上長笛裹在布中，技師用小燈檢查一段按鍵"
+}
+],
+"flute-first-repertoire": [
+{
+"id": "flute-first-repertoire-1",
+"after": "挑曲時先看最難的中段和結尾，只試開頭",
+"alt": "長者的手在枱面輕拍，曲集翻到中段攤開"
+}
+],
+"flute-intonation": [
+{
+"id": "flute-intonation-1",
+"after": "練習可以分兩段：先用儀器認識偏差，再",
+"alt": "手把小型調音器翻轉蓋在譜架托上，屏幕朝下"
+},
+{
+"id": "flute-intonation-2",
+"after": "一般來說，管身還涼時音高偏低，吹暖後",
+"alt": "長者坐在天花冷氣風口下，手持長笛準備吹奏"
+}
+],
+"flute-registers": [
+{
+"id": "flute-registers-1",
+"after": "音頭吹清楚了，再延長音值，讓低音有中",
+"alt": "老師雙手拿着學生長笛的尾段，檢查低音封鍵"
+},
+{
+"id": "flute-registers-2",
+"after": "用節拍器保持緩慢舒服的拍子，兩個音各",
+"alt": "午休時學生在學校走廊窗台邊，跟小節拍器慢練長笛"
+}
+],
+"flute-tone": [
+{
+"id": "flute-tone-1",
+"after": "鏡子可以幫你察覺下巴有沒有過度擠壓",
+"alt": "書枱上放着長笛頭管、小圓鏡和手機"
+},
+{
+"id": "flute-tone-2",
+"after": "調整前後各吹同一句容易的旋律，比較呼",
+"alt": "坐着吹長笛的人雙腳平放地上，背不靠椅背"
+},
+{
+"id": "flute-tone-3",
+"after": "聲音結束後，保留一瞬間的安靜，才把長",
+"alt": "由側幕看學生演奏後，長笛仍舉着，未有放下"
+}
+],
+"dizi-air": [
+{
+"id": "dizi-air-2",
+"after": "遍與遍之間放下笛子，短休息一下",
+"alt": "成人坐在沙發，竹笛放在腿上，一手輕扶休息"
+},
+{
+"id": "dizi-air-3",
+"after": "以舒服速度吹這兩拍，連續幾次都保持拍子",
+"alt": "手指輕推木製節拍器的滑錘，放在鋼琴面上"
+}
+],
+"dizi-fingers": [
+{
+"id": "dizi-fingers-1",
+"after": "檢查時一次只加一根手指。由較容易的指法",
+"alt": "一手兩指輕按竹笛音孔，第三指懸在下一孔上"
+}
+],
+"dizi-first-dizi": [
+{
+"id": "dizi-first-dizi-1",
+"after": "D 調比 F、G 調長，孔距較闊，聲音較低而厚。",
+"alt": "三支長短不同的竹笛並排在格仔枱布上"
+}
+],
+"dizi-learning-hk": [
+{
+"id": "dizi-learning-hk-1",
+"after": "入門可以把自然發聲與簡短的音樂遊戲結合。",
+"alt": "小朋友背影吹竹笛，家長坐在對面拿笛等回應"
+},
+{
+"id": "dizi-learning-hk-2",
+"after": "可以用每日十分鐘口風和長音建立節奏。",
+"alt": "下班後在飯枱解開笛袋，準備只練一小段"
+},
+{
+"id": "dizi-learning-hk-3",
+"after": "隔週帶回一段代表性錄音和具體問題",
+"alt": "師生在課室一起聽手機錄音，笛子收在布袋內"
+}
+],
+"dizi-membrane": [
+{
+"id": "dizi-membrane-1",
+"after": "流程固定下來，每次才有得比較。",
+"alt": "雙手捏着半透明笛膜，正放到竹笛膜孔上"
+},
+{
+"id": "dizi-membrane-2",
+"after": "膜面破損或黏合不穩，就要重新處理",
+"alt": "竹笛膜孔上的笛膜裂開一道縫，邊緣翹起"
+}
+],
+"dizi-phrasing": [
+{
+"id": "dizi-phrasing-1",
+"after": "學民歌句法可以先唱，不必急着加技巧。",
+"alt": "成人背影站在窗前，放下竹笛，舉手隨歌聲劃句"
+},
+{
+"id": "dizi-phrasing-2",
+"after": "句尾停頓也要有拍子。若接着有伴奏或下一句",
+"alt": "吹奏者與鋼琴手在句尾一起停住等待"
+}
+],
+"dizi-repertoire": [
+{
+"id": "dizi-repertoire-1",
+"after": "四小節也有起伏。先唱一次，找出哪裏像開口",
+"alt": "手拿鉛筆在譜架的樂譜上標記換氣位置"
+},
+{
+"id": "dizi-repertoire-2",
+"after": "上台作品要有完整的開頭與結尾",
+"alt": "學生背對鏡頭在空禮堂舞台上吹竹笛"
+}
+],
+"dizi-schools": [
+{
+"id": "dizi-schools-1",
+"after": "北派則常與北方的戲曲和民間吹奏連在一起",
+"alt": "手從布笛袋抽出短笛，旁邊留着一支長笛"
+},
+{
+"id": "dizi-schools-2",
+"after": "把觀察寫成可聽見的動作。",
+"alt": "戴耳機的人在書桌前一邊聽錄音一邊寫筆記"
+}
+],
+"dizi-start": [
+{
+"id": "dizi-start-1",
+"after": "入門先認清這三種孔：吹孔、膜孔、按音孔。",
+"alt": "一支真實竹笛平放枱上，可見吹孔、膜孔和按音孔"
+},
+{
+"id": "dizi-start-2",
+"after": "若一換指便失去聲音，先檢查封孔與手形",
+"alt": "年長學生坐着試吹竹笛，只見側後的頭和肩"
+}
+],
+"dizi-vs-xiao": [
+{
+"id": "dizi-vs-xiao-1",
+"after": "所以辨認時先看吹口結構，再看持法",
+"alt": "竹笛與南簫並放枱上，比較側吹孔和管端吹口"
+},
+{
+"id": "dizi-vs-xiao-2",
+"after": "然後看身體。有機會便兩件都試持",
+"alt": "成人由身後所見試持洞簫，留意頭頸是否舒服"
+}
+],
+"bamboo-care": [
+{
+"id": "bamboo-care-1",
+"after": "濕度變化、溫差和碰撞都會影響竹身。",
+"alt": "雨天巴士上，長形笛袋放在膝上，旁邊是濕摺傘"
+},
+{
+"id": "bamboo-care-2",
+"after": "樂器和袋子分開檢查。把濕樂器長時間悶在袋裏",
+"alt": "玄關處手用軟布輕抹竹笛，濕笛袋掛在一旁"
+},
+{
+"id": "bamboo-care-3",
+"after": "定期觀察原有的細紋、接口和笛膜狀態",
+"alt": "手持竹笛對光，竹身上有順紋的細裂紋"
+}
+],
+"bamboo-on-stage": [
+{
+"id": "bamboo-on-stage-1",
+"after": "彩排先用固定短句比較角度和距離",
+"alt": "彩排時吹笛者站在咪高峰架旁，咪高峰放在氣流以外"
+},
+{
+"id": "bamboo-on-stage-2",
+"after": "彩排時，把走到台前、預備與結尾一起走一遍。",
+"alt": "演奏者手持洞簫，從後台走向舞台的光"
+}
+],
+"xiao-adult": [
+{
+"id": "xiao-adult-1",
+"after": "晚間不便出聲，可以先讀譜",
+"alt": "晚上坐在沙發上，簫放在腿上默想指序"
+},
+{
+"id": "xiao-adult-2",
+"after": "一堂課不應只學新曲",
+"alt": "課堂尾段，記事簿上寫回家任務，學生膝上平放洞簫"
+}
+],
+"xiao-breath": [
+{
+"id": "xiao-breath-1",
+"after": "指法不用急着改，整首曲也不用",
+"alt": "學生側後方背影，持簫時肩膊放鬆，頭頸自然"
+},
+{
+"id": "xiao-breath-2",
+"after": "小幅度調整吹口角度，每次只改一項",
+"alt": "雙手鬆開，洞簫橫放膝上，坐在家中沙發稍歇"
+},
+{
+"id": "xiao-breath-3",
+"after": "聲音有氣聲而沒有核心",
+"alt": "手握洞簫上段，頂端 U 形吹口朝向鏡頭"
+}
+],
+"xiao-first-xiao": [
+{
+"id": "xiao-first-xiao-1",
+"after": "規格不同的洞簫，孔距和重量都可能不同",
+"alt": "樂器店櫃面上三支長短不同的洞簫，一隻手拿起其中一支"
+}
+],
+"xiao-intonation": [
+{
+"id": "xiao-intonation-1",
+"after": "學生只盯數字的話",
+"alt": "調音器斜放枱邊，持簫的人轉身向窗，先用耳朵聽"
+},
+{
+"id": "xiao-intonation-2",
+"after": "半孔的位置不能只看手指外觀",
+"alt": "手指只蓋住洞簫音孔一部分，另一半仍露出"
+}
+],
+"xiao-learn-piece": [
+{
+"id": "xiao-learn-piece-1",
+"after": "第二遍只聽句子",
+"alt": "一手握鉛筆在斜放的譜上做記號，簫仍收在布袋內"
+},
+{
+"id": "xiao-learn-piece-2",
+"after": "第三遍跟着輕拍拍子",
+"alt": "乘車時戴耳機聽錄音，手在膝上輕拍拍子"
+}
+],
+"xiao-long-note": [
+{
+"id": "xiao-long-note-1",
+"after": "選舒服音區的一個音",
+"alt": "放學後空課室，學生背影站着吹簫，肩膊放鬆"
+},
+{
+"id": "xiao-long-note-2",
+"after": "短句可以先跟",
+"alt": "手指按停書櫃上的機械節拍器，另一手垂下握着簫"
+}
+],
+"xiao-restraint": [
+{
+"id": "xiao-restraint-1",
+"after": "請老師或伙伴只聽錄音",
+"alt": "兩人並肩坐在走廊長椅，聽手機錄音，簫橫放膝上"
+},
+{
+"id": "xiao-restraint-2",
+"after": "與古琴合作，先聽對方的句子與音區",
+"alt": "持簫者放下洞簫，先聽對面古琴彈一句"
+}
+],
+"xiao-with-others": [
+{
+"id": "xiao-with-others-1",
+"after": "錄音時把裝置放在能同時",
+"alt": "手機架在椅上，同時收錄鋼琴和洞簫，兩人背向鏡頭排練"
+},
+{
+"id": "xiao-with-others-2",
+"after": "先在家中不同位置聽一聽",
+"alt": "家人站在窄走廊背向鏡頭，隔着半掩房門聽簫聲"
+}
+],
+"theory-duration": [
+{
+"id": "theory-duration-1",
+"after": "不同樂器的",
+"alt": "小朋友兩手提着鼓槌停在空靈鼓上方，不再敲擊"
+},
+{
+"id": "theory-duration-2",
+"after": "最常見的偏差，是長音不夠長",
+"alt": "綠黑板上四個粉筆方格，橫線貫穿三格，第四格一點"
+}
+],
+"theory-expression": [
+{
+"id": "theory-expression-1",
+"after": "與伙伴合奏時",
+"alt": "禮堂舞台邊，兩名長笛學生對望預備，一人提起笛頭作提示"
+},
+{
+"id": "theory-expression-2",
+"after": "請一位伙伴不看譜聽你演奏",
+"alt": "友人背向鏡頭坐沙發，聽對面的人敲空靈鼓，譜合上放旁邊"
+}
+],
+"theory-pitch": [
+{
+"id": "theory-pitch-2",
+"after": "練完可以隨機指向曲中一個受影響的音",
+"alt": "學生手指點向譜架上的譜，另一手持長笛，正在自我測驗"
+}
+],
+"theory-pulse": [
+{
+"id": "theory-pulse-1",
+"after": "試一首熟悉的歌",
+"alt": "書枱底下，學生校鞋腳尖微微抬起，正在踏拍子"
+},
+{
+"id": "theory-pulse-2",
+"after": "最易混淆的是 3/4",
+"alt": "書枱上兩行六粒積木，一行分三組兩粒，一行分兩組三粒"
+},
+{
+"id": "theory-pulse-3",
+"after": "先決條件是拍子不動",
+"alt": "雙手在枱面分工，左手掌拍穩拍點，右手手指點出節奏"
+}
+],
+"drum-arrangement": [
+{
+"id": "drum-arrangement-1",
+"after": "把兩種力度放到不同的手上，也",
+"alt": "側面低角度拍雙手持槌，一手抬高一手貼近鼓面"
+},
+{
+"id": "drum-arrangement-2",
+"after": "練的時候先固定低音的位置，再",
+"alt": "老師用鼓槌指着鼓上的低音音舌"
+}
+],
+"drum-before-buying": [
+{
+"id": "drum-before-buying-1",
+"after": "好看的外觀、好聽的示範都只是",
+"alt": "雙手在櫃枱前由底部托起一面啞黑空靈鼓"
+},
+{
+"id": "drum-before-buying-2",
+"after": "把旋律用到的音列成一行，標出",
+"alt": "手持鉛筆對照筆記簿，逐一核對鼓上的音"
+},
+{
+"id": "drum-before-buying-3",
+"after": "空靈鼓通常指鋼舌鼓，表面有切",
+"alt": "空靈鼓與手碟並放，切割音舌和凹凸音區不同"
+}
+],
+"drum-care": [
+{
+"id": "drum-care-1",
+"after": "每次敲完，用乾淨的軟布輕抹鼓",
+"alt": "手持灰色軟布輕抹香檳金鼓面"
+},
+{
+"id": "drum-care-2",
+"after": "收納袋也要乾燥。鼓抹乾了，放",
+"alt": "手伸入收納袋摸內襯，背後窗上布滿水氣"
+}
+],
+"drum-groups": [
+{
+"id": "drum-groups-1",
+"after": "活動開始，先示範停下的手勢，",
+"alt": "大人舉起手掌示意停下，孩子持槌坐在鼓前"
+},
+{
+"id": "drum-groups-2",
+"after": "回答總是提早進來，就先把槌放",
+"alt": "孩子把鼓槌放在膝上，等大人敲完一句"
+},
+{
+"id": "drum-groups-3",
+"after": "器材不足的話，輪替聆聽與演奏",
+"alt": "課室內學生分組，每組一人敲鼓、其他人聽"
+}
+],
+"drum-improvise": [
+{
+"id": "drum-improvise-1",
+"after": "用兩個音敲一個四拍問句。回答",
+"alt": "坐在沙發上用兩支槌在兩片音舌間來回"
+},
+{
+"id": "drum-improvise-2",
+"after": "錄下來，取一個簡短的名字，例",
+"alt": "下雨天窗邊的空靈鼓，窗上掛着雨水"
+}
+],
+"drum-performing": [
+{
+"id": "drum-performing-1",
+"after": "只坐好敲兩下，發現不到這些問題",
+"alt": "彩排時檢查譜架、咪高峰與雙手路線"
+},
+{
+"id": "drum-performing-2",
+"after": "需要調整時，先減少鼓聲的密度，",
+"alt": "長笛手站着吹奏，旁邊有人坐着敲空靈鼓"
+}
+],
+"drum-pulse": [
+{
+"id": "drum-pulse-1",
+"after": "能穩定跟拍後，短暫關掉拍點，",
+"alt": "手指按停木製節拍器，另一手持槌在鼓旁等候"
+},
+{
+"id": "drum-pulse-2",
+"after": "先用兩個音做四拍短句，敲兩拍",
+"alt": "休止時雙手持槌靜止，懸在鼓面上方預備"
+},
+{
+"id": "drum-pulse-3",
+"after": "把力度放輕後，聽音頭是否仍然清",
+"alt": "夜裏客廳一盞枱燈下輕敲鼓，睡房門半掩"
+}
+],
+"drum-recording": [
+{
+"id": "drum-recording-1",
+"after": "先把手機放穩，避開鼓身，也避開",
+"alt": "手機架在膠凳上，對着旁邊實木枱上的空靈鼓"
+},
+{
+"id": "drum-recording-2",
+"after": "先定一個聆聽目標，音頭、節奏或",
+"alt": "戴耳筒回聽錄音，手持鉛筆在小簿上作記號"
+}
+],
+"drum-start": [
+{
+"id": "drum-start-1",
+"after": "分開走的好處，是容易看出不穩來",
+"alt": "成人學員坐在鼓前，雙肩放鬆開始第一堂"
+},
+{
+"id": "drum-start-2",
+"after": "先用很小的動作敲同一個音，找一",
+"alt": "手指鬆握鼓槌，槌頭剛離開音舌"
+},
+{
+"id": "drum-start-3",
+"after": "每手分別敲四下，保持相同速度，",
+"alt": "長者左手持槌單獨練習，右手放在枱上休息"
+}
+],
+"listening-how": [
+{
+"id": "listening-how-1",
+"after": "播放音量盡量相近，否則較響的版",
+"alt": "手指調校小音響音量鈕，旁邊疊着兩隻 CD 盒"
+},
+{
+"id": "listening-how-2",
+"after": "伴奏常有反覆音型或節奏，重複之",
+"alt": "一隻手在膝頭輕拍，跟着伴奏的節奏"
+},
+{
+"id": "listening-how-3",
+"after": "同一旋律用長笛、竹笛或鋼琴演奏",
+"alt": "長笛與竹笛並放在琴蓋上，材質形狀完全不同"
+}
+],
+"listening-live": [
+{
+"id": "listening-live-1",
+"after": "出發前看清場地、開場時間與入場",
+"alt": "開場前的觀眾席，膝上放着節目單，遠處舞台未開始"
+},
+{
+"id": "listening-live-2",
+"after": "表演不一定要等大舞台。邀請一兩",
+"alt": "家人坐在沙發上，孩子在客廳另一邊預備演奏"
+}
+],
+"ensemble-basics": [
+{
+"id": "ensemble-basics-1",
+"after": "站在樂器旁邊的感覺，與觀眾席可",
+"alt": "手舉手機在禮堂中段，錄遠處舞台上的合奏"
+},
+{
+"id": "ensemble-basics-2",
+"after": "開始前約定誰帶領，並確認大家看",
+"alt": "兩名學生舉起長笛，由背後看肩膀吸氣準備"
+},
+{
+"id": "ensemble-basics-3",
+"after": "竹笛不必一直突出，鋼琴或長笛也",
+"alt": "竹笛手站在鋼琴旁，與鋼琴手一起排練"
+}
+],
+"exam-abrsm-paths": [
+{
+"id": "exam-abrsm-paths-1",
+"after": "書面知識放回樂器上，就不會",
+"alt": "學生握鉛筆寫樂理練習，長笛一截放在本子後面"
+},
+{
+"id": "exam-abrsm-paths-2",
+"after": "一欄記演奏準備，曲目和音樂能",
+"alt": "老師和學生的手一起指着手畫兩欄紙"
+}
+],
+"exam-accompanist": [
+{
+"id": "exam-accompanist-1",
+"after": "然後用較慢的速度接一次完整結",
+"alt": "學生持長笛站在鋼琴旁，與伴奏老師合奏"
+},
+{
+"id": "exam-accompanist-2",
+"after": "伴奏的前奏和長休止，自己也要",
+"alt": "學生坐沙發戴耳機，手指在膝上數伴奏休止"
+}
+],
+"exam-adult": [
+{
+"id": "exam-adult-1",
+"after": "幾次短練，往往勝過偶爾一次長",
+"alt": "下班未換衫，直接拿起長笛練上次卡住的地方"
+},
+{
+"id": "exam-adult-2",
+"after": "成人容易憑印象判斷，今天累就",
+"alt": "成人在停好的車內用耳機回聽錄音"
+}
+],
+"exam-cross-instrument": [
+{
+"id": "exam-cross-instrument-1",
+"after": "要看出哪些真的共用，可以把同",
+"alt": "樂器收好放在枱上，先用雙手拍節奏"
+},
+{
+"id": "exam-cross-instrument-2",
+"after": "吹口、持握和指法，每次換都要",
+"alt": "長笛頭管、笛子和洞簫的吹口並排放在絨布上"
+}
+],
+"exam-mock-and-nerves": [
+{
+"id": "exam-mock-and-nerves-1",
+"after": "模擬前準備好物品和流程，錄下",
+"alt": "課室模擬考，學生背影對着低頭聆聽的老師"
+},
+{
+"id": "exam-mock-and-nerves-2",
+"after": "考前保留熟悉的安排，例如整理",
+"alt": "考前坐着抹乾雙手，笛盒放在膝上"
+},
+{
+"id": "exam-mock-and-nerves-3",
+"after": "在家就可以模擬。先把長笛放好",
+"alt": "笛已放好，人先走到譜架前站穩"
+}
+],
+"exam-pieces": [
+{
+"id": "exam-pieces-1",
+"after": "選一句旋律，標出主要重音、方",
+"alt": "老師在半空畫出樂句弧線，學生放低長笛細看"
+},
+{
+"id": "exam-pieces-2",
+"after": "要換譜或調整伴奏，事前約定動",
+"alt": "兩首曲之間，學生換譜，伴奏雙手放在膝上等候"
+}
+],
+"exam-review": [
+{
+"id": "exam-review-1",
+"after": "先與老師一起讀評語，再選一段",
+"alt": "師生各戴一邊耳機，手機和反放的紙在枱上"
+},
+{
+"id": "exam-review-2",
+"after": "檢討之外，也留時間讀新譜、合",
+"alt": "兩個學生坐着共用譜架，一起吹長笛和笛子"
+}
+],
+"exam-roadmap": [
+{
+"id": "exam-roadmap-1",
+"after": "每週目標也可拆成固定幾格。",
+"alt": "翻開的練習本有手畫方格，手指點着其中一格"
+},
+{
+"id": "exam-roadmap-2",
+"after": "曲目可由四小節開始，選短段建",
+"alt": "小孩子站在調低的譜架前，只吹一小段"
+},
+{
+"id": "exam-roadmap-3",
+"after": "先讀結構、調性、奏法和速度轉",
+"alt": "厚譜冊紙邊貼滿彩色索引貼，手指翻開其中一處"
+}
+],
+"exam-supporting-tests": [
+{
+"id": "exam-supporting-tests-1",
+"after": "視奏有步驟可練，不全靠天份。",
+"alt": "老師把一張新譜放上譜架，學生準備視奏"
+},
+{
+"id": "exam-supporting-tests-2",
+"after": "練習可以按模唱、節奏回應、和聲",
+"alt": "老師按着兩三個琴鍵，孩子的手搭在鋼琴邊聽"
+}
+],
+"exam-video": [
+{
+"id": "exam-video-1",
+"after": "試錄不提交，用來提早發現演奏",
+"alt": "學生站在地上膠紙記號，前面手機架在腳架上"
+},
+{
+"id": "exam-video-2",
+"after": "裝置要放穩，電量和儲存空間要",
+"alt": "家長雙手夾緊腳架上的手機，接着充電線"
+}
+],
+"exam-vs-competition": [
+{
+"id": "exam-vs-competition-1",
+"after": "目標要落到這個學生身上。想用",
+"alt": "門口望入小房間，有書枱、譜架和鋼琴"
+},
+{
+"id": "exam-vs-competition-2",
+"after": "若主要目的是比賽，曲目和舞台上",
+"alt": "學生站在側幕後，望向舞台上的譜架"
+}
+],
+"parents-before-start": [
+{
+"id": "parents-before-start-1",
+"after": "下課後先聽孩子說。「哪個聲音",
+"alt": "下課後走廊上，家長彎身聽孩子比手劃腳說話的背影"
+},
+{
+"id": "parents-before-start-2",
+"after": "試用時，請老師看看孩子有沒有聳",
+"alt": "孩子試持長笛的背面，成人的手在手肘旁留意姿勢"
+},
+{
+"id": "parents-before-start-3",
+"after": "香港住家空間有限，一個可移動的",
+"alt": "客廳窗邊的譜架和矮櫃收納籃，組成小小練習角"
+}
+],
+"parents-daily": [
+{
+"id": "parents-daily-1",
+"after": "挑一個不正在爭執的時刻，問「",
+"alt": "晚飯後家長和孩子並坐沙發談話的背影，樂器盒收在一旁"
+},
+{
+"id": "parents-daily-2",
+"after": "可以一起聽音樂、玩節奏或分享演",
+"alt": "姊姊吹笛子，弟弟在旁拍手維持拍子的背影"
+},
+{
+"id": "parents-daily-3",
+"after": "可以請孩子指出老師圈起的位置，",
+"alt": "孩子指着老師用紅筆圈起的位置"
+}
+],
+"parents-performance": [
+{
+"id": "parents-performance-1",
+"after": "等待時保持平常語氣。讓孩子安靜",
+"alt": "後台走廊，穿白恤衫的孩子拿水瓶靜坐，家長陪在旁"
+},
+{
+"id": "parents-performance-2",
+"after": "要留。考級準備開始後，孩子每天",
+"alt": "孩子盤坐地上敲香檳金空靈鼓，考試書整齊合上放在沙發"
+}
+],
+"practice-ask": [
+{
+"id": "practice-ask-1",
+"after": "猜測可以用小測試確認。懷疑是指",
+"alt": "不吹奏，把樂器放低只按一次指法"
+},
+{
+"id": "practice-ask-2",
+"after": "老師示範後，當場自己做一次，再",
+"alt": "老師放下樂器，學生自己當場再做一次"
+}
+],
+"practice-log": [
+{
+"id": "practice-log-1",
+"after": "已經掌握的可以擦掉。動作穩定了",
+"alt": "手拿擦膠在譜邊擦去鉛筆記號，桌上留着擦膠碎屑"
+},
+{
+"id": "practice-log-2",
+"after": "分鐘數記錄的是忙碌，判斷才幫到",
+"alt": "洞簫旁打開的小簿，頁上只有短短三行鉛筆字"
+}
+],
+"practice-recording": [
+{
+"id": "practice-recording-1",
+"after": "第一遍只找證據。任務是拍子，就",
+"alt": "戴耳機回聽錄音，手拿鉛筆只記一個位置"
+},
+{
+"id": "practice-recording-2",
+"after": "現場吹奏時，很難同時客觀地聽音",
+"alt": "手機放在書架固定位置，離吹奏者約三米"
+},
+{
+"id": "practice-recording-3",
+"after": "選好位置，平日盡量沿用，記下房",
+"alt": "櫃面用膠紙標好手機位，每次放回原處"
+}
+],
+"practice-slow": [
+{
+"id": "practice-slow-1",
+"after": "做完一遍便停下，說出結果，不急",
+"alt": "放學後的空課室，學生放低長笛站在譜架前想一想"
+},
+{
+"id": "practice-slow-2",
+"after": "也可以把入口寫在小紙上，隨機抽",
+"alt": "手從杯中抽出一張摺好的小紙條，旁邊散着幾張"
+},
+{
+"id": "practice-slow-3",
+"after": "先用簡單節奏，別用最難的曲測試",
+"alt": "手指按停鋼琴頂上的機械節拍器擺桿，讓聲音暫停"
+}
+],
+"practice-time": [
+{
+"id": "practice-time-1",
+"after": "短練習最怕被手機和臨時事情切碎",
+"alt": "晚飯後餐枱上，雙手打開長笛盒，鉛筆和譜已放在旁"
+},
+{
+"id": "practice-time-2",
+"after": "然後看譜默唱，或用很輕的動作保",
+"alt": "夜裏成人坐摺枱前默看樂譜，房門半掩，樂器盒收在腳邊"
+},
+{
+"id": "practice-time-3",
+"after": "材料相同，較容易看見手感有沒有",
+"alt": "中年學員雙手輕握鼓槌，左右交替敲霧藍空靈鼓"
+}
+]
+}

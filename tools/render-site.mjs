@@ -26,12 +26,15 @@ const trad=s=>s.replace(/[长紧练体离现师乐会计这进对时气简开关
 const ART={flute:'譜架上的銀色長笛與鉛筆插畫',dizi:'竹笛的側吹孔、笛膜與六個指孔插畫',xiao:'管端有吹口缺口的直持洞簫插畫','tongue-drum':'表面有清晰切割音舌的鋼舌鼓與鼓槌插畫',practice:'窗邊的譜架、笛盒與練習簿插畫',theory:'五線譜紙、鉛筆、音叉與節拍器插畫',family:'兩張高矮木椅面向同一譜架的親子學習插畫',listening:'雨窗旁的耳機與節目冊插畫',performance:'演奏舞台上的譜架與鋼琴插畫'};
 const CATS={'長笛':{slug:'flute',art:'flute',course:'flute-course.html',desc:'由自然發聲、氣息與音準，走向有方向的樂句。'},'笛子':{slug:'dizi',art:'dizi',course:'dizi-course.html',desc:'認識口風、笛膜、指法與竹笛的語氣。'},'簫':{slug:'xiao',art:'xiao',course:'xiao-course.html',desc:'在長音、氣口與留白之間，把聲音聽得更細。'},'空靈鼓':{slug:'tongue-drum',art:'tongue-drum',course:'tongue-drum-course.html',desc:'由回彈和拍點出發，學習分句、即興與合作。'},'樂理':{slug:'theory',art:'theory',course:'learning-guide.html',desc:'把拍號、音程與記譜，連到耳朵和實際演奏。'},'練習方法':{slug:'practice',art:'practice',course:'practice.html',desc:'短時間、明確目標與錄音，讓每次練習有下文。'},'家長陪練':{slug:'parents',art:'family',course:'parents.html',desc:'陪孩子建立習慣，也保留彼此願意聆聽的空間。'},'聆聽與合奏':{slug:'listening',art:'listening',course:'learning-guide.html',desc:'聽見聲音的細節，學會與另一個人共同開始。'},'考級':{slug:'exam',art:'performance',course:'exam-guide.html',desc:'看清制度、安排練習，完整準備一場演奏。'},'舊站手記':{slug:'archive',art:'listening',course:'archive.html',desc:'張老師在舊站寫過的文章和簡譜，保留當年的寫法。'}};
 const inline=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_,t,u)=>/^https?:/.test(u)?`<a href="${u}" target="_blank" rel="noopener">${t}</a>`:`<a href="${u}">${t}</a>`);
+const FIGS=JSON.parse(await read('content/note-figures.json'));
+const noteFigure=f=>`<figure class="note-figure"><img src="../assets/images/notes/${f.id}.webp" srcset="../assets/images/notes/${f.id}-640.webp 640w, ../assets/images/notes/${f.id}.webp 1280w" sizes="(max-width: 760px) 100vw, 720px" width="1280" height="960" alt="${esc(f.alt)}" loading="lazy" decoding="async"></figure>`;
 const parseNote=(raw,file)=>{
   const m=raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);if(!m)throw Error('frontmatter: '+file);
   const meta={},replaces={};let inRep=false;
   for(const line of m[1].split('\n')){const rep=line.match(/^\s+([a-z0-9-]+):\s*(\S+)\s*$/);if(inRep&&rep){replaces[rep[1]]=rep[2];continue}const kv=line.match(/^([a-z_]+):\s*(.*)$/);if(!kv)throw Error(`frontmatter ${file}: ${line}`);inRep=kv[1]==='replaces';if(!inRep)meta[kv[1]]=kv[2]}
+  const figs=(FIGS[path.basename(file,'.md')]||[]).map(f=>({...f}));
   const html=[],sections=[],faq=[],opening=[];let para=[],list=null,inFaq=false;
-  const flushP=()=>{if(!para.length)return;const t=para.join('');para=[];if(!sections.length&&!opening.length){opening.push(t);html.push(`<p class="article-opening">${inline(t)}</p>`)}else html.push(`<p>${inline(t)}</p>`);if(inFaq&&faq.length)faq.at(-1).a+=(faq.at(-1).a?' ':'')+t.replace(/\[([^\]]+)\]\([^)]+\)/g,'$1')};
+  const flushP=()=>{if(!para.length)return;const t=para.join('');para=[];if(!sections.length&&!opening.length){opening.push(t);html.push(`<p class="article-opening">${inline(t)}</p>`)}else html.push(`<p>${inline(t)}</p>`);for(const f of figs)if(!f.done&&t.startsWith(f.after)){html.push(noteFigure(f));f.done=true}if(inFaq&&faq.length)faq.at(-1).a+=(faq.at(-1).a?' ':'')+t.replace(/\[([^\]]+)\]\([^)]+\)/g,'$1')};
   const flushL=()=>{if(!list)return;html.push(`<${list.tag}>${list.items.map(x=>`<li>${inline(x)}</li>`).join('')}</${list.tag}>`);list=null};
   for(const line of m[2].split('\n')){
     const t=line.trim();const h2=t.match(/^## (.+?) \{#([a-z0-9-]+)\}$/),h3=t.match(/^### (.+)$/),ul=t.match(/^- (.+)$/),ol=t.match(/^\d+\. (.+)$/);
@@ -44,6 +47,7 @@ const parseNote=(raw,file)=>{
   }
   flushP();flushL();
   if(faq.length&&faq.some(x=>!x.a))throw Error('empty FAQ answer: '+file);
+  for(const f of figs)if(!f.done)throw Error(`note figure ${f.id}: paragraph not found`);
   const slug=path.basename(meta.url,'.html');
   return{slug,code:meta.code,category:meta.category,title:meta.title,seoTitle:meta.seo_title,description:meta.description,url:meta.url,date:meta.date,replaces,body:html.join('\n'),sections,faq,excerpt:opening[0]||meta.description,sources:[]};
 };

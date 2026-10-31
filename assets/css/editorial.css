@@ -215,6 +215,8 @@ main { min-height: 60vh; }
 .article-body > .editorial-figure { margin-bottom: 46px; }
 .article-body .editorial-figure img { max-height: 467px; object-fit: cover; }
 .article-body .article-opening { font-size: 20px; }
+.note-figure { margin: 8px 0 40px; }
+.note-figure img { display: block; width: 100%; height: auto; border-radius: 4px; }
 .article-diagram { margin: 44px 0 54px; }
 .article-diagram img { width: 100%; border: 1px solid var(--line); }
 .article-end { border-top: 1px solid var(--line); margin-top: 54px; padding: 36px 0; }
