@@ -1,0 +1,134 @@
+# 張老師音樂學院
+
+香港長笛、笛子、洞簫與空靈鼓學習網站。
+
+## 主要頁面
+- [張老師音樂學院](https://teabonvivant.github.io/oliver-flute-studio/index.html): 香港長笛、笛子、洞簫及空靈鼓課程。認識張家詠老師、成人與兒童學習方向，閱讀音樂練習、樂理及考級手記。
+- [關於張家詠老師](https://teabonvivant.github.io/oliver-flute-studio/about.html): 認識張家詠 Oliver Cheung 的音樂教學背景、演奏學習與課堂方向，了解長笛、竹笛、洞簫及空靈鼓學習。
+- [音樂課程](https://teabonvivant.github.io/oliver-flute-studio/courses.html): 長笛、笛子、洞簫及空靈鼓課程內容、入門準備、進階方向與查詢安排。
+- [長笛課程](https://teabonvivant.github.io/oliver-flute-studio/flute-course.html): 長笛學習從姿勢、吹口與氣流開始。聲音逐漸穩定後，加入指法、節奏、讀譜與曲目，讓基本功與音樂一起前進。
+- [笛子課程](https://teabonvivant.github.io/oliver-flute-studio/dizi-course.html): 竹笛的聲音由口風、笛膜、封孔與氣息一起形成。課程由基本發聲和簡譜閱讀入手，逐步認識指法、民歌句法及合奏中的角色。
+- [洞簫課程](https://teabonvivant.github.io/oliver-flute-studio/xiao-course.html): 洞簫學習重視自然發聲、持握、音準與樂句。由可重複的短音開始，逐步延伸長音、換氣與旋律，讓從容建立在清楚的方法之上。
+- [空靈鼓課程](https://teabonvivant.github.io/oliver-flute-studio/tongue-drum-course.html): 空靈鼓由音舌振動發聲，入門可以很直接；要把聲音連成音樂，仍需要節拍、回彈、分句與聆聽。課程由少量音與清楚短句開始，再加入旋律和即興。
+- [成人音樂入門](https://teabonvivant.github.io/oliver-flute-studio/adult-beginner.html): 成人初學與重拾音樂的選擇、練習時間、樂器準備及學習方向。
+- [家長學習指南](https://teabonvivant.github.io/oliver-flute-studio/parents.html): 兒童音樂入門、第一件樂器、陪練溝通與學習進度觀察，給家長具體而溫和的協助方法。
+- [練習資源](https://teabonvivant.github.io/oliver-flute-studio/practice.html): 短時間練習安排、每週記錄、錄音回聽及課前整理，幫助音樂學生把課堂方法帶回日常。
+- [音樂考級準備](https://teabonvivant.github.io/oliver-flute-studio/exam-guide.html): 考級類型、適用大綱、演奏與樂理安排、伴奏排練和模擬考準備指南。
+- [音樂學習指南](https://teabonvivant.github.io/oliver-flute-studio/learning-guide.html): 按成人入門、家長陪練、樂器、樂理及考級目標，找到合適的音樂課程與學習文章。
+- [音樂手記](https://teabonvivant.github.io/oliver-flute-studio/blog.html): 香港繁體中文音樂文章，涵蓋長笛、笛子、洞簫、空靈鼓、樂理、練習方法、家長陪練、聆聽與考級，長文附目錄，可直接跳到要看的段落。
+- [常見問題](https://teabonvivant.github.io/oliver-flute-studio/faq.html): 音樂課程、成人與兒童入門、樂器選擇、練習、考級及課堂查詢的常見問題。
+- [聯絡張老師](https://teabonvivant.github.io/oliver-flute-studio/contact.html): WhatsApp 9809 6351 查詢長笛、笛子、洞簫及空靈鼓課程。整理程度、學習目標和可上課時間，與張老師討論安排。
+- [延伸閱讀與正式資料](https://teabonvivant.github.io/oliver-flute-studio/resources.html): 音樂考試大綱、香港音樂課程、中樂學習與長笛保養的官方資料入口；考試及招生安排以各機構最新公告為準。
+- [私隱與使用說明](https://teabonvivant.github.io/oliver-flute-studio/privacy.html): 了解本站查詢訊息、練習清單、外部連結及內容使用方式。
+- [練習室](https://teabonvivant.github.io/oliver-flute-studio/studio.html): 張老師音樂學院的網上練習工具：調音器、節拍器、長笛指法表及長音練習，打開瀏覽器即可使用，毋須下載或註冊。
+- [網上調音器](https://teabonvivant.github.io/oliver-flute-studio/tuner.html): 免費網上調音器，適合長笛、笛子、洞簫及其他樂器。顯示音名、簡譜唱名、音分偏差及頻率，可設定 A=440 至 443 Hz。
+- [網上節拍器](https://teabonvivant.github.io/oliver-flute-studio/metronome.html): 免費網上節拍器：30 至 240 BPM、拍號、細分拍、首拍重音、輕拍定速及逐步加速練習。手機及電腦瀏覽器均可使用。
+- [長笛指法表](https://teabonvivant.github.io/oliver-flute-studio/flute-fingering.html): 長笛基本指法表：由 C4 至 A6 共 34 個音，每個音附五線譜位置、按鍵圖、簡譜唱名及示範音，適合長笛初學及溫習。
+- [長音練習計時](https://teabonvivant.github.io/oliver-flute-studio/long-tone.html): 長音練習計時器：吹奏時自動計秒並分析音高穩定度，記錄每次長音秒數，適合長笛、笛子、洞簫練氣息與音色。
+- [出品](https://teabonvivant.github.io/oliver-flute-studio/works.html): 張老師音樂學院的音樂出品：譜間簡譜打譜軟件、長笛紙牌、長笛演奏動畫及教學樂譜。
+- [譜間 · 簡譜打譜工作室](https://teabonvivant.github.io/oliver-flute-studio/pujian.html): 譜間是張家詠老師為音樂課堂開發的簡譜打譜軟件：數字鍵打譜、自動排版、空靈鼓跟敲、真實樂器音源試聽，匯出 PDF、MP3 及 MusicXML。
+- [長笛紙牌](https://teabonvivant.github.io/oliver-flute-studio/flute-cards.html): 長笛紙牌：張老師音樂學院籌備中的長笛學習紙牌，包括指法、音名、節奏及樂理卡。網上翻卡練習可即時試玩。
+- [相片集](https://teabonvivant.github.io/oliver-flute-studio/gallery.html): 張老師的教學留影、演出照片、學生得獎與考級成績，以及合作過的學校與機構。
+- [影片](https://teabonvivant.github.io/oliver-flute-studio/videos.html): 張老師的長笛、竹笛、洞簫、空靈鼓演奏，以及吹奏教學和長笛大師班分享。
+- [樂譜](https://teabonvivant.github.io/oliver-flute-studio/scores.html): 張老師教學使用的流行曲簡譜與五線譜、笛子班樂譜及空靈鼓曲譜，供學生課堂練習。
+- [舊站手記](https://teabonvivant.github.io/oliver-flute-studio/archive.html): 張老師在 oliverflute.com 寫過的音樂文章：長笛初學、呼吸、選笛、標準音、五聲音階、尺八、葫蘆絲、Trinity 與 ABRSM 考試等。
+- [空靈鼓配件](https://teabonvivant.github.io/oliver-flute-studio/drum-accessories.html): 張老師為學生代訂的空靈鼓配件：6 吋 11 音小鼓、鼓架、桌面支架及金屬支架，附學生訂購價。
+- [長笛文章](https://teabonvivant.github.io/oliver-flute-studio/topic-flute.html): 由自然發聲、氣息與音準，走向有方向的樂句。張老師的長笛文章共 13 篇，可由〈選第一支長笛：成人與兒童〉和〈長笛呼吸：支撐、換氣與樂句〉讀起。
+- [笛子文章](https://teabonvivant.github.io/oliver-flute-studio/topic-dizi.html): 認識口風、笛膜、指法與竹笛的語氣。張老師的笛子文章共 12 篇，可由〈竹笛入門：筒音、簡譜與第一個音〉和〈笛膜：貼法與聲音〉讀起。
+- [洞簫文章](https://teabonvivant.github.io/oliver-flute-studio/topic-xiao.html): 在長音、氣口與留白之間，把聲音聽得更細。張老師的洞簫文章共 8 篇，可由〈洞簫的氣：第一個音、口風與呼吸〉和〈洞簫長音與慢板〉讀起。
+- [空靈鼓文章](https://teabonvivant.github.io/oliver-flute-studio/topic-tongue-drum.html): 由回彈和拍點出發，學習分句、即興與合作。張老師的空靈鼓文章共 9 篇，可由〈買空靈鼓之前：調式、音域與手碟分別〉和〈空靈鼓入門：手、槌、回彈與雙手〉讀起。
+- [樂理文章](https://teabonvivant.github.io/oliver-flute-studio/topic-theory.html): 把拍號、音程與記譜，連到耳朵和實際演奏。張老師的樂理文章共 4 篇，可由〈拍子與節奏：三拍、四拍、6/8 與切分〉和〈時值記號：休止符、延音線、附點與簡譜〉讀起。
+- [練習方法文章](https://teabonvivant.github.io/oliver-flute-studio/topic-practice.html): 短時間、明確目標與錄音，讓每次練習有下文。張老師的練習方法文章共 5 篇，可由〈練習時間怎樣安排〉和〈慢練、分段與節拍器〉讀起。
+- [家長陪練文章](https://teabonvivant.github.io/oliver-flute-studio/topic-parents.html): 陪孩子建立習慣，也保留彼此願意聆聽的空間。張老師的家長陪練文章共 3 篇，可由〈開始學音樂之前，家長可以準備甚麼〉和〈陪練的日常〉讀起。
+- [聆聽與合奏文章](https://teabonvivant.github.io/oliver-flute-studio/topic-listening.html): 聽見聲音的細節，學會與另一個人共同開始。張老師的聆聽與合奏文章共 3 篇，可由〈怎樣聽一首曲〉和〈第一次聽現場，與在家演奏一首曲〉讀起。
+- [考級文章](https://teabonvivant.github.io/oliver-flute-studio/topic-exam.html): 看清制度、安排練習，完整準備一場演奏。張老師的考級文章共 11 篇，可由〈考級路線圖：一至八級與報考時機〉和〈考級三項：音階、視奏、聽覺〉讀起。
+
+## 音樂手記
+- [選第一支長笛：成人與兒童](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-first-flute.html): 長笛
+- [長笛呼吸：支撐、換氣與樂句](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-breathing.html): 長笛
+- [長笛音色：從起音到收音](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-tone.html): 長笛
+- [長笛每日練習怎樣安排](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-daily-practice.html): 長笛
+- [長笛三個音區：高音、低音與跳音](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-registers.html): 長笛
+- [長笛手指：清晰與換指](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-fingers.html): 長笛
+- [長笛音準：同一個音每天都不同](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-intonation.html): 長笛
+- [長笛的表情：連分奏、強弱與顫音](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-expression.html): 長笛
+- [初學長笛的第一批曲目](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-first-repertoire.html): 長笛
+- [長笛保養：每天吹完後的三件事](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-care.html): 長笛
+- [成人學長笛：時間少、停學多年](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-adult.html): 長笛
+- [長笛合奏與伴奏](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-ensemble.html): 長笛
+- [如何選擇長笛老師](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-choose-teacher.html): 長笛
+- [竹笛入門：筒音、簡譜與第一個音](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-start.html): 笛子
+- [笛膜：貼法與聲音](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-membrane.html): 笛子
+- [竹笛氣息與長音](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-air.html): 笛子
+- [竹笛手指：封孔、半孔與吐音](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-fingers.html): 笛子
+- [竹笛的語氣：裝飾音與民歌句法](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-phrasing.html): 笛子
+- [南派與北派笛子風格](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-schools.html): 笛子
+- [第一支笛子：D、G 還是 F 調](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-first-dizi.html): 笛子
+- [笛子、洞簫、南簫：怎樣分、怎樣選](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-vs-xiao.html): 笛子
+- [在香港學笛子：兒童、成人與一對一課堂](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-learning-hk.html): 笛子
+- [竹笛與洞簫的竹材保養](https://teabonvivant.github.io/oliver-flute-studio/blog/bamboo-care.html): 笛子
+- [竹笛曲目：從四小節到舞台曲](https://teabonvivant.github.io/oliver-flute-studio/blog/dizi-repertoire.html): 笛子
+- [竹笛與洞簫上台：擴音與音量](https://teabonvivant.github.io/oliver-flute-studio/blog/bamboo-on-stage.html): 笛子
+- [洞簫的氣：第一個音、口風與呼吸](https://teabonvivant.github.io/oliver-flute-studio/blog/xiao-breath.html): 簫
+- [洞簫長音與慢板](https://teabonvivant.github.io/oliver-flute-studio/blog/xiao-long-note.html): 簫
+- [洞簫音準與半孔](https://teabonvivant.github.io/oliver-flute-studio/blog/xiao-intonation.html): 簫
+- [洞簫的留白與分寸](https://teabonvivant.github.io/oliver-flute-studio/blog/xiao-restraint.html): 簫
+- [第一支簫怎樣選、怎樣拿](https://teabonvivant.github.io/oliver-flute-studio/blog/xiao-first-xiao.html): 簫
+- [成人學簫與一對一課堂](https://teabonvivant.github.io/oliver-flute-studio/blog/xiao-adult.html): 簫
+- [學一首簫曲](https://teabonvivant.github.io/oliver-flute-studio/blog/xiao-learn-piece.html): 簫
+- [洞簫與別人一起：合奏、鋼琴與鄰居](https://teabonvivant.github.io/oliver-flute-studio/blog/xiao-with-others.html): 簫
+- [買空靈鼓之前：調式、音域與手碟分別](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-before-buying.html): 空靈鼓
+- [空靈鼓入門：手、槌、回彈與雙手](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-start.html): 空靈鼓
+- [空靈鼓的拍子與留白](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-pulse.html): 空靈鼓
+- [空靈鼓即興：由兩個音開始](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-improvise.html): 空靈鼓
+- [空靈鼓的層次與簡單編排](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-arrangement.html): 空靈鼓
+- [團體與親子空靈鼓](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-groups.html): 空靈鼓
+- [空靈鼓錄音](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-recording.html): 空靈鼓
+- [空靈鼓保養](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-care.html): 空靈鼓
+- [空靈鼓演出與合奏](https://teabonvivant.github.io/oliver-flute-studio/blog/drum-performing.html): 空靈鼓
+- [拍子與節奏：三拍、四拍、6/8 與切分](https://teabonvivant.github.io/oliver-flute-studio/blog/theory-pulse.html): 樂理
+- [時值記號：休止符、延音線、附點與簡譜](https://teabonvivant.github.io/oliver-flute-studio/blog/theory-duration.html): 樂理
+- [音高記號：升降、音程、音階與調號](https://teabonvivant.github.io/oliver-flute-studio/blog/theory-pitch.html): 樂理
+- [表情與樂句：強弱、速度與問答](https://teabonvivant.github.io/oliver-flute-studio/blog/theory-expression.html): 樂理
+- [練習時間怎樣安排](https://teabonvivant.github.io/oliver-flute-studio/blog/practice-time.html): 練習方法
+- [慢練、分段與節拍器](https://teabonvivant.github.io/oliver-flute-studio/blog/practice-slow.html): 練習方法
+- [錄音回聽：各樂器怎樣聽](https://teabonvivant.github.io/oliver-flute-studio/blog/practice-recording.html): 練習方法
+- [練習日誌與譜上記號](https://teabonvivant.github.io/oliver-flute-studio/blog/practice-log.html): 練習方法
+- [選曲、找問題與問老師](https://teabonvivant.github.io/oliver-flute-studio/blog/practice-ask.html): 練習方法
+- [開始學音樂之前，家長可以準備甚麼](https://teabonvivant.github.io/oliver-flute-studio/blog/parents-before-start.html): 家長陪練
+- [陪練的日常](https://teabonvivant.github.io/oliver-flute-studio/blog/parents-daily.html): 家長陪練
+- [表演、老師與考級之間](https://teabonvivant.github.io/oliver-flute-studio/blog/parents-performance.html): 家長陪練
+- [怎樣聽一首曲](https://teabonvivant.github.io/oliver-flute-studio/blog/listening-how.html): 聆聽與合奏
+- [第一次聽現場，與在家演奏一首曲](https://teabonvivant.github.io/oliver-flute-studio/blog/listening-live.html): 聆聽與合奏
+- [合奏入門](https://teabonvivant.github.io/oliver-flute-studio/blog/ensemble-basics.html): 聆聽與合奏
+- [考級路線圖：一至八級與報考時機](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-roadmap.html): 考級
+- [考級三項：音階、視奏、聽覺](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-supporting-tests.html): 考級
+- [考級曲目：詮釋、技術曲與曲目之間](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-pieces.html): 考級
+- [考級伴奏：何時開始合](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-accompanist.html): 考級
+- [模擬考與考試緊張](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-mock-and-nerves.html): 考級
+- [錄影考試](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-video.html): 考級
+- [評分與考後檢討](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-review.html): 考級
+- [ABRSM：實用考試、演奏考試與樂理資格](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-abrsm-paths.html): 考級
+- [考級與比賽](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-vs-competition.html): 考級
+- [跨樂器考級規劃](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-cross-instrument.html): 考級
+- [成人考級](https://teabonvivant.github.io/oliver-flute-studio/blog/exam-adult.html): 考級
+- [初學 空靈鼓 - 玩樂器](https://teabonvivant.github.io/oliver-flute-studio/blog/2023p2.html): 舊站手記
+- [長笛及樂理試](https://teabonvivant.github.io/oliver-flute-studio/blog/abrsm.html): 舊站手記
+- [給準備學習長笛的你](https://teabonvivant.github.io/oliver-flute-studio/blog/beginners.html): 舊站手記
+- [真的愛你（簡單版）](https://teabonvivant.github.io/oliver-flute-studio/blog/beyondlove.html): 舊站手記
+- [長笛呼吸法的邏輯](https://teabonvivant.github.io/oliver-flute-studio/blog/breathe.html): 舊站手記
+- [長笛挑選ＡＢＣ](https://teabonvivant.github.io/oliver-flute-studio/blog/buyflute.html): 舊站手記
+- [音樂冷知識](https://teabonvivant.github.io/oliver-flute-studio/blog/cold-knowledge.html): 舊站手記
+- [中國音樂只有五個音！？](https://teabonvivant.github.io/oliver-flute-studio/blog/f40a20b5bdc.html): 舊站手記
+- [初學長笛的幾個誤區](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-class01.html): 舊站手記
+- [葫蘆絲](https://teabonvivant.github.io/oliver-flute-studio/blog/hulusi.html): 舊站手記
+- [Jesus loves me](https://teabonvivant.github.io/oliver-flute-studio/blog/jesus-loves-me.html): 舊站手記
+- [Jesus you shine upon my life](https://teabonvivant.github.io/oliver-flute-studio/blog/jesus-you-shine-upon-my-life.html): 舊站手記
+- [懂樂器 = 唱歌岩key?](https://teabonvivant.github.io/oliver-flute-studio/blog/key.html): 舊站手記
+- [世上只有媽媽好](https://teabonvivant.github.io/oliver-flute-studio/blog/mother.html): 舊站手記
+- [調音440HZ?](https://teabonvivant.github.io/oliver-flute-studio/blog/pitch.html): 舊站手記
+- [最有效率的練笛方式](https://teabonvivant.github.io/oliver-flute-studio/blog/practise1.html): 舊站手記
+- [日本動漫配樂常用的樂器](https://teabonvivant.github.io/oliver-flute-studio/blog/shakuhachi.html): 舊站手記
+- [齊齊學唱歌](https://teabonvivant.github.io/oliver-flute-studio/blog/singtogether.html): 舊站手記
+- [Trinity 的演奏級到底要哪什麼?](https://teabonvivant.github.io/oliver-flute-studio/blog/trinity.html): 舊站手記
+- [什麼！銀色的長笛屬於這個家族？](https://teabonvivant.github.io/oliver-flute-studio/blog/woodwinds.html): 舊站手記
