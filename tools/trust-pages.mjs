@@ -16,8 +16,8 @@ const heroWa=file=>b=>{const i=b.indexOf('</div></section>');if(i<0)throw Error(
 const swapArt=(b,html)=>b.replace(/<figure class="editorial-figure">[\s\S]*?<\/figure>/,html);
 const ctaWa=file=>b=>b.replace('<a class="btn primary" href="contact.html">查詢課程</a>',`<a class="btn primary" href="${wa(file)}" target="_blank" rel="noopener">WhatsApp 張老師</a>`);
 const card=(lines)=>`<aside class="teacher-card">${pic('about-001','張家詠老師手持長笛','tc-photo')}<div><p class="tc-name">張家詠老師 <span>Oliver Cheung</span></p><ul>${lines.map(x=>`<li>${x}</li>`).join('')}</ul><a class="text-link" href="about.html">認識張老師</a></div></aside>`;
-const WIND=['皇家音樂學院長笛演奏文憑、八級樂理','中央音樂學院竹笛演奏文憑','二十年教學，曾任四十多間中小學竹笛及指揮','與百多間機構合作課程，教授學員數千人'];
-const DRUM=['香港古樹茶文化學會副會長、樂聚忘憂樂團團長','2020 年起開設空靈鼓及茶禪音樂課程','曾研習音樂治療、靜觀及 NLP','與百多間機構合作課程，教授學員數千人'];
+const WIND=['皇家音樂學院長笛演奏文憑、八級樂理','中央音樂學院竹笛演奏文憑','二十年教學，曾任四十多間中小學的竹笛導師及指揮','與百多間機構合作開辦課程，教過數千名學員'];
+const DRUM=['香港古樹茶文化學會副會長、樂聚忘憂樂團團長','2020 年起開設空靈鼓及茶禪音樂課程','曾研習音樂治療、靜觀及 NLP','與百多間機構合作開辦課程，教過數千名學員'];
 
 const COURSE={
 'flute-course.html':{open:['flute-002','學生在課室吹奏長笛'],strip:[['flute-001','譜上的長笛'],['class-051','學生在屯門課室吹奏長笛'],['class-087','學生在屯門課室吹奏長笛'],['class-014','學生吹奏長笛'],['class-048','學生吹奏長笛'],['awards-013','長笛學生考獲證書'],['awards-007','長笛學生考獲證書']],card:WIND,title:'長笛學生'},
