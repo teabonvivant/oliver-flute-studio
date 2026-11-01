@@ -2,6 +2,7 @@ import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { join, resolve, dirname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { navItems, REDIRECTS } from './tools/render-site.mjs';
+import { seoPost } from './tools/seo-post.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const dist = resolve(root, "dist");
@@ -63,6 +64,7 @@ for (const [slug, to] of Object.entries(emptyPosts)) await writeFile(join(assets
   await writeFile(join(assets, "home-v2.html"), stub("./"), "utf8");
 }
 await writeFile(join(assets, ".nojekyll"), "", "utf8");
+await seoPost({ assets, origin: (process.env.SITE_ORIGIN || "https://teabonvivant.github.io/oliver-flute-studio").replace(/\/$/, "") });
 const covered = new Set(await readFile(join(root, "assets/fonts/site/coverage.txt"), "utf8"));
 const missing = new Set();
 for (const file of await readdir(assets, { recursive: true })) {
