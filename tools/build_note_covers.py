@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# 注意：2026-11-02 起封面已改為 AI 生成圖（_team_runs/note-covers-20261102/final），重跑本腳本會用舊站相片覆蓋，勿再執行。
 """由舊站真實相片裁出手記封面：content/note-covers.json → assets/images/notes/<slug>[-640|-1024].webp"""
 import json, os
 from PIL import Image

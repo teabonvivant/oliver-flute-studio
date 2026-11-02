@@ -1,342 +1,342 @@
 {
-"flute-first-flute": {
-"photo": "perf-035",
-"alt": "老師手持長笛的合照",
-"y": 0.2
-},
-"flute-breathing": {
-"photo": "class-051",
-"alt": "學生對着譜架吹奏長笛",
-"y": 0.3
-},
-"flute-tone": {
-"photo": "teach-001",
-"alt": "長笛吹口與嘴唇的特寫",
-"y": 0.5
-},
-"flute-daily-practice": {
-"photo": "class-079",
-"alt": "學生在練習室吹奏長笛",
-"y": 0.3
-},
-"flute-registers": {
-"photo": "class-062",
-"alt": "學生在練習室吹奏長笛",
-"y": 0.4
-},
-"flute-fingers": {
-"photo": "perf-008",
-"alt": "演奏者按長笛按鍵的特寫",
-"y": 0.6
-},
-"flute-intonation": {
-"photo": "class-091",
-"alt": "學生對着譜架吹奏長笛",
-"y": 0.3
-},
-"flute-expression": {
-"photo": "perf-018",
-"alt": "長笛演奏者在台上演奏",
-"y": 0.3
-},
-"flute-first-repertoire": {
-"photo": "class-048",
-"alt": "小朋友吹奏長笛",
-"y": 0.3
-},
-"flute-care": {
-"photo": "class-087",
-"alt": "學生手持長笛在練習室吹奏",
-"y": 0.3
-},
-"flute-adult": {
-"photo": "class-004",
-"alt": "成人學生與張老師在課堂合照",
-"y": 0.3
-},
-"flute-ensemble": {
-"photo": "perf-019",
-"alt": "樂團中的長笛聲部",
-"y": 0.5
-},
-"flute-choose-teacher": {
-"photo": "class-014",
-"alt": "學生在課室吹奏長笛",
-"y": 0.3
-},
-"dizi-start": {
-"photo": "class-111",
-"alt": "學生坐在課室吹奏竹笛",
-"y": 0.3
-},
-"dizi-membrane": {
-"photo": "class-044",
-"alt": "學生對着樂譜吹奏竹笛",
-"y": 0.3
-},
-"dizi-air": {
-"photo": "class-101",
-"alt": "學生在練習室吹奏竹笛",
-"y": 0.2
-},
-"dizi-fingers": {
-"photo": "class-083",
-"alt": "學生吹奏竹笛的手部姿勢",
-"y": 0.5
-},
-"dizi-phrasing": {
-"photo": "class-098",
-"alt": "學生對着譜架吹奏竹笛",
-"y": 0.4
-},
-"dizi-schools": {
-"photo": "perf-005",
-"alt": "張老師在樂團中演奏竹笛",
-"y": 0.3
-},
-"dizi-first-dizi": {
-"photo": "class-109",
-"alt": "學生手持竹笛吹奏",
-"y": 0.3
-},
-"dizi-vs-xiao": {
-"photo": "class-103",
-"alt": "學生吹奏竹笛，牆上掛着多支竹製樂器",
-"y": 0.4
-},
-"dizi-learning-hk": {
-"photo": "class-045",
-"alt": "張老師與學生吹奏竹笛",
-"y": 0.3
-},
-"bamboo-care": {
-"photo": "class-097",
-"alt": "牆上掛着多支竹製樂器的練習室",
-"y": 0.3
-},
-"dizi-repertoire": {
-"photo": "class-054",
-"alt": "學生對着樂譜吹奏竹笛",
-"y": 0.4
-},
-"bamboo-on-stage": {
-"photo": "perf-032",
-"alt": "演奏者在咪高峰前吹奏洞簫",
-"y": 0.3
-},
-"xiao-breath": {
-"photo": "class-080",
-"alt": "學生直持洞簫吹奏",
-"y": 0.2
-},
-"xiao-long-note": {
-"photo": "class-088",
-"alt": "學生直持洞簫吹奏",
-"y": 0.2
-},
-"xiao-intonation": {
-"photo": "class-106",
-"alt": "學生直持洞簫吹奏",
-"y": 0.1
-},
-"xiao-restraint": {
-"photo": "perf-030",
-"alt": "張老師手持洞簫",
-"y": 0.2
-},
-"xiao-first-xiao": {
-"photo": "class-106",
-"alt": "學生手持洞簫",
-"y": 0.25
-},
-"xiao-adult": {
-"photo": "perf-007",
-"alt": "張老師在樂團中吹奏洞簫",
-"y": 0.3
-},
-"xiao-learn-piece": {
-"photo": "class-080",
-"alt": "學生對着譜架吹奏洞簫",
-"y": 0.35
-},
-"xiao-with-others": {
-"photo": "perf-032",
-"alt": "樂團中吹奏洞簫的演奏者",
-"y": 0.3
-},
-"drum-before-buying": {
-"photo": "class-005",
-"alt": "放在桌上的空靈鼓與學員",
-"y": 0.4
-},
-"drum-start": {
-"photo": "class-031",
-"alt": "學員圍坐桌前學敲空靈鼓",
-"y": 0.5
-},
-"drum-pulse": {
-"photo": "class-035",
-"alt": "學員在課堂上敲空靈鼓",
-"y": 0.3
-},
-"drum-improvise": {
-"photo": "class-008",
-"alt": "學員手持空靈鼓合照",
-"y": 0.3
-},
-"drum-arrangement": {
-"photo": "class-013",
-"alt": "學員手持不同顏色的空靈鼓",
-"y": 0.3
-},
-"drum-groups": {
-"photo": "class-016",
-"alt": "團體空靈鼓班合照",
-"y": 0.4
-},
-"drum-recording": {
-"photo": "class-015",
-"alt": "學員與空靈鼓合照",
-"y": 0.3
-},
-"drum-care": {
-"photo": "class-010",
-"alt": "課室內學員處理空靈鼓",
-"y": 0.4
-},
-"drum-performing": {
-"photo": "class-022",
-"alt": "空靈鼓班學員合照",
-"y": 0.5
-},
-"exam-roadmap": {
-"photo": "class-056",
-"alt": "學生手持考級證書",
-"y": 0.25
-},
-"exam-supporting-tests": {
-"photo": "class-084",
-"alt": "學生伏案書寫",
-"y": 0.4
-},
-"exam-pieces": {
-"photo": "class-065",
-"alt": "學生手持考級證書",
-"y": 0.3
-},
-"exam-accompanist": {
-"photo": "perf-015",
-"alt": "鋼琴與演奏者在音樂廳台上",
-"y": 0.6
-},
-"exam-mock-and-nerves": {
-"photo": "class-082",
-"alt": "學生手持考級證書與樂器",
-"y": 0.3
-},
-"exam-video": {
-"photo": "class-066",
-"alt": "學生手持證書站在練習室",
-"y": 0.55
-},
-"exam-review": {
-"photo": "class-069",
-"alt": "張老師與學生及證書合照",
-"y": 0.5
-},
-"exam-abrsm-paths": {
-"photo": "class-077",
-"alt": "張老師與學生及證書合照",
-"y": 0.5
-},
-"exam-vs-competition": {
-"photo": "class-038",
-"alt": "學生手持獎狀與老師合照",
-"y": 0.5
-},
-"exam-cross-instrument": {
-"photo": "class-073",
-"alt": "學生手持獎狀與張老師合照",
-"y": 0.4
-},
-"exam-adult": {
-"photo": "class-034",
-"alt": "學員手持證書與竹製樂器",
-"y": 0.5
-},
-"listening-how": {
-"photo": "perf-036",
-"alt": "由舞台望向音樂廳的燈光",
-"y": 0.5
-},
-"listening-live": {
-"photo": "perf-012",
-"alt": "學校禮堂內聽音樂會的學生",
-"y": 0.4
-},
-"ensemble-basics": {
-"photo": "perf-009",
-"alt": "樂團合奏",
-"y": 0.5
-},
-"parents-before-start": {
-"photo": "class-026",
-"alt": "張老師與小學生合照",
-"y": 0.4
-},
-"parents-daily": {
-"photo": "class-075",
-"alt": "小學生在課室吹奏",
-"y": 0.5
-},
-"parents-performance": {
-"photo": "class-033",
-"alt": "學生在禮堂台上合奏",
-"y": 0.5
-},
-"practice-time": {
-"photo": "class-107",
-"alt": "學生對着譜架練習",
-"y": 0.4
-},
-"practice-slow": {
-"photo": "class-089",
-"alt": "學生對着樂譜慢練",
-"y": 0.4
-},
-"practice-recording": {
-"photo": "class-072",
-"alt": "兩名學生一起練習",
-"y": 0.3
-},
-"practice-log": {
-"photo": "class-108",
-"alt": "學生在譜上做記號",
-"y": 0.3
-},
-"practice-ask": {
-"photo": "class-024",
-"alt": "張老師在課室與學生討論",
-"y": 0.4
-},
-"theory-pulse": {
-"photo": "class-096",
-"alt": "學生在課室看譜吹奏",
-"y": 0.5
-},
-"theory-duration": {
-"photo": "perf-027",
-"alt": "樂團演奏時譜架上的樂譜",
-"y": 0.5
-},
-"theory-pitch": {
-"photo": "perf-028",
-"alt": "譜架上的樂譜",
-"y": 0.5
-},
-"theory-expression": {
-"photo": "class-032",
-"alt": "張老師與學生在課室上課",
-"y": 0.5
-}
+ "flute-first-flute": {
+  "photo": "perf-035",
+  "alt": "下雨天隔着樂器店櫥窗望進去，絨布上放着長笛和幾個笛盒",
+  "y": 0.2
+ },
+ "flute-breathing": {
+  "photo": "class-051",
+  "alt": "音樂室裏一條白色薄紙帶被吹成水平，旁邊是站着的學生身體一截",
+  "y": 0.3
+ },
+ "flute-tone": {
+  "photo": "teach-001",
+  "alt": "音樂室裏，小錄音機對着椅子上平放的長笛，譜架掛着耳機",
+  "y": 0.5
+ },
+ "flute-daily-practice": {
+  "photo": "class-079",
+  "alt": "早晨窗邊書枱上攤開的練習簿、一個小沙漏、鉛筆和闔上的笛盒",
+  "y": 0.3
+ },
+ "flute-registers": {
+  "photo": "class-062",
+  "alt": "學校樓梯，最低一級放着笛盒，高處一級放着樂譜和鉛筆",
+  "y": 0.4
+ },
+ "flute-fingers": {
+  "photo": "perf-008",
+  "alt": "低角度看枱上橫放的長笛，旁邊的節拍器和譜上被圈起的一處",
+  "y": 0.6
+ },
+ "flute-intonation": {
+  "photo": "class-091",
+  "alt": "書枱上放着溫度計、冷氣遙控器和打開的笛盒",
+  "y": 0.3
+ },
+ "flute-expression": {
+  "photo": "perf-018",
+  "alt": "譜架上的樂譜有鉛筆畫的連線弧，旁邊是學生下垂的袖口和手",
+  "y": 0.3
+ },
+ "flute-first-repertoire": {
+  "photo": "class-048",
+  "alt": "音樂室矮書架前，一隻手從一排曲集裏抽出一本薄冊子",
+  "y": 0.3
+ },
+ "flute-care": {
+  "photo": "class-087",
+  "alt": "木枱上並排放着清潔棒、折好的軟布和打開的笛盒一角",
+  "y": 0.3
+ },
+ "flute-adult": {
+  "photo": "class-004",
+  "alt": "飯枱上平放着一支長笛，旁邊是一個廚房計時器和一件脫下的恤衫，背後是亮着燈的廚房",
+  "y": 0.3
+ },
+ "flute-ensemble": {
+  "photo": "perf-019",
+  "alt": "鋼琴譜板上有鉛筆圈記號的樂譜，琴蓋上橫放着一支長笛",
+  "y": 0.5
+ },
+ "flute-choose-teacher": {
+  "photo": "class-014",
+  "alt": "課室外走廊的長椅上放着外套、笛盒和筆記簿，旁邊的課室門半開",
+  "y": 0.3
+ },
+ "dizi-start": {
+  "photo": "class-111",
+  "alt": "桌面上由近至遠排開紙、薄膜、竹笛和鉛筆。",
+  "y": 0.3
+ },
+ "dizi-membrane": {
+  "photo": "class-044",
+  "alt": "摺好的毛巾上放着竹笛，旁邊是一碟清水和一疊薄薄的笛膜。",
+  "y": 0.3
+ },
+ "dizi-air": {
+  "photo": "class-101",
+  "alt": "課室桌上平放着一支竹笛，旁邊一條細紙條被氣流輕輕吹得偏向一邊。",
+  "y": 0.2
+ },
+ "dizi-fingers": {
+  "photo": "class-083",
+  "alt": "竹笛平放在桌上，旁邊一隻攤開的手掌，指尖留着淡淡的壓痕。",
+  "y": 0.5
+ },
+ "dizi-phrasing": {
+  "photo": "class-098",
+  "alt": "桌上斜放的樂譜只用鉛筆圈了一處，旁邊平放着一支竹笛。",
+  "y": 0.4
+ },
+ "dizi-schools": {
+  "photo": "perf-005",
+  "alt": "窗台上一長一短兩支竹笛並排，中間放着一副耳機。",
+  "y": 0.3
+ },
+ "dizi-first-dizi": {
+  "photo": "class-109",
+  "alt": "茶几上一大一小兩隻手並排攤開，各自旁邊放着一支長短不同的竹笛。",
+  "y": 0.3
+ },
+ "dizi-vs-xiao": {
+  "photo": "class-103",
+  "alt": "桌上橫放着一支竹笛，旁邊一支洞簫直立靠在牆邊。",
+  "y": 0.4
+ },
+ "dizi-learning-hk": {
+  "photo": "class-045",
+  "alt": "家中餐枱上平放着一支竹笛，牆上掛着幾處被圈起的月曆。",
+  "y": 0.3
+ },
+ "bamboo-care": {
+  "photo": "class-097",
+  "alt": "雨天窗邊的乾毛巾上放着竹笛，旁邊的笛袋攤開晾乾。",
+  "y": 0.3
+ },
+ "dizi-repertoire": {
+  "photo": "class-054",
+  "alt": "學校禮堂舞台側的木階上平放着一支竹笛。",
+  "y": 0.4
+ },
+ "bamboo-on-stage": {
+  "photo": "perf-032",
+  "alt": "空舞台上立着一支咪高峰架，旁邊地上貼着一個小十字站位記號。",
+  "y": 0.3
+ },
+ "xiao-breath": {
+  "photo": "class-080",
+  "alt": "窗簾被風輕輕吹起，窗台上橫放着一支洞簫",
+  "y": 0.2
+ },
+ "xiao-long-note": {
+  "photo": "class-088",
+  "alt": "枱上線香升起一縷筆直的細煙，旁邊橫放着洞簫",
+  "y": 0.2
+ },
+ "xiao-intonation": {
+  "photo": "class-106",
+  "alt": "木枱上放着一支音叉，後面橫放着洞簫",
+  "y": 0.1
+ },
+ "xiao-restraint": {
+  "photo": "perf-030",
+  "alt": "素色茶席上只放着一隻白瓷杯和一支洞簫，中間留着大片空白",
+  "y": 0.2
+ },
+ "xiao-first-xiao": {
+  "photo": "class-106",
+  "alt": "枱上打開的長盒內躺着一支新洞簫，旁邊放着軟尺",
+  "y": 0.25
+ },
+ "xiao-adult": {
+  "photo": "perf-007",
+  "alt": "飯枱上一本空白週曆旁平放着洞簫，椅背搭着下班後的外套和公事包",
+  "y": 0.3
+ },
+ "xiao-learn-piece": {
+  "photo": "class-080",
+  "alt": "臥室角落的小揚聲器和譜架，洞簫還平放在床上沒有拿起",
+  "y": 0.35
+ },
+ "xiao-with-others": {
+  "photo": "perf-032",
+  "alt": "黃昏窗邊，窗台上橫放着洞簫，窗外是對面樓宇亮起的窗口",
+  "y": 0.3
+ },
+ "drum-before-buying": {
+  "photo": "class-005",
+  "alt": "樂器店的木桌上並排放着一大一小兩面空靈鼓，前面有一條軟捲尺。",
+  "y": 0.4
+ },
+ "drum-start": {
+  "photo": "class-031",
+  "alt": "剛開箱的空靈鼓放在桌上，旁邊的紙箱敞開，有人正從膠袋裏取出一支鼓槌。",
+  "y": 0.5
+ },
+ "drum-pulse": {
+  "photo": "class-035",
+  "alt": "木桌一側放着空靈鼓，兩支鼓槌交叉放下，旁邊一杯熱茶冒着蒸氣。",
+  "y": 0.3
+ },
+ "drum-improvise": {
+  "photo": "class-008",
+  "alt": "空靈鼓上兩塊音舌各貼了一小片膠紙作記號，旁邊放着一對鼓槌。",
+  "y": 0.3
+ },
+ "drum-arrangement": {
+  "photo": "class-013",
+  "alt": "霧藍色空靈鼓放在木桌上，兩支鼓槌分別擱在不同大小的音舌旁，旁邊有一張斜放的鉛筆草稿。",
+  "y": 0.3
+ },
+ "drum-groups": {
+  "photo": "class-016",
+  "alt": "地墊上四面空靈鼓圍成一個圈，鼓槌都放下，旁邊有一雙小朋友的鞋。",
+  "y": 0.4
+ },
+ "drum-recording": {
+  "photo": "class-015",
+  "alt": "手機靠在兩本書上對着遠處桌上的空靈鼓，畫面下方有一個人安靜地坐着等待。",
+  "y": 0.3
+ },
+ "drum-care": {
+  "photo": "class-010",
+  "alt": "翻轉的空靈鼓倒放在毛巾上，旁邊有軟布和打開的收納袋。",
+  "y": 0.4
+ },
+ "drum-performing": {
+  "photo": "class-022",
+  "alt": "空蕩的小舞台上，鼓架上的空靈鼓、咪高峰和椅子已經擺好。",
+  "y": 0.5
+ },
+ "exam-roadmap": {
+  "photo": "class-056",
+  "alt": "學校樓梯中段的梯級上放着書包和合上的笛盒",
+  "y": 0.25
+ },
+ "exam-supporting-tests": {
+  "photo": "class-084",
+  "alt": "書枱上放着一支音叉和一本反放的小冊子",
+  "y": 0.4
+ },
+ "exam-pieces": {
+  "photo": "class-065",
+  "alt": "一隻手捏着譜架上樂譜的紙角準備翻頁",
+  "y": 0.3
+ },
+ "exam-accompanist": {
+  "photo": "perf-015",
+  "alt": "琴房裏直立鋼琴旁琴凳空着，膠椅上放着合上的笛盒",
+  "y": 0.6
+ },
+ "exam-mock-and-nerves": {
+  "photo": "class-082",
+  "alt": "譜架托上放着一個計時器，旁邊有人垂手握着長笛",
+  "y": 0.3
+ },
+ "exam-video": {
+  "photo": "class-066",
+  "alt": "從腳架位置望向客廳，地上有膠紙十字和一個空譜架",
+  "y": 0.55
+ },
+ "exam-review": {
+  "photo": "class-069",
+  "alt": "一隻手從書架上抽出一本舊譜冊",
+  "y": 0.5
+ },
+ "exam-abrsm-paths": {
+  "photo": "class-077",
+  "alt": "飯枱上並排放着合上的笛盒、反放的手機和一本薄練習本",
+  "y": 0.5
+ },
+ "exam-vs-competition": {
+  "photo": "class-038",
+  "alt": "學校走廊裏學生背對鏡頭站在課室門和禮堂門之間",
+  "y": 0.5
+ },
+ "exam-cross-instrument": {
+  "photo": "class-073",
+  "alt": "節拍器放在中間，兩旁是長笛盒和笛子、簫的布袋",
+  "y": 0.4
+ },
+ "exam-adult": {
+  "photo": "class-034",
+  "alt": "玄關鞋櫃上放着公事包、鎖匙和合上的笛盒",
+  "y": 0.5
+ },
+ "listening-how": {
+  "photo": "perf-036",
+  "alt": "書桌上放着一副耳機、一本空白便條簿和一支鉛筆，旁邊有一杯茶。",
+  "y": 0.5
+ },
+ "listening-live": {
+  "photo": "perf-012",
+  "alt": "一個小朋友背向鏡頭，站在半開的音樂廳大門前，門內透出暖黃的燈光。",
+  "y": 0.4
+ },
+ "ensemble-basics": {
+  "photo": "perf-009",
+  "alt": "音樂室裏兩張譜架和兩張椅子靠近並略朝向對方，似乎等着兩個人坐下一起排練。",
+  "y": 0.5
+ },
+ "parents-before-start": {
+  "photo": "class-026",
+  "alt": "音樂室門外的走廊上，兩張膠椅並排，放着孩子的書包和一個布袋，門縫透出暖黃的光。",
+  "y": 0.4
+ },
+ "parents-daily": {
+  "photo": "class-075",
+  "alt": "飯枱上，大人與孩子的手並排輕拍枱面，旁邊平放着一支竹笛和一杯茶。",
+  "y": 0.5
+ },
+ "parents-performance": {
+  "photo": "class-033",
+  "alt": "玄關地上放着一袋已備好的東西：折好的深色衣服、水樽、文件夾和一個關着的長笛盒。",
+  "y": 0.5
+ },
+ "practice-time": {
+  "photo": "class-107",
+  "alt": "晚上客廳茶几上，一面空靈鼓和兩支鼓槌旁邊放着一個廚房計時器。",
+  "y": 0.4
+ },
+ "practice-slow": {
+  "photo": "class-089",
+  "alt": "攤開的琴譜本頁邊夾着紅、黃、藍三個紙籤，旁邊放着一支鉛筆。",
+  "y": 0.4
+ },
+ "practice-recording": {
+  "photo": "class-072",
+  "alt": "譜架頂掛着一副耳機，托邊靠着手機，前面椅子上平放着一支竹笛。",
+  "y": 0.3
+ },
+ "practice-log": {
+  "photo": "class-108",
+  "alt": "書枱上方的軟木板，釘着一排寫滿短短鉛筆字的小紙條，下面放着筆筒和擦膠。",
+  "y": 0.3
+ },
+ "practice-ask": {
+  "photo": "class-024",
+  "alt": "譜架上的樂譜貼着一張黃色便條，標出卡住的一行，旁邊的手機正在錄音。",
+  "y": 0.4
+ },
+ "theory-pulse": {
+  "photo": "class-096",
+  "alt": "鋼琴頂上的木製節拍器，擺桿偏向一側，旁邊放着一對木響棒和鈴鼓",
+  "y": 0.5
+ },
+ "theory-duration": {
+  "photo": "perf-027",
+  "alt": "音樂室裏掛在譜架上的三角鐵靜止下垂，槌放在枱面，後面牆上有一個掛鐘",
+  "y": 0.5
+ },
+ "theory-pitch": {
+  "photo": "perf-028",
+  "alt": "課室枱上的單排鐵琴，音片由長至短像階梯，旁邊放着一支琴槌",
+  "y": 0.5
+ },
+ "theory-expression": {
+  "photo": "class-032",
+  "alt": "音樂室裏兩張椅子面對面，各有一個譜架，其中一張椅上放着洞簫",
+  "y": 0.5
+ }
 }
