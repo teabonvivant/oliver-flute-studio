@@ -22,6 +22,17 @@ export async function seoPost({ assets, origin, oldUrls }) {
   const redirects = [];
   const pageInfo = {};
   const ghOrigin = "https://teabonvivant.github.io/oliver-flute-studio";
+  const ghBase = "/oliver-flute-studio";
+  const basePath = new URL(origin + "/").pathname.replace(/\/$/, "");
+  // 源碼以 GitHub Pages 網址／子路徑撰寫；非 html 的文字檔（sitemap、llms、webmanifest）及根路徑寫法也要換成目標網域
+  for (const f of await readdir(assets, { recursive: true })) {
+    if (!/\.(?:html|txt|xml|webmanifest)$/.test(f) || f.startsWith("hero-options")) continue;
+    const p = join(assets, f);
+    const src = await readFile(p, "utf8");
+    let out = src.replaceAll(ghOrigin, origin);
+    if (basePath !== ghBase) out = out.replaceAll(ghBase + "/", basePath + "/");
+    if (out !== src) await writeFile(p, out, "utf8");
+  }
 
   for (const f of files) {
     const p = join(assets, f);
@@ -96,5 +107,34 @@ export async function seoPost({ assets, origin, oldUrls }) {
   const old = new Set((oldUrls || []).map((u) => new URL(u).pathname.replace(/^\//, "")));
   const lines = redirects.filter(([from]) => !from.includes("/") || from.startsWith("blog/")).map(([from, to]) => `/${from} ${to} 301`);
   await writeFile(join(assets, "_redirects"), `# 舊 oliverflute.com 網址 → 新網址（Cloudflare Pages／Netlify 格式；GitHub Pages 不使用）\n${lines.join("\n")}\n`, "utf8");
+  // 只限 *.pages.dev（專案網址及版本／分支網址）noindex；自訂網域不受影響（Cloudflare _headers 以主機名匹配）
+  await writeFile(join(assets, "_headers"), "https://:project.pages.dev/*\n  X-Robots-Tag: noindex, nofollow\nhttps://:version.:project.pages.dev/*\n  X-Robots-Tag: noindex, nofollow\n/admin*\n  X-Robots-Tag: noindex, nofollow\n  Cache-Control: no-store\n  Referrer-Policy: no-referrer\n/api/*\n  Cache-Control: no-store\n  X-Robots-Tag: noindex\n", "utf8");
+  // Cloudflare Pages 會把 *.html 轉到無副檔名網址：站內連結、canonical、sitemap、轉向目標一律改用實際回 200 的網址（只改本站 .html，外站、圖片、腳本不動）
+  const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const clean = (u) => {
+    const m = u.match(/^([^?#]*?\.html)([?#].*)?$/s);
+    if (!m) return u;
+    let path = m[1];
+    const tail = m[2] || "";
+    if (/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(path) && !path.startsWith(origin + "/")) return u;
+    if (/(^|\/)404\.html$/.test(path)) return u;
+    path = /(^|\/)index\.html$/.test(path) ? path.replace(/index\.html$/, "") || "./" : path.slice(0, -5);
+    return path + tail;
+  };
+  const ownRe = new RegExp(esc(origin) + "/[^\"'\\s<>\\\\]*?\\.html(?:[?#][^\"'\\s<>\\\\]*)?", "g");
+  for (const f of await readdir(assets, { recursive: true })) {
+    if (f.startsWith("hero-options")) continue;
+    const p = join(assets, f);
+    const src = await readFile(p, "utf8").catch(() => null);
+    if (src === null) continue;
+    let out = src;
+    if (f === "_redirects") out = src.split("\n").map((l) => (l.startsWith("/") ? l.replace(/^(\S+\s+)(\S+)/, (_, a, b) => a + clean(b)) : l)).join("\n");
+    else if (/\.(?:html|txt|xml|webmanifest)$/.test(f)) {
+      out = out.replace(ownRe, (u) => clean(u));
+      if (f.endsWith(".html")) out = out.replace(/(\bhref=")([^"]*)(")/g, (_, a, u, c) => a + clean(u) + c).replace(/(http-equiv="refresh" content="[^"]*?url=)([^"]*)(")/g, (_, a, u, c) => a + clean(u) + c);
+    } else if (f.endsWith("assets/js/blog-index.js")) out = out.replace(/("url":")([^"]+\.html)(")/g, (_, a, u, c) => a + clean(u) + c);
+    else if (f.endsWith("assets/js/academy.js")) out = out.replace("slug+'-course.html'", "slug+'-course'");
+    if (out !== src) await writeFile(p, out, "utf8");
+  }
   return { stubs: redirects.length, oldTracked: old.size };
 }

@@ -25,6 +25,7 @@ for (const entry of await readdir(join(root,'assets/images/home'))) publicFiles.
 for (const entry of await readdir(join(root,'assets/audio/home'))) publicFiles.push('assets/audio/home/'+entry);
 for (const file of publicFiles) {await mkdir(dirname(join(assets,file)),{recursive:true});await cp(join(root,file),join(assets,file));}
 
+await cp(join(root, 'admin'), join(assets, 'admin'), { recursive: true });
 const rootFiles = await readdir(root, { withFileTypes: true });
 for (const entry of rootFiles) {
   if (!entry.isFile()) continue;
