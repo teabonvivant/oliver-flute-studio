@@ -258,6 +258,15 @@ input::placeholder, textarea::placeholder { color: #6c7065; opacity: 1; }
 .practice-sheet input { margin-top: 8px; }
 .practice-sheet button { margin-top: 28px; }
 .table-scroll { max-width: 100%; overflow-x: auto; margin-bottom: 26px; }
+.table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.practice-sheet fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+.practice-sheet legend { padding: 0; margin-bottom: 4px; font-weight: 600; }
+.practice-note { margin: 14px 0 0; font-size: 15px; color: var(--muted); }
+.undo-link { padding: 0; border: 0; background: none; color: var(--accent); text-decoration: underline; font: inherit; cursor: pointer; }
+.eg-row td { color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+#practice-list { scroll-margin-top: 96px; }
+@media (max-width: 700px) { .table-scroll { background: linear-gradient(to right, var(--paper, #fff) 30%, transparent), linear-gradient(to left, var(--paper, #fff) 30%, transparent) 100% 0, radial-gradient(farthest-side at 0 50%, #0003, transparent), radial-gradient(farthest-side at 100% 50%, #0003, transparent) 100% 0; background-repeat: no-repeat; background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%; background-attachment: local, local, scroll, scroll; } .print-row { display: none; } }
 table { width: 100%; border-collapse: collapse; font-size: 16px; font-variant-numeric: tabular-nums; }
 th, td { padding: 18px; border: 1px solid #b7bcae; text-align: left; }
 th { font-weight: 400; background: var(--tint); }
@@ -479,6 +488,10 @@ td { height: 72px; }
   .main-nav a::after, .journal-entry-links a::before, .blog-filters button::after, .search-form > div::after, .faq-list summary::before, .faq-list summary::after { background: CanvasText; }
 }
 @media print {
+  .skip-link { display: none !important; }
+  .js [data-r] { opacity: 1 !important; transform: none !important; }
+  .print-row { display: table-row !important; }
+  .band > h2 { break-after: avoid; }
   body { font-size: 11pt; background: white; color: black; }
   .site-header, .site-footer, .enquiry-band, .journal-grid, .article-side, .btn, .related-band { display: none !important; }
   .page-hero { background: none; padding: 20px 0; }

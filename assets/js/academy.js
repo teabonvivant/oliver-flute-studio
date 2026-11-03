@@ -26,7 +26,9 @@
     const key='oliver-music-practice-v1',checks=[...sheet.querySelectorAll('input[type=checkbox]')];
     try{const values=JSON.parse(localStorage.getItem(key)||'[]');checks.forEach((c,i)=>c.checked=values[i]===true)}catch{}
     sheet.addEventListener('change',()=>{try{localStorage.setItem(key,JSON.stringify(checks.map(c=>c.checked)))}catch{}});
-    sheet.querySelector('[data-reset-practice]')?.addEventListener('click',()=>{checks.forEach(c=>c.checked=false);try{localStorage.removeItem(key)}catch{}});
+    const note=sheet.querySelector('[data-practice-status]');let prev=null;
+    sheet.querySelector('[data-reset-practice]')?.addEventListener('click',()=>{prev=checks.map(c=>c.checked);checks.forEach(c=>c.checked=false);try{localStorage.removeItem(key)}catch{}
+      if(!note||!prev.some(Boolean))return;note.textContent='清單已重新開始。';const b=document.createElement('button');b.type='button';b.className='undo-link';b.textContent='復原';b.addEventListener('click',()=>{checks.forEach((c,i)=>c.checked=prev[i]);try{localStorage.setItem(key,JSON.stringify(prev))}catch{}note.textContent='已復原上一份清單。'});note.append(' ',b)});
   });
   document.querySelector('[data-print]')?.addEventListener('click',()=>window.print());
   document.querySelectorAll('[data-contact-builder]').forEach(form=>{
