@@ -3224,7 +3224,7 @@ def organization_schema() -> dict:
         "@type": "MusicSchool",
         "@id": f"{BASE_URL}/#music-school",
         "name": SITE_NAME,
-        "alternateName": ["Oliver Flute", "Oliver's Music Channel", "張老師音樂學院"],
+        "alternateName": ["Oliver Flute", "Oliver Music Studio", "張老師音樂學院"],
         "url": BASE_URL,
         "sameAs": SAME_AS,
         "founder": {

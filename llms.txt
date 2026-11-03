@@ -1,9 +1,9 @@
-# 張老師音樂頻道
+# 張老師音樂工作室
 
 香港長笛、笛子、洞簫與空靈鼓學習網站。
 
 ## 主要頁面
-- [張老師音樂頻道](https://teabonvivant.github.io/oliver-flute-studio/index.html): 香港長笛、笛子、洞簫及空靈鼓課程。認識張家詠老師、成人與兒童學習方向，閱讀音樂練習、樂理及考級手記。
+- [張老師音樂工作室](https://teabonvivant.github.io/oliver-flute-studio/index.html): 香港長笛、笛子、洞簫及空靈鼓課程。認識張家詠老師、成人與兒童學習方向，閱讀音樂練習、樂理及考級手記。
 - [關於張家詠老師](https://teabonvivant.github.io/oliver-flute-studio/about.html): 認識張家詠 Oliver Cheung 的音樂教學背景、演奏學習與課堂方向，了解長笛、竹笛、洞簫及空靈鼓學習。
 - [音樂課程](https://teabonvivant.github.io/oliver-flute-studio/courses.html): 長笛、笛子、洞簫及空靈鼓課程內容、入門準備、進階方向與查詢安排。
 - [長笛課程](https://teabonvivant.github.io/oliver-flute-studio/flute-course.html): 長笛學習從姿勢、吹口與氣流開始。聲音逐漸穩定後，加入指法、節奏、讀譜與曲目，讓基本功與音樂一起前進。
@@ -20,14 +20,14 @@
 - [聯絡張老師](https://teabonvivant.github.io/oliver-flute-studio/contact.html): WhatsApp 9809 6351 查詢長笛、笛子、洞簫及空靈鼓課程。整理程度、學習目標和可上課時間，與張老師討論安排。
 - [延伸閱讀與正式資料](https://teabonvivant.github.io/oliver-flute-studio/resources.html): 音樂考試大綱、香港音樂課程、中樂學習與長笛保養的官方資料入口；考試及招生安排以各機構最新公告為準。
 - [私隱與使用說明](https://teabonvivant.github.io/oliver-flute-studio/privacy.html): 了解本站查詢訊息、練習清單、外部連結及內容使用方式。
-- [練習室](https://teabonvivant.github.io/oliver-flute-studio/studio.html): 張老師音樂頻道的網上練習工具：調音器、節拍器、長笛指法表及長音練習，打開瀏覽器即可使用，毋須下載或註冊。
+- [練習室](https://teabonvivant.github.io/oliver-flute-studio/studio.html): 張老師音樂工作室的網上練習工具：調音器、節拍器、長笛指法表及長音練習，打開瀏覽器即可使用，毋須下載或註冊。
 - [網上調音器](https://teabonvivant.github.io/oliver-flute-studio/tuner.html): 免費網上調音器，適合長笛、笛子、洞簫及其他樂器。顯示音名、簡譜唱名、音分偏差及頻率，可設定 A=440 至 443 Hz。
 - [網上節拍器](https://teabonvivant.github.io/oliver-flute-studio/metronome.html): 免費網上節拍器：30 至 240 BPM、拍號、細分拍、首拍重音、輕拍定速及逐步加速練習。手機及電腦瀏覽器均可使用。
 - [長笛指法表](https://teabonvivant.github.io/oliver-flute-studio/flute-fingering.html): 長笛基本指法表：由 C4 至 A6 共 34 個音，每個音附五線譜位置、按鍵圖、簡譜唱名及示範音，適合長笛初學及溫習。
 - [長音練習計時](https://teabonvivant.github.io/oliver-flute-studio/long-tone.html): 長音練習計時器：吹奏時自動計秒並分析音高穩定度，記錄每次長音秒數，適合長笛、笛子、洞簫練氣息與音色。
-- [出品](https://teabonvivant.github.io/oliver-flute-studio/works.html): 張老師音樂頻道的音樂出品：譜間簡譜打譜軟件、長笛紙牌、長笛演奏動畫及教學樂譜。
+- [出品](https://teabonvivant.github.io/oliver-flute-studio/works.html): 張老師音樂工作室的音樂出品：譜間簡譜打譜軟件、長笛紙牌、長笛演奏動畫及教學樂譜。
 - [譜間 · 簡譜打譜工作室](https://teabonvivant.github.io/oliver-flute-studio/pujian.html): 譜間是張家詠老師為音樂課堂開發的簡譜打譜軟件：數字鍵打譜、自動排版、空靈鼓跟敲、真實樂器音源試聽，匯出 PDF、MP3 及 MusicXML。
-- [長笛紙牌](https://teabonvivant.github.io/oliver-flute-studio/flute-cards.html): 長笛紙牌：張老師音樂頻道籌備中的長笛學習紙牌，包括指法、音名、節奏及樂理卡。網上翻卡練習可即時試玩。
+- [長笛紙牌](https://teabonvivant.github.io/oliver-flute-studio/flute-cards.html): 長笛紙牌：張老師音樂工作室籌備中的長笛學習紙牌，包括指法、音名、節奏及樂理卡。網上翻卡練習可即時試玩。
 - [相片集](https://teabonvivant.github.io/oliver-flute-studio/gallery.html): 張老師的教學留影、演出照片、學生得獎與考級成績，以及合作過的學校與機構。
 - [影片](https://teabonvivant.github.io/oliver-flute-studio/videos.html): 張老師的長笛、竹笛、洞簫、空靈鼓演奏，以及吹奏教學和長笛大師班分享。
 - [樂譜](https://teabonvivant.github.io/oliver-flute-studio/scores.html): 張老師教學使用的流行曲簡譜與五線譜、笛子班樂譜及空靈鼓曲譜，供學生課堂練習。

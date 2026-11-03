@@ -9,7 +9,7 @@ const COURSES = [
   ["tongue-drum-course.html", "空靈鼓課程", "空靈鼓"],
 ];
 const LOCATIONS = [
-  { "@type": "Place", name: "張老師音樂頻道（屯門）", address: { "@type": "PostalAddress", streetAddress: "99 COMMONS 大廈（建安／青雲輕鐵站旁）", addressLocality: "屯門", addressRegion: "新界", addressCountry: "HK" } },
+  { "@type": "Place", name: "張老師音樂工作室（屯門）", address: { "@type": "PostalAddress", streetAddress: "99 COMMONS 大廈（建安／青雲輕鐵站旁）", addressLocality: "屯門", addressRegion: "新界", addressCountry: "HK" } },
   { "@type": "Place", name: "空靈鼓課程（佐敦）", address: { "@type": "PostalAddress", streetAddress: "彌敦道 229 號周生生大廈 12/F", addressLocality: "佐敦", addressRegion: "九龍", addressCountry: "HK" } },
 ];
 
@@ -57,7 +57,7 @@ export async function seoPost({ assets, origin, oldUrls }) {
     if (canonical && !h.includes("hreflang")) add += `<link rel="alternate" hreflang="zh-HK" href="${canonical}"><link rel="alternate" hreflang="x-default" href="${canonical}">`;
     if (canonical && !h.includes('property="og:url"')) add += `<meta property="og:url" content="${canonical}">`;
     if (image && !h.includes("twitter:image")) add += `<meta name="twitter:image" content="${image}">`;
-    if (!h.includes('property="og:site_name"')) add += `<meta property="og:site_name" content="張老師音樂頻道">`;
+    if (!h.includes('property="og:site_name"')) add += `<meta property="og:site_name" content="張老師音樂工作室">`;
     if (f === "index.html") {
       h = h.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/, (m, j) => {
         const o = JSON.parse(j);
@@ -68,13 +68,13 @@ export async function seoPost({ assets, origin, oldUrls }) {
         o.founder = { ...o.founder, "@id": `${origin}/about.html#person`, url: `${origin}/about.html` };
         return ldTag(o);
       });
-      add += ldTag({ "@context": "https://schema.org", "@type": "WebSite", name: "張老師音樂頻道", alternateName: ["Oliver's Music Channel", "Oliver Flute"], url: `${origin}/`, inLanguage: "zh-Hant-HK", publisher: { "@id": `${origin}/#org` } });
+      add += ldTag({ "@context": "https://schema.org", "@type": "WebSite", name: "張老師音樂工作室", alternateName: ["Oliver Music Studio", "Oliver Flute"], url: `${origin}/`, inLanguage: "zh-Hant-HK", publisher: { "@id": `${origin}/#org` } });
     } else if (!h.includes("ld+json")) {
       const url = canonical;
-      const crumb = f === "index.html" ? null : { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "張老師音樂頻道", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: title.split("｜")[0], item: url }] };
+      const crumb = f === "index.html" ? null : { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "張老師音樂工作室", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: title.split("｜")[0], item: url }] };
       const course = COURSES.find((c) => c[0] === f);
       let main;
-      if (course) main = { "@context": "https://schema.org", "@type": "Course", name: course[1], description: desc, url, inLanguage: "zh-Hant-HK", provider: { "@type": "EducationalOrganization", name: "張老師音樂頻道", url: `${origin}/` }, instructor: { "@type": "Person", name: "張家詠", alternateName: "Oliver Cheung" }, about: course[2] };
+      if (course) main = { "@context": "https://schema.org", "@type": "Course", name: course[1], description: desc, url, inLanguage: "zh-Hant-HK", provider: { "@type": "EducationalOrganization", name: "張老師音樂工作室", url: `${origin}/` }, instructor: { "@type": "Person", name: "張家詠", alternateName: "Oliver Cheung" }, about: course[2] };
       else if (f === "about.html") main = { "@context": "https://schema.org", "@type": "AboutPage", url, name: title, description: desc, mainEntity: { "@type": "Person", "@id": `${origin}/about.html#person`, name: "張家詠", alternateName: "Oliver Cheung", jobTitle: "音樂導師", knowsAbout: ["長笛", "竹笛", "洞簫", "空靈鼓"], worksFor: { "@id": `${origin}/#org` }, telephone: "+852 9809 6351" } };
       else if (f === "contact.html") main = { "@context": "https://schema.org", "@type": "ContactPage", url, name: title, description: desc, about: { "@id": `${origin}/#org` } };
       else if (f === "faq.html") {
@@ -92,9 +92,9 @@ export async function seoPost({ assets, origin, oldUrls }) {
 
   const keyPages = ["index.html", "about.html", "courses.html", ...COURSES.map((c) => c[0]), "adult-beginner.html", "parents.html", "exam-guide.html", "faq.html", "contact.html"];
   const llms = await readFile(join(assets, "llms.txt"), "utf8");
-  const summary = `> 張老師音樂頻道由張家詠（Oliver Cheung）老師創辦，在香港教授長笛、笛子、洞簫及空靈鼓，成人與兒童皆可學；屯門（99 COMMONS 大廈，建安／青雲輕鐵站旁）上課，空靈鼓課程另設佐敦（彌敦道 229 號周生生大廈 12/F）。長笛及笛子課不設上門及試堂。查詢及報名：WhatsApp 9809 6351（${origin}/contact.html）。學費一對一課程以查詢報價為準；空靈鼓班別學費見課程頁。\n\n完整內容（供 AI 讀取）：${origin}/llms-full.txt\n`;
+  const summary = `> 張老師音樂工作室由張家詠（Oliver Cheung）老師創辦，在香港教授長笛、笛子、洞簫及空靈鼓，成人與兒童皆可學；屯門（99 COMMONS 大廈，建安／青雲輕鐵站旁）上課，空靈鼓課程另設佐敦（彌敦道 229 號周生生大廈 12/F）。長笛及笛子課不設上門及試堂。查詢及報名：WhatsApp 9809 6351（${origin}/contact.html）。學費一對一課程以查詢報價為準；空靈鼓班別學費見課程頁。\n\n完整內容（供 AI 讀取）：${origin}/llms-full.txt\n`;
   await writeFile(join(assets, "llms.txt"), llms.replace(/^(# .+\n)\n/, `$1\n${summary}\n`).replace(/\n\n香港長笛、笛子、洞簫與空靈鼓學習網站。/, ""), "utf8");
-  let full = `# 張老師音樂頻道（完整內容）\n\n來源：${origin}/ ；以下為主要頁面全文，內容以網站最新版本為準。\n`;
+  let full = `# 張老師音樂工作室（完整內容）\n\n來源：${origin}/ ；以下為主要頁面全文，內容以網站最新版本為準。\n`;
   for (const f of keyPages) {
     const info = pageInfo[f];
     if (!info) continue;

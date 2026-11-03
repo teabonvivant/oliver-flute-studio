@@ -8,7 +8,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const site = path.join(root, 'dist', 'assets');
 const revisedDate = '2026-10-31';
-const brand = '張老師音樂頻道';
+const brand = '張老師音樂工作室';
 
 function read(file) {
   if (!fs.existsSync(path.join(site, file)) && fs.existsSync(path.join(site, file + '.html'))) file += '.html';
