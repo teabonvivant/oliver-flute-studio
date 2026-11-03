@@ -8,9 +8,10 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const site = path.join(root, 'dist', 'assets');
 const revisedDate = '2026-10-31';
-const brand = '張老師音樂學院';
+const brand = '張老師音樂頻道';
 
 function read(file) {
+  if (!fs.existsSync(path.join(site, file)) && fs.existsSync(path.join(site, file + '.html'))) file += '.html';
   return fs.readFileSync(path.join(site, file), 'utf8');
 }
 
@@ -52,7 +53,8 @@ function localTarget(fromFile, reference) {
   const normalized = path.resolve(joined);
   assert(normalized === site || normalized.startsWith(site + path.sep), `Reference escapes build output: ${reference}`);
   let target = normalized;
-  if (fs.existsSync(target) && fs.statSync(target).isDirectory()) target = path.join(target, 'index.html');
+  if (!withoutQuery.endsWith('/') && !path.extname(target) && fs.existsSync(`${target}.html`)) target = `${target}.html`;
+  else if (fs.existsSync(target) && fs.statSync(target).isDirectory()) target = path.join(target, 'index.html');
   else if (!path.extname(target)) target = `${target}.html`;
   return { file: target, anchor: decoded.includes('#') ? decoded.split('#').slice(1).join('#') : null };
 }
