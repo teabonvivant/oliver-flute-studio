@@ -73,10 +73,10 @@ section { padding: clamp(80px, 12vw, 180px) 0 0; }
 .breath { position: relative; height: clamp(150px, 22vh, 230px); margin: 18px calc(var(--gut) * -1) 0; }
 .wave { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-art { pointer-events: none; position: absolute; inset: 0; z-index: 0; }
-.hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; display: block; }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block; }
 .hero-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 55%, transparent) 14%, transparent 34%), linear-gradient(0deg, var(--paper) 0%, transparent 10%); }
 @media (min-width: 901px) {
-  .hero-art { left: auto; right: var(--gut); top: clamp(96px, 12vh, 128px); bottom: 40px; width: 54vw; border-radius: 32px; overflow: hidden; box-shadow: 0 30px 70px -36px #3f5554a6; border: 1px solid #ffffffcc; }
+  .hero-art { left: auto; right: var(--gut); top: clamp(110px, 17vh, 170px); bottom: auto; width: 54vw; aspect-ratio: 3 / 2; max-height: calc(100% - 150px); border-radius: 32px; overflow: hidden; box-shadow: 0 30px 70px -36px #3f5554a6; border: 1px solid #ffffffcc; }
   .hero-art::after { display: none; }
 }
 .breath .wave[data-wave="hero"] { width: 42%; }
