@@ -73,7 +73,7 @@
     constructor(canvas) {
       this.c = canvas; this.g = canvas.getContext('2d');
       this.kind = canvas.dataset.wave;
-      this.light = !!canvas.closest('.finale');
+      this.light = false;
       this.draw = this.kind === 'hero' && !reduce ? 0 : 1;
       this.bumps = []; this.analyser = null; this.level = 0; this.visible = false; this.raf = 0;
       this.buf = new Float32Array(2048);
