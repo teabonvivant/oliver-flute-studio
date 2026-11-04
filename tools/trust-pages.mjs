@@ -22,7 +22,7 @@ const DRUM=['香港古樹茶文化學會副會長、樂聚忘憂樂團團長','2
 const COURSE={
 'flute-course.html':{open:['flute-002','學生在課室吹奏長笛'],strip:[['flute-001','譜上的長笛'],['class-051','學生在屯門課室吹奏長笛'],['class-087','學生在屯門課室吹奏長笛'],['class-014','學生吹奏長笛'],['class-048','學生吹奏長笛'],['awards-013','長笛學生考獲證書'],['awards-007','長笛學生考獲證書']],card:WIND,title:'長笛學生'},
 'dizi-course.html':{open:['dizi-002','學生在課室學習笛子'],strip:[['dizi-001','學校笛子班學生合照'],['class-085','學生練習笛子'],['class-086','學生吹奏笛子'],['class-050','笛子班學生與張老師合照'],['awards-009','笛子學生考獲證書'],['awards-003','學生參加中國笛比賽後合照']],card:WIND,title:'笛子學生'},
-'xiao-course.html':{open:['class-080','學生在屯門課室吹奏洞簫'],strip:[['class-106','學生吹奏洞簫'],['class-104','成人學生吹奏洞簫'],['class-044','學生吹奏洞簫'],['class-063','學生吹奏葫蘆絲']],card:WIND,title:'洞簫學生'},
+'xiao-course.html':{open:['class-080','學生在屯門課室吹奏洞簫'],strip:[['class-106','學生吹奏洞簫'],['class-104','成人學生吹奏洞簫'],['class-044','學生吹奏洞簫'],['class-063','學生吹奏中國吹管樂器']],card:WIND,title:'洞簫學生'},
 'tongue-drum-course.html':{open:['drum-course-002','空靈鼓班上課情況'],strip:[['class-001','空靈鼓班學員合照'],['class-013','空靈鼓班學員合照'],['class-015','空靈鼓班學員合照'],['class-008','空靈鼓班學員合照'],['class-031','空靈鼓課堂'],['drum-trial-002','空靈鼓與鼓槌'],['drum-course-004','兩款空靈鼓'],['drum-trial-001','空靈鼓'],['drum-course-001','空靈鼓入門班海報']],card:DRUM,title:'空靈鼓班'}
 };
 for(const [file,c] of Object.entries(COURSE)){

@@ -31,7 +31,7 @@
 - [相片集](https://teabonvivant.github.io/oliver-flute-studio/gallery.html): 張老師的教學留影、演出照片、學生得獎與考級成績，以及合作過的學校與機構。
 - [影片](https://teabonvivant.github.io/oliver-flute-studio/videos.html): 張老師的長笛、笛子、洞簫、空靈鼓演奏，以及吹奏教學和長笛大師班分享。
 - [樂譜](https://teabonvivant.github.io/oliver-flute-studio/scores.html): 張老師教學使用的流行曲簡譜與五線譜、笛子班樂譜及空靈鼓曲譜，供學生課堂練習。
-- [舊站手記](https://teabonvivant.github.io/oliver-flute-studio/archive.html): 張老師在 oliverflute.com 寫過的音樂文章：長笛初學、呼吸、選笛、標準音、五聲音階、尺八、葫蘆絲、Trinity 與 ABRSM 考試等。
+- [舊站手記](https://teabonvivant.github.io/oliver-flute-studio/archive.html): 張老師在 oliverflute.com 寫過的音樂文章：長笛初學、呼吸、選笛、標準音、五聲音階、尺八、Trinity 與 ABRSM 考試等。
 - [空靈鼓配件](https://teabonvivant.github.io/oliver-flute-studio/drum-accessories.html): 張老師為學生代訂的空靈鼓配件：6 吋 11 音小鼓、鼓架、桌面支架及金屬支架，附學生訂購價。
 - [長笛文章](https://teabonvivant.github.io/oliver-flute-studio/topic-flute.html): 氣息、音準、發聲；聲音穩了，才談樂句。張老師的長笛文章共 13 篇，可由〈選第一支長笛：成人與兒童〉和〈長笛呼吸：支撐、換氣與樂句〉讀起。
 - [笛子文章](https://teabonvivant.github.io/oliver-flute-studio/topic-dizi.html): 口風、笛膜、指法，決定笛子的語氣。張老師的笛子文章共 12 篇，可由〈竹笛入門：筒音、簡譜與第一個音〉和〈笛膜：貼法與聲音〉讀起。
@@ -121,7 +121,6 @@
 - [音樂冷知識](https://teabonvivant.github.io/oliver-flute-studio/blog/cold-knowledge.html): 舊站手記
 - [中國音樂只有五個音！？](https://teabonvivant.github.io/oliver-flute-studio/blog/f40a20b5bdc.html): 舊站手記
 - [初學長笛的幾個誤區](https://teabonvivant.github.io/oliver-flute-studio/blog/flute-class01.html): 舊站手記
-- [葫蘆絲](https://teabonvivant.github.io/oliver-flute-studio/blog/hulusi.html): 舊站手記
 - [Jesus loves me](https://teabonvivant.github.io/oliver-flute-studio/blog/jesus-loves-me.html): 舊站手記
 - [Jesus you shine upon my life](https://teabonvivant.github.io/oliver-flute-studio/blog/jesus-you-shine-upon-my-life.html): 舊站手記
 - [懂樂器 = 唱歌岩key?](https://teabonvivant.github.io/oliver-flute-studio/blog/key.html): 舊站手記

@@ -1,6 +1,6 @@
 {
   "totalArticles": 68,
-  "legacyArticles": 20,
+  "legacyArticles": 19,
   "redirects": 200,
   "pages": [
     "index.html",
@@ -42,7 +42,6 @@
     "blog/cold-knowledge.html",
     "blog/f40a20b5bdc.html",
     "blog/flute-class01.html",
-    "blog/hulusi.html",
     "blog/jesus-loves-me.html",
     "blog/jesus-you-shine-upon-my-life.html",
     "blog/key.html",
@@ -70,7 +69,7 @@
       "url": "blog/flute-first-flute.html",
       "title": "選第一支長笛：成人與兒童",
       "category": "長笛",
-      "characters": 1297,
+      "characters": 1293,
       "art": "flute"
     },
     {
@@ -84,7 +83,7 @@
       "url": "blog/flute-tone.html",
       "title": "長笛音色：從起音到收音",
       "category": "長笛",
-      "characters": 1768,
+      "characters": 1992,
       "art": "flute"
     },
     {
@@ -217,7 +216,7 @@
       "url": "blog/dizi-learning-hk.html",
       "title": "在香港學笛子：兒童、成人與一對一課堂",
       "category": "笛子",
-      "characters": 1341,
+      "characters": 1448,
       "art": "dizi"
     },
     {
@@ -427,7 +426,7 @@
       "url": "blog/parents-before-start.html",
       "title": "開始學音樂之前，家長可以準備甚麼",
       "category": "家長陪練",
-      "characters": 1342,
+      "characters": 1467,
       "art": "family"
     },
     {
@@ -560,7 +559,7 @@
       "url": "blog/beginners.html",
       "title": "給準備學習長笛的你",
       "category": "舊站手記",
-      "characters": 979,
+      "characters": 966,
       "art": "flute"
     },
     {
@@ -604,13 +603,6 @@
       "category": "舊站手記",
       "characters": 2213,
       "art": "flute"
-    },
-    {
-      "url": "blog/hulusi.html",
-      "title": "葫蘆絲",
-      "category": "舊站手記",
-      "characters": 586,
-      "art": "dizi"
     },
     {
       "url": "blog/jesus-loves-me.html",

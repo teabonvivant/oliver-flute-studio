@@ -48,7 +48,7 @@ await writeFile(join(assets, "1.html"), stub("./"), "utf8");
 await writeFile(join(assets, "blog", "categories.html"), stub("../archive.html"), "utf8");
 await mkdir(join(assets, "blog", "categories"), { recursive: true });
 for (const c of ["音樂雜談","樂器與考試","練習心得","空靈鼓"]) await writeFile(join(assets, "blog", "categories", c + ".html"), stub("../../archive.html"), "utf8");
-const emptyPosts = { "2026": "flute-course.html", "abrsm-flute-exam-hong-kong-guide": "exam-guide.html", "adult-beginner-flute-lessons-hong-kong": "adult-beginner.html", "flute-lesson-price-hong-kong-2025": "flute-course.html", "flute-no-sound-beginner-embouchure-hong-kong": "flute-course.html" };
+const emptyPosts = { "2026": "flute-course.html", hulusi: "topic-dizi.html", "abrsm-flute-exam-hong-kong-guide": "exam-guide.html", "adult-beginner-flute-lessons-hong-kong": "adult-beginner.html", "flute-lesson-price-hong-kong-2025": "flute-course.html", "flute-no-sound-beginner-embouchure-hong-kong": "flute-course.html" };
 for (const [slug, to] of Object.entries(emptyPosts)) await writeFile(join(assets, "blog", slug + ".html"), stub("../" + to), "utf8");
 {
   const fontsCss = (await readFile(join(root, "assets/fonts/home/fonts.css"), "utf8")).replaceAll("url(serif-var.woff2)", "url(assets/fonts/home/serif-var.woff2)");

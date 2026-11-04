@@ -147,8 +147,8 @@ function verifyArticles(posts) {
   const stubs = blogFiles.filter((file) => read(`blog/${file}`).includes('此頁已併入'));
   const pagesOnly = blogFiles.filter((file) => !read(`blog/${file}`).includes('頁面已搬遷'));
   assert.equal(stubs.length, 200, `Expected 200 old-URL redirects, found ${stubs.length}`);
-  assert.equal(pagesOnly.length, 88, `Expected 88 article pages, found ${pagesOnly.length}`);
-  assert.equal(posts.length, 88, `Expected 88 index records, found ${posts.length}`);
+  assert.equal(pagesOnly.length, 87, `Expected 87 article pages, found ${pagesOnly.length}`);
+  assert.equal(posts.length, 87, `Expected 87 index records, found ${posts.length}`);
   for (const file of stubs) {
     const html = read(`blog/${file}`);
     const to = firstMatch(html, /url=([^"]+)"/, `blog/${file} refresh target`);
@@ -199,14 +199,14 @@ function verifyRoutesAndSitemap(allHtml) {
   assert.equal(htmlFiles.length, 40, `Expected 40 top-level HTML routes, found ${htmlFiles.length}`);
   const sitemap = read('sitemap.xml');
   const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
-  assert.equal(entries.length, htmlFiles.length - 1 + 88, 'Sitemap route count mismatch');
+  assert.equal(entries.length, htmlFiles.length - 1 + 87, 'Sitemap route count mismatch');
   assert(entries.every((entry) => entry.includes(`<lastmod>${revisedDate}</lastmod>`)), 'Sitemap lastmod values do not match the latest revision date');
   const urls = entries.map((entry) => firstMatch(entry, /<loc>([^<]+)<\/loc>/, 'Sitemap location'));
   assert.equal(new Set(urls).size, urls.length, 'Sitemap contains duplicate URLs');
-  assert.equal(urls.filter((url) => url.includes('/blog/')).length, 88, 'Sitemap should list the 68 merged articles and 20 old-site posts');
+  assert.equal(urls.filter((url) => url.includes('/blog/')).length, 87, 'Sitemap should list the 68 merged articles and 19 old-site posts');
   assert.equal(urls.filter((url) => url.includes('/archive/')).length, 0, 'Archive stubs stay out of the sitemap');
   assertHas(read('robots.txt'), /Sitemap: https:\/\/\S+\/sitemap\.xml/, 'Robots sitemap link');
-  return { topLevelRoutes: htmlFiles.length, sitemapRoutes: entries.length, articleSitemapRoutes: 88 };
+  return { topLevelRoutes: htmlFiles.length, sitemapRoutes: entries.length, articleSitemapRoutes: 87 };
 }
 
 function main() {
