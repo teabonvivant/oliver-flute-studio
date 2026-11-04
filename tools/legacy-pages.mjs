@@ -20,7 +20,6 @@ perform:[
 ['vi:344295334','長笛','Despacito'],
 ['vi:344322948','長笛','Czardas'],
 ['vi:344303172','長笛','Elegy'],
-['vi:344307531','陶笛','半壺紗'],
 ['vi:344290735','洞簫','Take Five'],
 ['vi:344288702','洞簫、結他','穿越時空的思念']
 ],
@@ -93,8 +92,8 @@ const FACADE=([key,tag,title])=>{
 const VM=JSON.parse(await read('content/legacy-video-meta.json'));
 const vgrid=list=>`<div class="video-grid">${list.map(FACADE).join('')}</div>`;
 add('videos.html','影片','張老師的長笛、笛子、洞簫、空靈鼓演奏，以及吹奏教學和長笛大師班分享。',
-hero('影片','長笛、笛子、洞簫、陶笛、空靈鼓，都在這幾段影片裏。')+tabs('videos.html')+
-`<section class="band video-band" id="perform"><h2>演奏分享</h2><p>張老師的長笛、笛子、洞簫、陶笛與空靈鼓演奏。按一下縮圖才會載入影片。</p>${vgrid(VIDEOS.perform)}</section>`+
+hero('影片','長笛、笛子、洞簫、空靈鼓，都在這幾段影片裏。')+tabs('videos.html')+
+`<section class="band video-band" id="perform"><h2>演奏分享</h2><p>張老師的長笛、笛子、洞簫與空靈鼓演奏。按一下縮圖才會載入影片。</p>${vgrid(VIDEOS.perform)}</section>`+
 `<section class="band video-band" id="drum"><h2>空靈鼓音色示範</h2><p>想先知道空靈鼓是甚麼聲音，可以由這兩首開始。</p>${vgrid(VIDEOS.drum)}<p class="video-more">${link('tongue-drum-course.html','了解空靈鼓課程')}</p></section>`+
 `<section class="band video-band" id="teach"><h2>吹奏教學</h2><p>長笛與笛子的基本吹奏：持笛、嘴形、指法與發音。</p>${vgrid(VIDEOS.teach)}<div class="teach-figures"><figure><a class="lb-item" href="${L}teach-006.webp" data-lightbox="長笛吹奏嘴形教學圖" data-w="${MEDIA['teach-006'].w}" data-h="${MEDIA['teach-006'].h}"><img src="${L}teach-006-480.webp" width="${MEDIA['teach-006'].tw}" height="${MEDIA['teach-006'].th}" alt="長笛吹奏嘴形教學圖" loading="lazy" decoding="async"></a><figcaption><strong>嘴形教學圖</strong>很多初學長笛的同學都覺得長笛難吹，原因是氣不能有效吹進笛裏。這張圖拆開幾個嘴形要點，可以幫助找到方向。</figcaption></figure><figure><a class="lb-item" href="${L}teach-007.webp" data-lightbox="長笛吹奏姿勢教學圖" data-w="${MEDIA['teach-007'].w}" data-h="${MEDIA['teach-007'].h}"><img src="${L}teach-007-480.webp" width="${MEDIA['teach-007'].tw}" height="${MEDIA['teach-007'].th}" alt="長笛吹奏姿勢教學圖" loading="lazy" decoding="async"></a><figcaption><strong>吹奏姿勢圖</strong>吹奏時覺得長笛很重、手指不夠長而按不穩鍵，多半與持笛姿勢有關。這張圖示範身體和手形的安排。</figcaption></figure></div></section>`+
 `<section class="band video-band" id="masterclass"><h2>大師班分享</h2><p>張老師推薦學生觀看的長笛大師班，涵蓋嘴形、音色、音階練習與高音區的控制。影片來自各大師及機構的公開頻道。</p>${vgrid(VIDEOS.master)}</section>`+
