@@ -75,7 +75,7 @@ export async function seoPost({ assets, origin, oldUrls }) {
       const course = COURSES.find((c) => c[0] === f);
       let main;
       if (course) main = { "@context": "https://schema.org", "@type": "Course", name: course[1], description: desc, url, inLanguage: "zh-Hant-HK", provider: { "@type": "EducationalOrganization", name: "張老師音樂工作室", url: `${origin}/` }, instructor: { "@type": "Person", name: "張家詠", alternateName: "Oliver Cheung" }, about: course[2] };
-      else if (f === "about.html") main = { "@context": "https://schema.org", "@type": "AboutPage", url, name: title, description: desc, mainEntity: { "@type": "Person", "@id": `${origin}/about.html#person`, name: "張家詠", alternateName: "Oliver Cheung", jobTitle: "音樂導師", knowsAbout: ["長笛", "竹笛", "洞簫", "空靈鼓"], worksFor: { "@id": `${origin}/#org` }, telephone: "+852 9809 6351" } };
+      else if (f === "about.html") main = { "@context": "https://schema.org", "@type": "AboutPage", url, name: title, description: desc, mainEntity: { "@type": "Person", "@id": `${origin}/about.html#person`, name: "張家詠", alternateName: "Oliver Cheung", jobTitle: "音樂導師", knowsAbout: ["長笛", "笛子", "洞簫", "空靈鼓"], worksFor: { "@id": `${origin}/#org` }, telephone: "+852 9809 6351" } };
       else if (f === "contact.html") main = { "@context": "https://schema.org", "@type": "ContactPage", url, name: title, description: desc, about: { "@id": `${origin}/#org` } };
       else if (f === "faq.html") {
         const qa = [...h.matchAll(/<summary>([^<]*)<\/summary><div><p>([^<]*)<\/p>/g)].map((m) => ({ "@type": "Question", name: m[1], acceptedAnswer: { "@type": "Answer", text: m[2] } }));

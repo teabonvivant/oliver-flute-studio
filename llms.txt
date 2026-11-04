@@ -4,10 +4,10 @@
 
 ## 主要頁面
 - [張老師音樂工作室](https://teabonvivant.github.io/oliver-flute-studio/index.html): 香港長笛、笛子、洞簫及空靈鼓課程。認識張家詠老師、成人與兒童學習方向，閱讀音樂練習、樂理及考級手記。
-- [關於張家詠老師](https://teabonvivant.github.io/oliver-flute-studio/about.html): 認識張家詠 Oliver Cheung 的音樂教學背景、演奏學習與課堂方向，了解長笛、竹笛、洞簫及空靈鼓學習。
+- [關於張家詠老師](https://teabonvivant.github.io/oliver-flute-studio/about.html): 認識張家詠 Oliver Cheung 的音樂教學背景、演奏學習與課堂方向，了解長笛、笛子、洞簫及空靈鼓學習。
 - [音樂課程](https://teabonvivant.github.io/oliver-flute-studio/courses.html): 長笛、笛子、洞簫及空靈鼓課程內容、入門準備、進階方向與查詢安排。
 - [長笛課程](https://teabonvivant.github.io/oliver-flute-studio/flute-course.html): 長笛學習從姿勢、吹口與氣流開始。聲音逐漸穩定後，加入指法、節奏、讀譜與曲目，讓基本功與音樂一起前進。
-- [笛子課程](https://teabonvivant.github.io/oliver-flute-studio/dizi-course.html): 竹笛的聲音由口風、笛膜、封孔與氣息一起形成。課程由基本發聲和簡譜閱讀入手，逐步認識指法、民歌句法及合奏中的角色。
+- [笛子課程](https://teabonvivant.github.io/oliver-flute-studio/dizi-course.html): 笛子的聲音由口風、笛膜、封孔與氣息一起形成。課程由基本發聲和簡譜閱讀入手，逐步認識指法、民歌句法及合奏中的角色。
 - [洞簫課程](https://teabonvivant.github.io/oliver-flute-studio/xiao-course.html): 洞簫學習重視自然發聲、持握、音準與樂句。由可重複的短音開始，逐步延伸長音、換氣與旋律，讓從容建立在清楚的方法之上。
 - [空靈鼓課程](https://teabonvivant.github.io/oliver-flute-studio/tongue-drum-course.html): 空靈鼓由音舌振動發聲，入門可以很直接；要把聲音連成音樂，仍需要節拍、回彈、分句與聆聽。課程由少量音與清楚短句開始，再加入旋律和即興。
 - [成人音樂入門](https://teabonvivant.github.io/oliver-flute-studio/adult-beginner.html): 成人初學與重拾音樂的選擇、練習時間、樂器準備及學習方向。
