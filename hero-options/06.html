@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<base href="../">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>張老師音樂學院｜長笛 · 笛子 · 洞簫 · 空靈鼓</title>
+<meta name="description" content="香港長笛、笛子、洞簫及空靈鼓課程。按住，聽一個音——由一口氣開始，認識張家詠老師與四種樂器的學習方向。">
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://teabonvivant.github.io/oliver-flute-studio/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"張老師音樂學院","url":"https://teabonvivant.github.io/oliver-flute-studio/","telephone":"+852 9809 6351","areaServed":"香港","description":"香港長笛、笛子、洞簫及空靈鼓課程。認識張家詠老師、成人與兒童學習方向，閱讀音樂練習、樂理及考級手記。","founder":{"@type":"Person","name":"張家詠","alternateName":"Oliver Cheung","jobTitle":"音樂導師","knowsAbout":["長笛","竹笛","洞簫","空靈鼓"]},"sameAs":["https://www.oliverflute.com/"]}</script>
+<meta name="theme-color" content="#f3f1ea">
+<link rel="icon" href="assets/images/brand-mark-original.png">
+<meta property="og:title" content="張老師音樂學院">
+<meta property="og:description" content="把一個音聽清楚，讓音樂慢慢走近。長笛、笛子、洞簫與空靈鼓課程。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://teabonvivant.github.io/oliver-flute-studio/assets/images/editorial/flute.webp">
+<meta property="og:locale" content="zh_HK">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/home/serif-var.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Noto Serif TC';font-style:normal;font-weight:300 900;font-display:swap;src:url(assets/fonts/home/serif-var.woff2) format('woff2')}
+</style>
+<style>/* home v2 "one breath": standalone styles; palette from theme.css (sea salt / coral). */
+:root {
+  --ink: #1f2b2a;
+  --ink-2: #4f5d5b;
+  --paper: #f3f1ea;
+  --paper-2: #e9e6dc;
+  --line: #c9c7bb;
+  --coral: #b04f3c;
+  --coral-d: #8f3d2d;
+  --night: #172221;
+  --serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --sans: "Manrope", system-ui, -apple-system, "Microsoft JhengHei", sans-serif;
+  --gut: clamp(20px, 5vw, 80px);
+  --ease: cubic-bezier(.2, .7, .1, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.85 var(--serif); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+h1, h2, h3, p, dl, dd, ol, ul, figure, blockquote { margin: 0; }
+ol, ul { padding: 0; list-style: none; }
+::selection { background: var(--coral); color: var(--paper); }
+:focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 50; background: var(--ink); color: var(--paper); padding: 10px 16px; text-decoration: none; }
+.skip:focus { top: 12px; }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: .05; background: url(assets/images/home/grain.webp); }
+
+/* bar */
+.bar { position: fixed; inset: 0 0 auto; z-index: 40; display: flex; align-items: center; gap: 28px; padding: 14px var(--gut); transition: background .3s var(--ease), transform .3s var(--ease), box-shadow .3s; }
+.bar.scrolled { background: color-mix(in srgb, var(--paper) 92%, transparent); box-shadow: 0 1px 0 var(--line); }
+.bar.hide { transform: translateY(-100%); }
+.mark { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; min-height: 44px; }
+.mark img { width: 68px; height: auto; }
+.mark b { display: block; font-weight: 600; font-size: 17px; letter-spacing: .12em; line-height: 1.3; }
+.mark small { display: block; font: 500 10px/1.4 var(--sans); letter-spacing: .22em; color: var(--ink-2); }
+.links { display: flex; gap: 26px; }
+.links a { font-size: 15px; letter-spacing: .08em; text-decoration: none; position: relative; padding: 6px 0; }
+.links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .25s var(--ease); }
+.links a:hover::after { transform: scaleX(1); transform-origin: left; }
+.pill { font-size: 15px; letter-spacing: .08em; text-decoration: none; padding: 10px 20px; border-radius: 99px; background: var(--ink); color: var(--paper); transition: background .2s; }
+.pill:hover { background: var(--coral); }
+.burger { display: none; }
+
+/* 通用 */
+.sec-head { display: flex; align-items: baseline; gap: clamp(16px, 3vw, 40px); padding: 0 var(--gut); margin-bottom: clamp(36px, 6vw, 80px); border-top: 1px solid var(--line); padding-top: 22px; }
+.idx { font: 500 13px/1 var(--sans); letter-spacing: .2em; color: var(--coral); min-width: 2.5em; }
+.sec-head h2 { font-weight: 600; font-size: clamp(28px, 4.4vw, 64px); line-height: 1.2; letter-spacing: .04em; }
+.sec-head h2 i { font: italic 400 .42em/1 var(--sans); letter-spacing: .06em; color: var(--ink-2); margin-left: .4em; }
+section { padding: clamp(80px, 12vw, 180px) 0 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 26px; border: 1px solid var(--ink); border-radius: 99px; text-decoration: none; font-size: 16px; letter-spacing: .08em; background: transparent; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn.solid { background: var(--coral); border-color: var(--coral); color: #fff; }
+.btn.solid:hover { background: var(--coral-d); border-color: var(--coral-d); }
+.go { display: inline-flex; align-items: center; gap: 10px; font-size: 16px; letter-spacing: .08em; text-decoration: none; padding: 8px 0; border-bottom: 1px solid currentColor; }
+.go::after { content: "→"; font-family: var(--sans); transition: transform .25s var(--ease); }
+.go:hover { color: var(--coral); }
+.go:hover::after { transform: translateX(5px); }
+.acts { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* hero */
+.hero { position: relative; min-height: 100svh; display: grid; grid-template-rows: 1fr auto auto; padding: clamp(110px, 14vh, 150px) var(--gut) 40px; }
+.hero-title { position: relative; z-index: 2; font-weight: 600; font-size: clamp(54px, 9.6vw, 168px); line-height: 1.04; letter-spacing: .02em; align-self: end; }
+.hero-title .ln { display: block; }
+.hero-title .accent { color: var(--coral); font-size: .5em; letter-spacing: .08em; margin-top: .45em; font-weight: 400; }
+.breath { position: relative; height: clamp(150px, 22vh, 230px); margin: 18px calc(var(--gut) * -1) 0; }
+.wave { position: absolute; inset: 0; width: 100%; height: 100%; }
+.breath { --img-w: min(60vw, 1100px); }
+.breath-img { position: absolute; right: 0; top: 50%; width: var(--img-w); height: auto; translate: 0 -39.5%; pointer-events: none; }
+.breath .wave[data-wave="hero"] { width: calc(100% - var(--img-w) * .52); }
+.hold { position: absolute; left: var(--gut); top: 50%; translate: 0 -50%; width: 112px; height: 112px; border-radius: 50%; border: 1px solid var(--ink); background: var(--paper); cursor: pointer; display: grid; place-items: center; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; transition: background .25s, color .25s, scale .25s var(--ease); }
+.hold-text { font-size: 15px; line-height: 1.5; letter-spacing: .1em; }
+.hold-ring { position: absolute; inset: -9px; border-radius: 50%; border: 1px solid var(--coral); opacity: 0; scale: .9; transition: opacity .3s, scale .3s var(--ease); }
+.hold:hover .hold-ring { opacity: .6; scale: 1; }
+.hold.on { background: var(--ink); color: var(--paper); scale: .96; }
+.hold.on .hold-ring { opacity: 1; scale: 1.08; animation: ring 1.6s var(--ease) infinite; }
+@keyframes ring { 50% { scale: 1.2; opacity: .3; } }
+.hold-note { position: absolute; left: calc(var(--gut) + 140px); top: calc(50% + 62px); display: flex; flex-direction: column; font: 500 12px/1.7 var(--sans); letter-spacing: .14em; color: var(--ink-2); }
+.hold-note span + span { font: 400 13px/1.7 var(--serif); letter-spacing: .06em; }
+.hero-foot { position: relative; z-index: 2; display: grid; justify-items: start; gap: 22px; margin-top: 44px; max-width: 40vw; }
+.hero-foot > p:first-child { font-size: clamp(16px, 1.35vw, 19px); color: var(--ink-2); }
+.credit { justify-self: stretch; font: 500 12px/1.6 var(--sans); letter-spacing: .14em; color: var(--ink-2); padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* 四種聲音 */
+.voices { overflow: hidden; }
+.track { display: grid; gap: clamp(72px, 10vw, 140px); }
+.voice { padding: 0 var(--gut); display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 4vw, 72px); align-items: center; }
+.hscroll .track { display: flex; gap: 0; width: max-content; }
+.hscroll .voice { width: 100vw; box-sizing: border-box; }
+.voice figure { overflow: hidden; border-radius: 4px; aspect-ratio: 3 / 2; background: var(--paper-2); }
+.voice figure img { width: 100%; height: 100%; object-fit: cover; scale: 1.08; }
+.num { font: 500 13px/1 var(--sans); letter-spacing: .2em; color: var(--coral); }
+.num i { font-style: italic; color: var(--ink-2); margin-left: .8em; letter-spacing: .1em; }
+.voice h3 { font-weight: 600; font-size: clamp(64px, 9vw, 150px); line-height: 1.05; letter-spacing: .06em; margin: 18px 0 14px; }
+.voice-copy > p:not(.num):not(.fit) { font-size: clamp(18px, 1.5vw, 23px); color: var(--ink); max-width: 22em; }
+.fit { margin-top: 14px; font-size: 15px; line-height: 1.8; color: var(--ink-2); max-width: 28em; padding-left: 14px; border-left: 2px solid var(--coral); }
+.vindex { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; padding: 0 var(--gut); margin: -40px 0 56px; }
+.vindex a { font-size: 17px; letter-spacing: .1em; text-decoration: none; color: var(--ink-2); padding: 6px 0; transition: color .2s; }
+.vindex a:hover, .vindex a.on { color: var(--ink); }
+.vindex a.on { box-shadow: inset 0 -2px var(--coral); }
+.vbar { display: none; flex: 1; min-width: 120px; height: 1px; background: var(--line); position: relative; }
+.vbar i { position: absolute; inset: 0; background: var(--coral); transform-origin: left; transform: scaleX(0); }
+.vnote { width: 100%; font: 500 12px/1.6 var(--sans); letter-spacing: .14em; color: var(--ink-2); }
+.hscroll .vindex { margin: 18px 0 0; }
+.hscroll .vbar { display: block; }
+.listen { display: flex; align-items: center; gap: 18px; margin: 30px 0 26px; }
+.play { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 22px 0 16px; border: 1px solid var(--ink); border-radius: 99px; background: transparent; cursor: pointer; letter-spacing: .1em; font-size: 16px; transition: background .2s, color .2s; }
+.play span { width: 18px; height: 18px; border-radius: 50%; background: var(--coral); position: relative; }
+.play span::after { content: ""; position: absolute; left: 7px; top: 5px; border-left: 6px solid #fff; border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+.play[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.play[aria-pressed="true"] span::after { left: 6px; top: 6px; width: 6px; height: 6px; border: 0; background: #fff; }
+.play:hover { border-color: var(--coral); }
+.wave.mini { position: relative; flex: 1; height: 48px; max-width: 260px; }
+
+@media (min-width: 901px) {
+  .voices.hscroll { padding-top: 88px; box-sizing: border-box; margin-top: clamp(80px, 12vw, 180px); height: 100svh; display: flex; flex-direction: column; }
+  .hscroll .sec-head { padding-top: 28px; margin-bottom: 0; }
+  .hscroll .track { flex: 1; min-height: 0; }
+  .hscroll .voice { height: 100%; padding-top: 3vh; padding-bottom: 6vh; }
+  .hscroll .voice figure { aspect-ratio: auto; height: min(100%, 68vh); }
+}
+
+/* 老師 */
+.teacher-grid { padding: 0 var(--gut); display: grid; grid-template-columns: minmax(260px, 5fr) 7fr; gap: clamp(32px, 6vw, 110px); align-items: start; }
+.portrait { overflow: hidden; border-radius: 4px; max-width: 520px; }
+.portrait img { width: 100%; }
+.teacher blockquote { font-weight: 600; font-size: clamp(22px, 2.7vw, 44px); line-height: 1.5; letter-spacing: .03em; margin-left: -.5em; }
+.teacher blockquote .ln { display: block; }
+.teacher blockquote .ln + .ln { padding-left: .5em; }
+.lead { margin: 28px 0 40px; color: var(--ink); max-width: 32em; font-size: 19px; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); margin-bottom: 40px; }
+.facts div { padding: 20px 16px 0 0; }
+.facts div + div { padding-left: 18px; border-left: 1px solid var(--line); }
+.facts dt { font: 500 15px/1 var(--sans); color: var(--ink-2); }
+.facts dt b { font: 300 clamp(40px, 4.4vw, 68px)/1 var(--sans); color: var(--ink); letter-spacing: -.02em; margin-right: 4px; }
+.facts div:last-child dt b { font: 600 clamp(32px, 3.4vw, 52px)/1.25 var(--serif); }
+.facts dd { margin-top: 10px; font-size: 14px; color: var(--ink-2); line-height: 1.6; }
+
+/* 舞台 */
+.reel { display: grid; gap: 14px; overflow: hidden; }
+.row { display: flex; gap: 14px; width: max-content; }
+.row img { height: clamp(200px, 26vw, 380px); width: auto; border-radius: 3px; }
+.row[data-row="1"] { margin-left: -30vw; }
+.stage-links { display: flex; gap: 32px; padding: 36px var(--gut) 0; }
+
+/* 路線 */
+.routes { position: relative; }
+.route-list { padding: 0 var(--gut); counter-reset: r; }
+.route-list a { display: grid; grid-template-columns: 4em 1fr 1fr auto; gap: 20px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid var(--line); text-decoration: none; transition: color .25s, padding .3s var(--ease); }
+.route-list li:first-child a { border-top: 1px solid var(--line); }
+.r-n { font: italic 400 15px/1 var(--sans); color: var(--coral); }
+.r-t { font-weight: 600; font-size: clamp(24px, 2.8vw, 42px); line-height: 1.3; letter-spacing: .03em; }
+.r-d { color: var(--ink-2); font-size: 16px; }
+.r-k { font: 500 13px/1 var(--sans); letter-spacing: .12em; white-space: nowrap; }
+.r-k::after { content: " →"; }
+.route-list a:hover { color: var(--coral); padding-left: 14px; }
+.route-list a:hover .r-d { color: var(--ink); }
+.peek { position: absolute; left: 0; top: 0; width: 300px; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; pointer-events: none; opacity: 0; z-index: 3; box-shadow: 0 30px 60px -30px #0006; }.arrange { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 56px var(--gut) 0; border-top: 1px solid var(--line); }
+.arrange > div { padding: 22px 24px 24px 0; border-bottom: 1px solid var(--line); }
+.arrange > div:nth-child(3n + 2), .arrange > div:nth-child(3n + 3) { padding-left: 24px; border-left: 1px solid var(--line); }
+.arrange > div:nth-child(3n + 3) { padding-right: 0; }
+.arrange dt { font: 500 12px/1 var(--sans); letter-spacing: .2em; color: var(--coral); margin-bottom: 12px; }
+.arrange dd { font-size: 17px; line-height: 1.75; color: var(--ink); }
+.arrange-note { margin: 26px var(--gut) 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; font-size: 16px; line-height: 1.7; color: var(--ink-2); }
+.arrange-note .ar { color: var(--coral); font-size: 13px; }
+
+/* 練習室 */
+.practice-grid { padding: 0 var(--gut); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: start; }
+.metro { background: var(--night); color: var(--paper); border-radius: 6px; padding: clamp(28px, 4vw, 54px); display: grid; justify-items: start; gap: 10px; }
+.metro-label { font: 500 12px/1 var(--sans); letter-spacing: .2em; color: #b8c3c1; }
+.bpm { display: flex; align-items: center; gap: 18px; margin-top: 18px; }
+.bpm output { font: 200 clamp(84px, 10vw, 150px)/1 var(--sans); letter-spacing: -.04em; min-width: 2.4ch; text-align: center; font-variant-numeric: tabular-nums; }
+.bpm button { width: 48px; height: 48px; border-radius: 50%; border: 1px solid #ffffff55; background: none; color: var(--paper); font: 300 24px/1 var(--sans); cursor: pointer; }
+.bpm button:hover { border-color: var(--paper); }
+.bpm-unit { font-size: 14px; color: #b8c3c1; letter-spacing: .1em; }
+.meter { display: flex; gap: 6px; margin-top: 14px; }
+.meter button { min-height: 40px; padding: 0 14px; border-radius: 99px; border: 1px solid #ffffff44; background: none; color: #c9d2d0; font: 500 13px/1 var(--sans); letter-spacing: .08em; cursor: pointer; }
+.meter button[aria-pressed="true"] { background: var(--paper); color: var(--night); border-color: var(--paper); }
+.beats { display: flex; align-items: flex-end; gap: 12px; margin: 22px 0 26px; }
+.beats i { width: 44px; height: 6px; border-radius: 3px; background: #ffffff2e; transition: background .08s; }
+.beats i:first-child { height: 14px; }
+.beats i[hidden] { display: none; }
+.beats i.on { background: var(--paper); }
+.beats i.on:first-child { background: #e0846f; }
+.metro .btn.solid { min-width: 140px; }
+.tools > p { font-size: 18px; color: var(--ink-2); margin-bottom: 28px; }
+.tools li a { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.tools li:first-child a { border-top: 1px solid var(--line); }
+.tools b { font-weight: 600; font-size: 20px; letter-spacing: .05em; }
+.tools span { color: var(--ink-2); font-size: 15px; text-align: right; }
+.tools li a:hover b { color: var(--coral); }
+
+/* 手記 */
+.journal .sec-head b { font: 300 1.3em/1 var(--sans); letter-spacing: -.03em; color: var(--coral); margin-right: .1em; }
+.journal-intro { padding: 0 var(--gut); max-width: 40em; color: var(--ink-2); font-size: 18px; margin: -30px 0 40px; }
+.posts { padding: 0 var(--gut); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 44px); margin-bottom: 36px; }
+.posts a { display: grid; align-content: start; gap: 14px; padding-top: 22px; border-top: 2px solid var(--ink); text-decoration: none; }
+.posts .tag { font: 500 12px/1 var(--sans); letter-spacing: .2em; color: var(--coral); }
+.posts b { font-weight: 600; font-size: clamp(20px, 1.8vw, 26px); line-height: 1.5; }
+.posts .ex { color: var(--ink-2); font-size: 15px; }
+.posts a:hover b { color: var(--coral); }
+.journal > .go { margin-left: var(--gut); }
+
+/* 結尾 */
+.finale { position: relative; margin-top: clamp(100px, 14vw, 200px); background: var(--night); color: var(--paper); padding: clamp(100px, 14vw, 200px) var(--gut) clamp(80px, 10vw, 140px); overflow: hidden; }
+.finale .wave { opacity: .9; }
+.finale h2 { position: relative; font-weight: 600; font-size: clamp(48px, 8vw, 132px); line-height: 1.1; letter-spacing: .03em; }
+.finale h2 .ln { display: block; }
+.finale h2 .ln + .ln { color: #e0846f; }
+.finale p { position: relative; max-width: 30em; margin: 32px 0 36px; color: #c9d2d0; font-size: 18px; }
+.finale .acts { position: relative; }
+.btn.light { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.btn.light:hover { background: #e0846f; border-color: #e0846f; color: var(--night); }
+.btn.ghost { border-color: #ffffff77; color: var(--paper); }
+.btn.ghost:hover { background: var(--paper); color: var(--ink); }
+
+/* 頁腳 */
+.foot { background: var(--night); color: #c9d2d0; padding: 0 var(--gut) 30px; }
+.foot-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 48px 0; border-top: 1px solid #ffffff22; }
+.foot-cols a { display: block; text-decoration: none; padding: 6px 0; font-size: 16px; color: #e2e8e6; }
+.foot-cols a:hover { color: #fff; }
+.ft { font: 500 12px/1 var(--sans); letter-spacing: .2em; color: #8fa09d; margin-bottom: 14px; }
+.foot-word { font-weight: 600; font-size: clamp(40px, 10.4vw, 190px); line-height: 1; letter-spacing: .02em; color: transparent; -webkit-text-stroke: 1px #ffffff2e; white-space: nowrap; }
+.small { font-size: 13px; color: #8fa09d; margin-top: 18px; line-height: 1.7; }
+.small a { color: inherit; }
+
+/* JS 動態的起始狀態（只在 js＋允許動態時） */
+.js .split-w { text-indent: 0; display: inline-block; overflow: clip; overflow-clip-margin: .15em; vertical-align: top; }
+.js .split-w > span { display: inline-block; }
+
+/* 平板 */
+@media (max-width: 1100px) {
+  .links { gap: 18px; }
+  .links a { font-size: 14px; }
+  .route-list a { grid-template-columns: 3em 1fr auto; }
+  .r-d { display: none; }
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .facts div:nth-child(3) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 900px) {
+  body { font-size: 16px; }
+  .links { position: fixed; inset: 0; z-index: -1; flex-direction: column; justify-content: center; gap: 4px; padding: 0 var(--gut); background: var(--paper); visibility: hidden; opacity: 0; transition: opacity .25s, visibility .25s; }
+  .links a { font-size: 34px; font-weight: 600; letter-spacing: .06em; padding: 8px 0; }
+  .bar.open .links { visibility: visible; opacity: 1; }
+  .bar.open { background: var(--paper); }
+  .pill { display: none; }
+  .burger { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 4px; border: 0; background: none; cursor: pointer; position: relative; }
+  .burger span { position: absolute; left: 4px; width: 22px; height: 1.5px; background: currentColor; transition: transform .25s var(--ease); }
+  .burger span:first-child { top: 17px; }
+  .burger span:nth-child(2) { top: 25px; }
+  .burger em { font-style: normal; font-size: 15px; letter-spacing: .1em; padding-left: 32px; white-space: nowrap; }
+  .bar.open .burger span:first-child { transform: translateY(4px) rotate(45deg); }
+  .bar.open .burger span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+  .mark img { width: 54px; }
+  .mark b { font-size: 15px; }
+  .mark small { letter-spacing: .12em; white-space: nowrap; }
+  .hero { padding-top: 100px; }
+  .breath { --img-w: 150vw; height: 60vw; margin-top: 4px; margin-bottom: 56px; }
+  .hold-note { top: auto; bottom: -58px; left: var(--gut); }
+  .hero-foot { max-width: none; }
+  .hero-foot { grid-template-columns: 1fr; }
+  .hold { width: 96px; height: 96px; }
+  .voice { grid-template-columns: 1fr; gap: 24px; }
+  .voice h3 { font-size: clamp(56px, 16vw, 84px); margin: 12px 0 8px; }
+  .listen { margin: 22px 0 18px; }
+  .vindex a { padding: 12px 2px; min-height: 44px; display: inline-flex; align-items: center; }
+  .teacher-grid, .practice-grid { grid-template-columns: 1fr; }
+  .portrait { max-width: 420px; }
+  .row[data-row="1"] { margin-left: -60vw; }
+  .posts { grid-template-columns: 1fr; }
+  .journal-intro { margin-top: -16px; }
+  .foot-cols { grid-template-columns: 1fr 1fr; }
+  .peek { display: none; }
+  .arrange { grid-template-columns: 1fr; margin-top: 36px; }
+  .arrange > div { padding: 18px 0 20px; border-left: 0 !important; padding-left: 0 !important; }
+  .arrange dd { font-size: 16px; }
+}
+@media (max-width: 560px) {
+  .sec-head h2 { font-size: min(27px, 6.8vw); }
+  .finale h2 { font-size: min(48px, 11.4vw); }
+  .teacher blockquote { font-size: min(24px, 5.6vw); margin-left: -.4em; }
+  .sec-head { flex-direction: column; gap: 10px; }
+  .route-list a { grid-template-columns: 2em 1fr; gap: 6px 12px; padding: 22px 0; }
+  .r-k { grid-column: 2; }
+  .stage-links { flex-direction: column; gap: 6px; align-items: flex-start; }
+  .tools span { display: none; }
+  .facts dt b { font-size: 40px; }
+}
+.will-in { opacity: 0; translate: 0 26px; transition: opacity .7s var(--ease), translate .7s var(--ease); }
+.will-in.in { opacity: 1; translate: 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+  .will-in { opacity: 1; translate: none; }
+}
+.students-h { margin: 56px var(--gut) 18px; font: 500 12px/1 var(--sans); letter-spacing: .2em; color: var(--coral); }
+.students { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 0 var(--gut); }
+.students figure { margin: 0; }
+.students img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
+.students figcaption { margin-top: 8px; font-size: 14px; color: var(--ink-2); }
+@media (max-width: 900px) { .students { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+
+/* 主選單子選單（2026-10-24，結構同內頁 tools/render-site.mjs 的 NAV） */
+.links { align-items: center; }
+.nav-item { position: relative; display: flex; align-items: center; }
+.sub-toggle { display: inline-grid; place-items: center; width: 24px; height: 36px; padding: 0; border: 0; background: none; color: var(--ink-2); cursor: pointer; }
+.sub-toggle:hover, .has-sub.open .sub-toggle { color: var(--coral); }
+.sub-toggle svg { transition: transform .18s var(--ease); }
+.has-sub.open .sub-toggle svg { transform: rotate(180deg); }
+.sub { position: absolute; top: calc(100% + 12px); left: 50%; display: flex; gap: 34px; padding: 20px 26px 18px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 24px 50px -30px #1f2b2a66; opacity: 0; visibility: hidden; transform: translate(-50%, 6px); transition: opacity .16s, transform .16s var(--ease), visibility .16s; }
+.sub::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
+.has-sub.open .sub { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+@media (hover: hover) and (min-width: 901px) { .has-sub:hover .sub { opacity: 1; visibility: visible; transform: translate(-50%, 0); } .has-sub:hover .sub-toggle svg { transform: rotate(180deg); } }
+.sub-col { display: flex; flex-direction: column; min-width: 124px; }
+.sub-title { margin: 0 0 6px; font: 600 12px/1.6 var(--sans); letter-spacing: .14em; color: var(--ink-2); }
+.links .sub a { padding: 6px 0; font-size: 15px; letter-spacing: .04em; white-space: nowrap; }
+.links .sub a::after { display: none; }
+.links .sub a:hover, .links .sub a:focus-visible { color: var(--coral); }
+@media (max-width: 900px) {
+  .links { justify-content: flex-start; align-items: stretch; padding-top: 92px; padding-bottom: 40px; overflow-y: auto; }
+  .nav-item { flex-wrap: wrap; }
+  .nav-item > a { flex: 1; }
+  .sub-toggle { width: 48px; height: 56px; }
+  .sub { position: static; display: none; width: 100%; flex-direction: column; gap: 12px; padding: 0 0 14px 16px; background: none; border: 0; border-left: 1px solid var(--line); box-shadow: none; opacity: 1; visibility: visible; transform: none; transition: none; }
+  .sub::before { display: none; }
+  .has-sub.open .sub { display: flex; transform: none; }
+  .links .sub a { font-size: 17px; font-weight: 400; padding: 8px 0; }
+}
+@media (prefers-reduced-motion: reduce) { .sub, .sub-toggle svg { transition: none; } }
+h2 { text-wrap: balance; }
+</style>
+<script>document.documentElement.classList.add('js')</script>
+
+<meta name="robots" content="noindex,nofollow">
+<style>
+.hero-art { pointer-events: none; }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; }
+/* side / tall / mosaic: image column on the right */
+.L-side .hero, .L-tall .hero, .L-mosaic .hero { padding-right: calc(46vw + var(--gut)); }
+.L-side .hero-art, .L-tall .hero-art, .L-mosaic .hero-art { position: absolute; z-index: 1; right: var(--gut); top: clamp(100px, 13vh, 140px); bottom: 40px; width: 42vw; }
+.L-side .hero-art img { object-fit: contain; object-position: right center; }
+.L-round .hero-art img { object-fit: cover; aspect-ratio: 1; height: auto; max-height: 100%; border-radius: 50%; width: auto; margin-left: auto; }
+.L-tall .hero-art { width: 36vw; }
+.L-tall .hero { padding-right: calc(40vw + var(--gut)); }
+.L-side .hero-title, .L-tall .hero-title, .L-mosaic .hero-title { font-size: clamp(48px, 6.6vw, 120px); }
+.L-side .breath, .L-tall .breath, .L-mosaic .breath { margin-right: 0; }
+.L-side .breath .wave[data-wave="hero"], .L-tall .breath .wave[data-wave="hero"], .L-mosaic .breath .wave[data-wave="hero"] { width: 100%; }
+.L-side .hero-foot, .L-tall .hero-foot, .L-mosaic .hero-foot { max-width: none; }
+.L-flat { --paper: #eef0e6; }
+/* bleed: whole hero is the photo */
+.L-bleed .hero-art { position: absolute; inset: 0; z-index: 0; }
+.L-bleed .hero-art { left: 30vw; }
+.L-bleed .hero-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 70%, transparent) 22%, transparent 45%); }
+.L-bleed .hero-art img { object-position: 100% 50%; }
+.L-bleed .breath .wave[data-wave="hero"] { width: 52%; }
+.L-bleed .hero-title { font-size: clamp(48px, 7.4vw, 140px); }
+.L-dark .hero-art { left: 0; }
+.L-dark .hero-art::after { background: linear-gradient(90deg, color-mix(in srgb, var(--paper) 88%, transparent) 0%, color-mix(in srgb, var(--paper) 55%, transparent) 30%, transparent 50%); }
+.L-bleed:not(.L-dark) .hero-art { left: 22vw; }
+.L-bleed.L-b11 .hero-art { left: auto; right: 0; top: auto; bottom: 0; width: min(68vw, 160vh); height: auto; aspect-ratio: 16 / 9; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(180deg, transparent 0, #000 18%); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(180deg, transparent 0, #000 18%); mask-composite: intersect; }
+.L-b11 .hero-art::after { display: none; }
+.L-b11 .hero-art img { object-fit: cover; object-position: 50% 50%; }
+.L-dark { --paper: #172221; --ink: #f3f1ea; --ink-2: #b9c2bd; --line: #3a4846; }
+.L-dark .hero { background: var(--paper); color: var(--ink); }
+.L-dark .hero .btn:not(.solid) { border-color: var(--ink); color: var(--ink); }
+.L-dark .hold { background: transparent; border-color: var(--ink); }
+.L-dark .bar:not(.scrolled) { color: #f3f1ea; }
+/* band: wide image under title, wave flows in */
+.L-band .breath { --img-w: 64vw; height: calc(64vw / 3 + 10px); margin-top: 24px; }
+.L-band .hero-title { font-size: clamp(48px, 6.4vw, 116px); }
+.L-band .breath-img { translate: 0 -50%; }
+.L-band .breath .wave[data-wave="hero"] { width: calc(100% - var(--img-w) * .9); }
+.L-band .hero-foot { margin-top: 24px; }
+.L-plate .hero-art { display: flex; flex-direction: column; }
+.L-plate .hero-art img { flex: 1; min-height: 0; }
+.L-plate .legend { display: flex; flex-wrap: wrap; gap: 6px 26px; margin-top: 10px; font: 500 13px/1.6 var(--sans); letter-spacing: .14em; color: var(--ink-2); justify-content: flex-end; }
+.L-plate .legend b { color: var(--coral); font-weight: 600; margin-right: 6px; }
+/* mosaic of real photos */
+.L-mosaic .hero-art { display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.L-mosaic .hero-art img { min-height: 0; }
+.L-mosaic .hero-art img { border-radius: 4px; }
+.L-mosaic .hero-art img:first-child { grid-row: 1 / 3; }
+.L-mosaic .hero-art img:nth-child(4) { grid-column: 1 / 3; }
+@media (max-width: 900px) {
+  .L-side .hero, .L-tall .hero, .L-mosaic .hero { padding-right: var(--gut); }
+  .L-side .hero-art, .L-tall .hero-art, .L-mosaic .hero-art { position: relative; inset: auto; width: auto; height: auto; margin: 10px 0 0; grid-row: 2; }
+  .L-side .hero-art img, .L-tall .hero-art img { height: auto; max-height: 62vh; object-fit: contain; object-position: center; }
+  .L-round .hero-art img { margin: 0 auto; width: 86vw; }
+  .L-mosaic .hero-art { height: 92vw; }
+  .L-side .hero, .L-tall .hero, .L-mosaic .hero { grid-template-rows: auto auto auto auto; }
+  .L-bleed .hero-art::after { background: linear-gradient(180deg, transparent 55%, var(--paper) 100%); }
+  .L-bleed .hero-art { left: 0; top: 64px; bottom: auto; height: 46vh; }
+  .L-bleed .hero-art img { object-position: 72% 50%; }
+  .L-bleed .hero { padding-top: calc(46vh + 64px); }
+  .L-bleed:not(.L-dark) .hero-art { left: 0; }
+  .L-dark .hero-art::after { background: linear-gradient(180deg, transparent 55%, var(--paper) 100%); }
+  .hero-title { grid-row: 1; } .L-side .breath, .L-tall .breath, .L-mosaic .breath { grid-row: 3; } .L-side .hero-foot, .L-tall .hero-foot, .L-mosaic .hero-foot { grid-row: 4; }
+  .optbar { gap: 6px; padding: 6px 6px 6px 12px; font-size: 12px; } .optbar a { padding: 7px 9px; } .optbar .t { display: none; }
+  .L-band .breath { --img-w: 150vw; height: 54vw; }
+  .L-plate .legend { justify-content: flex-start; }
+  .L-bleed.L-b11 .hero-art { left: 0; right: 0; top: 64px; bottom: auto; width: auto; height: auto; aspect-ratio: 16 / 9; -webkit-mask-image: linear-gradient(180deg, #000 75%, transparent); mask-image: linear-gradient(180deg, #000 75%, transparent); }
+  .L-bleed.L-b11 .hero { padding-top: calc(56vw + 76px); }
+}
+.optbar { position: fixed; z-index: 70; left: 50%; bottom: 14px; translate: -50% 0; display: flex; align-items: center; gap: 14px; padding: 8px 10px 8px 18px; border-radius: 99px; background: #1f2b2a; color: #f3f1ea; font: 500 13px/1.3 var(--sans); letter-spacing: .06em; box-shadow: 0 6px 24px rgba(0,0,0,.25); white-space: nowrap; }
+.optbar a { color: inherit; text-decoration: none; padding: 8px 12px; border-radius: 99px; background: rgba(255,255,255,.1); }
+.optbar a:hover { background: #b04f3c; }
+.optbar b { font-family: var(--serif); font-weight: 600; letter-spacing: .1em; }
+</style>
+</head>
+<body class="L-side">
+<a class="skip" href="#main">跳到主要內容</a>
+
+<header class="bar" data-bar>
+  <a class="mark" href="index.html">
+    <img src="assets/images/home/brand-glyph.webp" width="62" height="29" alt="">
+    <span><b>張老師音樂學院</b><small>OLIVER CHEUNG · MUSIC</small></span>
+  </a>
+  <nav class="links" id="nav" aria-label="主要導覽"><div class="nav-item has-sub wide" data-sub><a href="courses.html">課程</a><button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-0" aria-label="課程子選單"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="sub" id="sub-0"><div class="sub-col"><p class="sub-title">樂器課程</p><a href="flute-course.html">長笛</a><a href="dizi-course.html">笛子</a><a href="xiao-course.html">洞簫</a><a href="tongue-drum-course.html">空靈鼓</a></div><div class="sub-col"><p class="sub-title">空靈鼓班</p><a href="tongue-drum-course.html#classes">入門初班班期</a><a href="tongue-drum-course.html#trial">體驗課</a><a href="drum-accessories.html">空靈鼓配件</a></div><div class="sub-col"><p class="sub-title">按學習需要</p><a href="adult-beginner.html">成人入門</a><a href="parents.html">家長指南</a><a href="exam-guide.html">考級準備</a><a href="faq.html">常見問題</a></div></div></div><div class="nav-item has-sub" data-sub><a href="about.html">張老師</a><button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-1" aria-label="張老師子選單"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="sub" id="sub-1"><div class="sub-col"><p class="sub-title">認識張老師</p><a href="about.html#bio">學習與資歷</a><a href="about.html#stage">演出與合作</a><a href="about.html#concept">教學理念</a><a href="gallery.html#awards">學生成績與獎項</a><a href="gallery.html#orgs">合作學校與機構</a></div></div></div><div class="nav-item has-sub wide" data-sub><a href="gallery.html">相片影音</a><button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-2" aria-label="相片影音子選單"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="sub" id="sub-2"><div class="sub-col"><p class="sub-title">影片</p><a href="videos.html#perform">演奏分享</a><a href="videos.html#drum">空靈鼓音色示範</a><a href="videos.html#teach">吹奏教學</a><a href="videos.html#masterclass">大師班分享</a></div><div class="sub-col"><p class="sub-title">相片</p><a href="gallery.html#class">教學留影</a><a href="gallery.html#performance">演出照片</a><a href="gallery.html#posters">演出剪影</a><a href="gallery.html#awards">學生成績與獎項</a></div><div class="sub-col"><p class="sub-title">樂譜</p><a href="scores.html#pop">流行曲譜</a><a href="scores.html#dizi">笛子班樂譜</a><a href="scores.html#drum">空靈鼓曲譜</a></div></div></div><div class="nav-item has-sub wide" data-sub><a href="studio.html">練習室</a><button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-3" aria-label="練習室子選單"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="sub" id="sub-3"><div class="sub-col"><p class="sub-title">練習工具</p><a href="tuner.html">調音器</a><a href="metronome.html">節拍器</a><a href="flute-fingering.html">長笛指法表</a><a href="long-tone.html">長音練習</a><a href="practice.html">練習清單</a></div><div class="sub-col"><p class="sub-title">出品</p><a href="works.html">出品總覽</a><a href="pujian.html">譜間打譜軟件</a><a href="flute-cards.html">長笛紙牌</a></div></div></div><div class="nav-item has-sub" data-sub><a href="blog.html">閱讀</a><button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-4" aria-label="閱讀子選單"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="sub" id="sub-4"><div class="sub-col"><p class="sub-title">閱讀</p><a href="blog.html">音樂手記 200 篇</a><a href="learning-guide.html">學習指南</a><a href="archive.html">舊站手記</a><a href="resources.html">延伸資源</a></div></div></div><a href="contact.html">聯絡</a></nav>
+  <a class="pill" href="https://wa.me/85298096351?text=%E5%BC%B5%E8%80%81%E5%B8%AB%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E9%9F%B3%E6%A8%82%E8%AA%B2%E7%A8%8B%E3%80%82%0A%E6%83%B3%E5%AD%B8%E6%A8%82%E5%99%A8%EF%BC%9A%0A%E5%AD%B8%E7%94%9F%E5%B9%B4%E9%BD%A1%EF%BC%9A%0A%E5%AD%B8%E9%81%8E%E6%A8%82%E5%99%A8%EF%BC%9A%0A%E5%8F%AF%E4%B8%8A%E8%AA%B2%E6%99%82%E9%96%93%EF%BC%9A" target="_blank" rel="noopener">WhatsApp 查詢</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="nav" data-burger><span></span><span></span><em>選單</em></button>
+</header>
+
+<main id="main">
+
+<section class="hero" data-hero>
+  <div class="hero-art" aria-hidden="true"><img src="hero-options/img/06-1800.webp" srcset="hero-options/img/06-900.webp 900w, hero-options/img/06-1800.webp 1800w" sizes="(max-width: 900px) 100vw, 60vw" width="1254" height="1254" alt="長笛、竹笛與空靈鼓" fetchpriority="high" decoding="async"></div>
+  <h1 class="hero-title" data-split>
+    <span class="ln">把一個音</span>
+    <span class="ln">聽清楚，</span>
+    <span class="ln accent">讓音樂慢慢走近。</span>
+  </h1>
+  <div class="breath">
+    
+    <canvas class="wave" data-wave="hero" aria-hidden="true"></canvas>
+    <button class="hold" type="button" data-hold="a4-flute" aria-describedby="hold-note">
+      <span class="hold-ring" aria-hidden="true"></span>
+      <span class="hold-text">按住<br>聽一個音</span>
+    </button>
+    <p class="hold-note" id="hold-note"><span>A4 · 440 Hz · 長笛</span><span data-hold-status>按住不放；鍵盤用空白鍵，放開便停</span></p>
+  </div>
+  <div class="hero-foot">
+    <p>長笛、笛子、洞簫與空靈鼓。<br>從自然的聲音、清楚的拍子，到一句有呼吸的旋律。</p>
+    <div class="acts">
+      <a class="btn solid" href="https://wa.me/85298096351?text=%E5%BC%B5%E8%80%81%E5%B8%AB%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E9%9F%B3%E6%A8%82%E8%AA%B2%E7%A8%8B%E3%80%82%0A%E6%83%B3%E5%AD%B8%E6%A8%82%E5%99%A8%EF%BC%9A%0A%E5%AD%B8%E7%94%9F%E5%B9%B4%E9%BD%A1%EF%BC%9A%0A%E5%AD%B8%E9%81%8E%E6%A8%82%E5%99%A8%EF%BC%9A%0A%E5%8F%AF%E4%B8%8A%E8%AA%B2%E6%99%82%E9%96%93%EF%BC%9A" target="_blank" rel="noopener">WhatsApp 張老師</a>
+      <a class="btn" href="courses.html">認識課程</a>
+    </div>
+    <p class="credit">張家詠老師 · 二十年教學經驗 · 香港屯門</p>
+  </div>
+</section>
+
+<section class="voices" id="voices" aria-labelledby="voices-h">
+  <header class="sec-head">
+    <span class="idx">01</span>
+    <h2 id="voices-h" data-split>四種聲音，各有一條學習的路</h2>
+  </header>
+  <nav class="vindex" aria-label="四種樂器">
+    <a href="#v-flute">長笛</a><a href="#v-dizi">笛子</a><a href="#v-xiao">洞簫</a><a href="#v-tongue-drum">空靈鼓</a>
+    <span class="vbar" aria-hidden="true"><i data-vbar></i></span>
+    <p class="vnote">四種樂器吹奏同一句旋律：A · C · E · A</p>
+  </nav>
+  <div class="track" data-track>
+    <article class="voice" id="v-flute">
+      <figure><img src="assets/images/editorial/flute-1024.webp" srcset="assets/images/editorial/flute-640.webp 640w, assets/images/editorial/flute-1024.webp 1024w, assets/images/editorial/flute.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" width="1536" height="1024" alt="窗光下放在譜架上的長笛" loading="lazy" decoding="async"></figure>
+      <div class="voice-copy">
+        <p class="num">01 / 04 <i>Flute</i></p>
+        <h3>長笛</h3>
+        <p>由第一個自然的音，走到有呼吸、有方向的旋律。</p>
+        <div class="listen">
+          <button class="play" type="button" data-play="flute" aria-pressed="false"><span aria-hidden="true"></span>聽一句</button>
+          <canvas class="wave mini" data-wave="flute" aria-hidden="true"></canvas>
+        </div>
+        <p class="fit">適合初次接觸長笛、希望重拾演奏的成人，以及想整理音色、讀譜或考級準備的學生。</p>
+        <a class="go" href="flute-course.html">長笛課程</a>
+      </div>
+    </article>
+    <article class="voice" id="v-dizi">
+      <figure><img src="assets/images/editorial/dizi-1024.webp" srcset="assets/images/editorial/dizi-640.webp 640w, assets/images/editorial/dizi-1024.webp 1024w, assets/images/editorial/dizi.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" width="1536" height="1024" alt="布上的竹笛與笛膜" loading="lazy" decoding="async"></figure>
+      <div class="voice-copy">
+        <p class="num">02 / 04 <i>Dizi</i></p>
+        <h3>笛子</h3>
+        <p>聽見竹聲的明亮，也學會其中的細節與分寸。</p>
+        <div class="listen">
+          <button class="play" type="button" data-play="dizi" aria-pressed="false"><span aria-hidden="true"></span>聽一句</button>
+          <canvas class="wave mini" data-wave="dizi" aria-hidden="true"></canvas>
+        </div>
+        <p class="fit">適合對竹笛聲音有興趣的初學者，以及想改善口風、笛膜反應、讀譜或演奏表達的學生。</p>
+        <a class="go" href="dizi-course.html">笛子課程</a>
+      </div>
+    </article>
+    <article class="voice" id="v-xiao">
+      <figure><img src="assets/images/editorial/xiao-1024.webp" srcset="assets/images/editorial/xiao-640.webp 640w, assets/images/editorial/xiao-1024.webp 1024w, assets/images/editorial/xiao.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" width="1536" height="1024" alt="靜置案上的洞簫" loading="lazy" decoding="async"></figure>
+      <div class="voice-copy">
+        <p class="num">03 / 04 <i>Xiao</i></p>
+        <h3>洞簫</h3>
+        <p>從一道氣流開始，慢慢聽清一個音的來去。</p>
+        <div class="listen">
+          <button class="play" type="button" data-play="xiao" aria-pressed="false"><span aria-hidden="true"></span>聽一句</button>
+          <canvas class="wave mini" data-wave="xiao" aria-hidden="true"></canvas>
+        </div>
+        <p class="fit">適合喜歡洞簫音色、願意細聽與慢練的成人及學生。</p>
+        <a class="go" href="xiao-course.html">洞簫課程</a>
+      </div>
+    </article>
+    <article class="voice" id="v-tongue-drum">
+      <figure><img src="assets/images/editorial/tongue-drum-1024.webp" srcset="assets/images/editorial/tongue-drum-640.webp 640w, assets/images/editorial/tongue-drum-1024.webp 1024w, assets/images/editorial/tongue-drum.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" width="1536" height="1024" alt="木桌上的空靈鼓與鼓棒" loading="lazy" decoding="async"></figure>
+      <div class="voice-copy">
+        <p class="num">04 / 04 <i>Tongue drum</i></p>
+        <h3>空靈鼓</h3>
+        <p>讓每一下敲擊有位置，讓聲音之間有回應。</p>
+        <div class="listen">
+          <button class="play" type="button" data-play="tongue-drum" aria-pressed="false"><span aria-hidden="true"></span>聽一句</button>
+          <canvas class="wave mini" data-wave="tongue-drum" aria-hidden="true"></canvas>
+        </div>
+        <p class="fit">適合想認識節奏與旋律的成人、學生，以及希望一起做音樂活動的親子或團體。</p>
+        <a class="go" href="tongue-drum-course.html">空靈鼓課程</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<section class="routes" aria-labelledby="routes-h">
+  <header class="sec-head">
+    <span class="idx">02</span>
+    <h2 id="routes-h">找到你的開始</h2>
+  </header>
+  <ol class="route-list">
+    <li><a href="adult-beginner.html" data-peek="assets/images/legacy/class-005-480.webp"><span class="r-n">i</span><span class="r-t">第一次學，或想重新開始</span><span class="r-d">把喜歡的聲音，放進實際可安排的練習時間。</span><span class="r-k">成人入門</span></a></li>
+    <li><a href="parents.html" data-peek="assets/images/legacy/class-026-480.webp"><span class="r-n">ii</span><span class="r-t">陪孩子認識音樂</span><span class="r-d">了解第一堂、樂器準備和家中陪練，慢慢建立習慣。</span><span class="r-k">家長指南</span></a></li>
+    <li><a href="exam-guide.html" data-peek="assets/images/legacy/awards-005-480.webp"><span class="r-n">iii</span><span class="r-t">已有基礎，想走得更穩</span><span class="r-d">整理技巧、作品與考級準備，讓下一步有清楚方向。</span><span class="r-k">考級與進階</span></a></li>
+  </ol>
+  <img class="peek" alt="" aria-hidden="true" data-peek-img>
+  <dl class="arrange">
+    <div><dt>形式</dt><dd>長笛、笛子、洞簫一對一；空靈鼓小組班。機構班另議。</dd></div>
+    <div><dt>每節</dt><dd>45 或 60 分鐘，按程度與目標安排。</dd></div>
+    <div><dt>地點</dt><dd>屯門 99 COMMONS 大廈（建安／青雲輕鐵站旁）。空靈鼓在佐敦彌敦道 229 號周生生大廈 12/F。</dd></div>
+    <div><dt>學費</dt><dd>空靈鼓班學費見<a href="tongue-drum-course.html">課程頁</a>；一對一課堂請 WhatsApp 查詢。</dd></div>
+    <div><dt>試堂</dt><dd>長笛及笛子課教學繁忙，不設上門及試堂。</dd></div>
+  </dl>
+  <p class="arrange-note">
+    <span>把想學的樂器、已有經驗及可上課時間告訴張老師</span>
+    <span class="ar" aria-hidden="true">→</span>
+    <span>回覆合適的安排與學費</span>
+    <span class="ar" aria-hidden="true">→</span>
+    <span>約定第一堂</span>
+  </p>
+</section>
+
+<section class="teacher" aria-labelledby="teacher-h">
+  <header class="sec-head">
+    <span class="idx">03</span>
+    <h2 id="teacher-h">張家詠老師 <i>Oliver Cheung</i></h2>
+  </header>
+  <div class="teacher-grid">
+    <figure class="portrait" data-reveal-img>
+      <img src="assets/images/home/teacher-640.webp" width="600" height="480" alt="張家詠老師手持長笛" loading="lazy" decoding="async">
+    </figure>
+    <div>
+      <blockquote data-split><span class="ln">「若音樂無法讓人本身感到快樂，</span><span class="ln">學習音樂的路就不容易走得長久。」</span></blockquote>
+      <p class="lead">畢業後致力於音樂教育二十年，先後擔任四十多間中小學的竹笛及指揮工作，亦與百多間機構合辦音樂課程，至今教授學員數千人。</p>
+      <dl class="facts">
+        <div><dt><b data-count="20">20</b>年</dt><dd>音樂教育</dd></div>
+        <div><dt><b data-count="40">40</b>+</dt><dd>間中小學竹笛及指揮</dd></div>
+        <div><dt><b data-count="100">100</b>+</dt><dd>間合作機構</dd></div>
+        <div><dt><b>數千</b></dt><dd>位學員</dd></div>
+      </dl>
+      <a class="go" href="about.html">認識張老師</a>
+    </div>
+  </div>
+</section>
+
+<section class="stage" aria-labelledby="stage-h">
+  <header class="sec-head">
+    <span class="idx">04</span>
+    <h2 id="stage-h">舞台與課室</h2>
+  </header>
+  <div class="reel" aria-label="演出與課堂相片">
+    <div class="row" data-row="-1">
+      <img src="assets/images/home/stage-flute-640.webp" srcset="assets/images/home/stage-flute-640.webp 640w" sizes="(max-width:900px) 62vw, 26vw" width="640" height="960" alt="樂團演出中吹奏長笛" loading="lazy" decoding="async">
+      <img src="assets/images/home/stage-solo-1200.webp" srcset="assets/images/home/stage-solo-640.webp 640w, assets/images/home/stage-solo-1200.webp 1200w" sizes="(max-width:900px) 62vw, 26vw" width="1200" height="798" alt="舞台上的室樂演出" loading="lazy" decoding="async">
+      <img src="assets/images/home/class-student-1200.webp" srcset="assets/images/home/class-student-640.webp 640w, assets/images/home/class-student-1200.webp 1200w" sizes="(max-width:900px) 62vw, 26vw" width="1200" height="900" alt="學生在課室練習長笛" loading="lazy" decoding="async">
+      <img src="assets/images/home/stage-dizi-1200.webp" srcset="assets/images/home/stage-dizi-640.webp 640w, assets/images/home/stage-dizi-1200.webp 1200w" sizes="(max-width:900px) 62vw, 26vw" width="1200" height="800" alt="張老師在譜架前吹奏竹笛" loading="lazy" decoding="async">
+      <img src="assets/images/home/stage-hall-640.webp" srcset="assets/images/home/stage-hall-640.webp 640w" sizes="(max-width:900px) 62vw, 26vw" width="640" height="480" alt="由舞台望向觀眾席" loading="lazy" decoding="async">
+      <img src="assets/images/home/stage-flute-640.webp" srcset="assets/images/home/stage-flute-640.webp 640w" sizes="(max-width:900px) 62vw, 26vw" width="640" height="960" alt="" loading="lazy" decoding="async" aria-hidden="true">
+      <img src="assets/images/home/stage-solo-1200.webp" srcset="assets/images/home/stage-solo-640.webp 640w, assets/images/home/stage-solo-1200.webp 1200w" sizes="(max-width:900px) 62vw, 26vw" width="1200" height="798" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    </div>
+    <div class="row" data-row="1">
+      <img src="assets/images/home/class-hands-640.webp" srcset="assets/images/home/class-hands-640.webp 640w" sizes="(max-width:900px) 62vw, 26vw" width="640" height="435" alt="長笛吹口與嘴形特寫" loading="lazy" decoding="async">
+      <img src="assets/images/home/stage-ensemble-1200.webp" srcset="assets/images/home/stage-ensemble-640.webp 640w, assets/images/home/stage-ensemble-1200.webp 1200w" sizes="(max-width:900px) 62vw, 26vw" width="1200" height="800" alt="中樂團演出" loading="lazy" decoding="async">
+      <img src="assets/images/home/stage-bow-640.webp" srcset="assets/images/home/stage-bow-640.webp 640w" sizes="(max-width:900px) 62vw, 26vw" width="640" height="1131" alt="張老師演出後手持竹笛" loading="lazy" decoding="async">
+      <img src="assets/images/home/stage-score-1200.webp" srcset="assets/images/home/stage-score-640.webp 640w, assets/images/home/stage-score-1200.webp 1200w" sizes="(max-width:900px) 62vw, 26vw" width="1200" height="800" alt="演出中吹奏長笛" loading="lazy" decoding="async">
+      <img src="assets/images/home/stage-duo-1200.webp" srcset="assets/images/home/stage-duo-640.webp 640w, assets/images/home/stage-duo-1200.webp 1200w" sizes="(max-width:900px) 62vw, 26vw" width="1200" height="1047" alt="兩位長笛演奏者合照" loading="lazy" decoding="async">
+      <img src="assets/images/home/class-hands-640.webp" srcset="assets/images/home/class-hands-640.webp 640w" sizes="(max-width:900px) 62vw, 26vw" width="640" height="435" alt="" loading="lazy" decoding="async" aria-hidden="true">
+      <img src="assets/images/home/stage-ensemble-1200.webp" srcset="assets/images/home/stage-ensemble-640.webp 640w, assets/images/home/stage-ensemble-1200.webp 1200w" sizes="(max-width:900px) 62vw, 26vw" width="1200" height="800" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    </div>
+  </div>
+  <h3 class="students-h">學生</h3>
+  <div class="students"><figure><img src="assets/images/legacy/class-026-480.webp" width="480" height="360" alt="與笛子班小朋友" loading="lazy" decoding="async"><figcaption>與笛子班小朋友</figcaption></figure><figure><img src="assets/images/legacy/class-051-480.webp" width="480" height="360" alt="長笛學生" loading="lazy" decoding="async"><figcaption>長笛學生</figcaption></figure><figure><img src="assets/images/legacy/awards-009-480.webp" width="480" height="271" alt="笛子學生考獲證書" loading="lazy" decoding="async"><figcaption>笛子學生考獲證書</figcaption></figure><figure><img src="assets/images/legacy/class-013-480.webp" width="480" height="218" alt="空靈鼓班" loading="lazy" decoding="async"><figcaption>空靈鼓班</figcaption></figure><figure><img src="assets/images/legacy/class-080-480.webp" width="360" height="480" alt="洞簫學生" loading="lazy" decoding="async"><figcaption>洞簫學生</figcaption></figure><figure><img src="assets/images/legacy/awards-003-480.webp" width="480" height="360" alt="中國笛比賽" loading="lazy" decoding="async"><figcaption>中國笛比賽</figcaption></figure><figure><img src="assets/images/legacy/class-005-480.webp" width="480" height="270" alt="成人空靈鼓課" loading="lazy" decoding="async"><figcaption>成人空靈鼓課</figcaption></figure><figure><img src="assets/images/legacy/awards-008-480.webp" width="480" height="434" alt="考級證書" loading="lazy" decoding="async"><figcaption>考級證書</figcaption></figure></div>
+  <p class="stage-links"><a class="go" href="gallery.html">相片集</a><a class="go" href="gallery.html#awards">學生成績與獎項</a><a class="go" href="videos.html">演奏與教學影片</a></p>
+</section>
+
+<section class="practice" aria-labelledby="practice-h">
+  <header class="sec-head">
+    <span class="idx">05</span>
+    <h2 id="practice-h">課後的練習室</h2>
+  </header>
+  <div class="practice-grid">
+    <div class="metro" data-metro>
+      <p class="metro-label">節拍器 · 現在就可以試</p>
+      <div class="bpm"><button type="button" data-bpm="-4" aria-label="減慢">−</button><output data-bpm-out aria-live="polite">72</output><button type="button" data-bpm="4" aria-label="加快">+</button></div>
+      <p class="bpm-unit">每分鐘拍數</p>
+      <div class="meter" role="group" aria-label="拍號"><button type="button" data-meter="2" aria-pressed="false">2/4</button><button type="button" data-meter="3" aria-pressed="false">3/4</button><button type="button" data-meter="4" aria-pressed="true">4/4</button></div>
+      <div class="beats" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <button class="btn solid" type="button" data-metro-toggle aria-pressed="false">開始</button>
+    </div>
+    <div class="tools">
+      <p>調音器、節拍器、長笛指法表和長音計時，打開手機就可以用。還有張老師為課堂做的打譜軟件「譜間」，以及長笛紙牌。</p>
+      <ul>
+        <li><a href="tuner.html"><b>調音器</b><span>音名、簡譜與音分</span></a></li>
+        <li><a href="metronome.html"><b>節拍器</b><span>細分拍與逐步加速</span></a></li>
+        <li><a href="flute-fingering.html"><b>長笛指法表</b><span>三十四個基本指法</span></a></li>
+        <li><a href="long-tone.html"><b>長音練習</b><span>計時與紀錄</span></a></li>
+        <li><a href="pujian.html"><b>譜間</b><span>簡譜打譜工作室</span></a></li>
+        <li><a href="flute-cards.html"><b>長笛紙牌</b><span>一張卡，一個音，一個指法</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="journal" aria-labelledby="journal-h">
+  <header class="sec-head">
+    <span class="idx">06</span>
+    <h2 id="journal-h"><b data-count="200">200</b> 篇音樂手記</h2>
+  </header>
+  <p class="journal-intro">從樂器入門、樂理、練習方法到家長陪練。選一個今天遇到的問題，由那裏讀起。</p>
+  <div class="posts">
+    <a href="blog/flute-21-first-five-minutes.html"><span class="tag">長笛</span><b>打開笛盒之後：把練習的首五分鐘留給聲音</b><span class="ex">笛盒打開，樂譜也放好了，手卻習慣直奔最難的一行。</span></a>
+    <a href="blog/theory-01-pulse-rhythm.html"><span class="tag">樂理</span><b>拍子像腳步，節奏像說話</b><span class="ex">走路時腳步大致平均，說話卻有長句、短句和停頓。</span></a>
+    <a href="blog/parents-02-practice-language.html"><span class="tag">家長</span><b>陪練時少說一句「又錯了」，可以換成甚麼？</b><span class="ex">把語句縮小到一個位置和一個動作，讓練習重新變得可處理。</span></a>
+  </div>
+  <a class="go" href="blog.html">瀏覽全部文章</a>
+</section>
+
+<section class="finale" aria-labelledby="finale-h">
+  <canvas class="wave" data-wave="finale" aria-hidden="true"></canvas>
+  <h2 id="finale-h" data-split><span class="ln">從你現在的程度</span><span class="ln">開始。</span></h2>
+  <p>把想學的樂器、已有經驗及可上課時間告訴張老師，一起討論合適的學習安排。</p>
+  <div class="acts">
+    <a class="btn light" href="https://wa.me/85298096351?text=%E5%BC%B5%E8%80%81%E5%B8%AB%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E9%9F%B3%E6%A8%82%E8%AA%B2%E7%A8%8B%E3%80%82%0A%E6%83%B3%E5%AD%B8%E6%A8%82%E5%99%A8%EF%BC%9A%0A%E5%AD%B8%E7%94%9F%E5%B9%B4%E9%BD%A1%EF%BC%9A%0A%E5%AD%B8%E9%81%8E%E6%A8%82%E5%99%A8%EF%BC%9A%0A%E5%8F%AF%E4%B8%8A%E8%AA%B2%E6%99%82%E9%96%93%EF%BC%9A" target="_blank" rel="noopener">WhatsApp 9809 6351</a>
+    <a class="btn ghost" href="contact.html">查詢課程</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-cols">
+    <div><p class="ft">開始學習</p><a href="adult-beginner.html">成人入門</a><a href="parents.html">家長指南</a><a href="exam-guide.html">考級準備</a><a href="faq.html">常見問題</a></div>
+    <div><p class="ft">課程</p><a href="flute-course.html">長笛</a><a href="dizi-course.html">笛子</a><a href="xiao-course.html">洞簫</a><a href="tongue-drum-course.html">空靈鼓</a></div>
+    <div><p class="ft">練習室與出品</p><a href="tuner.html">調音器</a><a href="metronome.html">節拍器</a><a href="pujian.html">譜間</a><a href="flute-cards.html">長笛紙牌</a></div>
+    <div><p class="ft">影音與閱讀</p><a href="videos.html">影片</a><a href="gallery.html">相片集</a><a href="scores.html">樂譜</a><a href="blog.html">音樂手記</a></div>
+  </div>
+  <div class="foot-base">
+    <p class="foot-word" aria-hidden="true">張老師音樂學院</p>
+    <p class="small">© 2026 張老師音樂學院 · <a href="privacy.html">私隱與使用說明</a> · 試聽音色：長笛 VSCO 2 CE（CC0）、笛子及空靈鼓 Freesound（CC0）、洞簫張老師自錄</p>
+  </div>
+</footer>
+
+<script src="assets/js/subnav.js" defer></script>
+<script>
+(() => {
+  const want = matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)').matches;
+  const add = (src) => new Promise((ok, bad) => {
+    const s = document.createElement('script');
+    s.src = src; s.async = false; s.onload = ok; s.onerror = bad;
+    document.head.appendChild(s);
+  });
+  if (!want) { add('assets/js/home-v2.js'); return; }
+  add('assets/vendor/gsap.min.js')
+    .then(() => add('assets/vendor/ScrollTrigger.min.js'))
+    .then(() => add('assets/vendor/lenis.min.js'))
+    .then(() => add('assets/js/home-v2.js'))
+    .catch(() => add('assets/js/home-v2.js'));
+})();
+</script>
+<nav class="optbar" aria-label="方案切換"><span>方案 06／12 · <b>圓</b></span><a href="hero-options/05.html">←<span class="t"> 上一款</span></a><a href="hero-options/07.html"><span class="t">下一款 </span>→</a><a href="hero-options/">全部</a></nav>
+</body>
+</html>
