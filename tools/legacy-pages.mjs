@@ -79,7 +79,7 @@ const orgLogos=range('orgs',29).map((n,i)=>`<li><img src="${L}${n}.webp" width="
 add('gallery.html','相片集','張老師的教學留影、演出照片、學生得獎與考級成績，以及合作過的學校與機構。',
 hero('相片集','二十年的課堂、舞台和學生的成績，都在這裏。')+tabs('gallery.html')+
 `<section class="band gallery-band" id="class"><h2>教學留影</h2><p>屯門課室的日常：吹口、手形、呼吸，都在一堂一堂之間慢慢調整。</p>${more(classPhotos,24)}</section>`+
-`<section class="band gallery-band" id="performance"><h2>演出照片</h2><p>長笛、竹笛、洞簫的獨奏、合奏與指揮。2007 年隨團到北京演奏廳演出，2011 年參與錄製 CCTV「魅力校園」。</p>${more(perfPhotos,12)}</section>`+
+`<section class="band gallery-band" id="performance"><h2>演出照片</h2><p>長笛、笛子、洞簫的獨奏、合奏與指揮。2007 年隨團到北京演奏廳演出，2011 年參與錄製 CCTV「魅力校園」。</p>${more(perfPhotos,12)}</section>`+
 `<section class="band gallery-band" id="awards"><h2>學生成績與獎項</h2><p>部分學生的比賽獎項、考級證書與考官評語。</p>${gallery(awardPhotos)}</section>`+
 `<section class="band gallery-band" id="orgs"><h2>曾經合作的學校與機構</h2><p>張老師曾擔任四十多間中小學的竹笛及指揮工作，亦與嶺南大學、城市大學、VTC 展亮技能發展中心、東華三院「健康校院計劃」、傷殘青年協會、YMCA、保良局、明愛、聖公會、麥理浩夫人中心等百多間機構合作課程。以下是部分校徽。</p><ul class="logo-wall">${orgLogos}</ul></section>`+
 cta(),'gallery.html');
@@ -92,9 +92,9 @@ const FACADE=([key,tag,title])=>{
 };
 const VM=JSON.parse(await read('content/legacy-video-meta.json'));
 const vgrid=list=>`<div class="video-grid">${list.map(FACADE).join('')}</div>`;
-add('videos.html','影片','張老師的長笛、竹笛、洞簫、空靈鼓演奏，以及吹奏教學和長笛大師班分享。',
-hero('影片','聽一聽，再決定喜歡哪一種聲音。')+tabs('videos.html')+
-`<section class="band video-band" id="perform"><h2>演奏分享</h2><p>張老師的長笛、竹笛、洞簫、陶笛與空靈鼓演奏。按一下縮圖才會載入影片。</p>${vgrid(VIDEOS.perform)}</section>`+
+add('videos.html','影片','張老師的長笛、笛子、洞簫、空靈鼓演奏，以及吹奏教學和長笛大師班分享。',
+hero('影片','長笛、笛子、洞簫、陶笛、空靈鼓，都在這幾段影片裏。')+tabs('videos.html')+
+`<section class="band video-band" id="perform"><h2>演奏分享</h2><p>張老師的長笛、笛子、洞簫、陶笛與空靈鼓演奏。按一下縮圖才會載入影片。</p>${vgrid(VIDEOS.perform)}</section>`+
 `<section class="band video-band" id="drum"><h2>空靈鼓音色示範</h2><p>想先知道空靈鼓是甚麼聲音，可以由這兩首開始。</p>${vgrid(VIDEOS.drum)}<p class="video-more">${link('tongue-drum-course.html','了解空靈鼓課程')}</p></section>`+
 `<section class="band video-band" id="teach"><h2>吹奏教學</h2><p>長笛與笛子的基本吹奏：持笛、嘴形、指法與發音。</p>${vgrid(VIDEOS.teach)}<div class="teach-figures"><figure><a class="lb-item" href="${L}teach-006.webp" data-lightbox="長笛吹奏嘴形教學圖" data-w="${MEDIA['teach-006'].w}" data-h="${MEDIA['teach-006'].h}"><img src="${L}teach-006-480.webp" width="${MEDIA['teach-006'].tw}" height="${MEDIA['teach-006'].th}" alt="長笛吹奏嘴形教學圖" loading="lazy" decoding="async"></a><figcaption><strong>嘴形教學圖</strong>很多初學長笛的同學都覺得長笛難吹，原因是氣不能有效吹進笛裏。這張圖拆開幾個嘴形要點，可以幫助找到方向。</figcaption></figure><figure><a class="lb-item" href="${L}teach-007.webp" data-lightbox="長笛吹奏姿勢教學圖" data-w="${MEDIA['teach-007'].w}" data-h="${MEDIA['teach-007'].h}"><img src="${L}teach-007-480.webp" width="${MEDIA['teach-007'].tw}" height="${MEDIA['teach-007'].th}" alt="長笛吹奏姿勢教學圖" loading="lazy" decoding="async"></a><figcaption><strong>吹奏姿勢圖</strong>吹奏時覺得長笛很重、手指不夠長而按不穩鍵，多半與持笛姿勢有關。這張圖示範身體和手形的安排。</figcaption></figure></div></section>`+
 `<section class="band video-band" id="masterclass"><h2>大師班分享</h2><p>張老師推薦學生觀看的長笛大師班，涵蓋嘴形、音色、音階練習與高音區的控制。影片來自各大師及機構的公開頻道。</p>${vgrid(VIDEOS.master)}</section>`+
@@ -163,5 +163,5 @@ return aboutBody({hero,link,cta,esc,MEDIA});
 patch('exam-guide.html',b=>before(b,'<section class="enquiry-band">',band('中央音樂學院海外考級（笛子）',`<p class="score-note">以下整理自舊站，所述報名日期及考試日期屬 2019 年簡章。報考前請到香港考試及評核局查閱最新公布。</p><details class="ccom-details" id="ccom"><summary>簡介、報考資格與考試要求</summary><div>${para('中央音樂學院是內地唯一的重點高校，屬國家「211 工程」建設的藝術院校。中央音樂學院與香港考試及評核局（考評局）自 2003 年起，在香港合作舉辦中樂演奏水平等級考試，為學習中樂演奏的香港學生與居民提供優良的學習服務和演奏水平被正確評估的機會。')}<h3>報考資格</h3>${para('申請人必須年滿 18 歲；18 歲以下考生須經家長／監護人、老師或學校／樂室報名，18 歲或以上考生可自行報名。報考各樂器的考生沒有年齡及專業數目限制，但每年考試中不能在相同專業內重複報考同一級別。','報考各樂器七至九級者，必須具有於香港考獲的北京中央音樂學院一級樂理考試證書；報考演奏級者，必須具有於香港考獲的九級樂器考試（與報考演奏級為同一樂器）及二級樂理考試證書。')}<h3>考試內容</h3>${para('演奏部分一律使用中央音樂學院考級委員會編訂的《海外版》教材，考試內容為該級曲目中自選練習曲一首、樂曲兩首。一至六級另設口試：文字題口答、簡譜視唱、節奏讀譜或視擊（拍出節奏）。')}<h3>考試要求</h3>${para('一至九級各樂器考試中，18 歲以下考生應考時必須背譜演奏；18 歲或以上考生可看譜。所有考生應考時必須帶備《海外版》正本教材進入考場，否則成績或會受影響。','考生應考笛子須自備樂器。考官可幫助一至四級考生調弦，樂器考試不用伴奏。因考試時間不足以演奏整首樂曲，考官會在能予評分的情況下中斷演奏。')}<h3>報名與考試安排（2019 年簡章）</h3>${para('考試時間一般為星期一至星期六上午 9 時至中午 12 時或下午 2 時至 5 時，日期及時間由電腦分配，以准考證為準。2019 年網上報名日期為 3 月 1 日上午 8 時 30 分至 3 月 21 日下午 5 時 30 分。')}<div class="resource-links"><a href="http://www.hkeaa.edu.hk/DocLibrary/ipe/ccompractical/ccm_title_dizi.pdf" target="_blank" rel="noopener">竹笛考級曲目（PDF）</a><a href="http://www.hkeaa.edu.hk/DocLibrary/ipe/ccompractical/ccm_title_oral.pdf" target="_blank" rel="noopener">口試簡譜視唱及節奏資料（PDF）</a><a href="https://online.hkeaa.edu.hk/Portal/home.xhtml" target="_blank" rel="noopener">考評局網上報名</a></div></div></details>`)));
 
 // 首頁入口
-patch('index.html',b=>before(b,'<section class="enquiry-band">',band('看看、聽聽、翻翻',`<div class="route-list"><a href="videos.html"><h3>影片</h3><p>長笛、竹笛、洞簫與空靈鼓的演奏，以及吹奏教學和大師班。</p><span>去聽聽</span></a><a href="gallery.html"><h3>相片集</h3><p>課堂留影、演出照片、學生成績，以及合作過的學校與機構。</p><span>看相片</span></a><a href="scores.html"><h3>樂譜</h3><p>流行曲、笛子班與空靈鼓曲譜，在課堂上使用。</p><span>翻樂譜</span></a><a href="archive.html"><h3>舊站手記</h3><p>來自 oliverflute.com 的二十篇文章，由學長笛到標準音。</p><span>讀舊文</span></a></div>`,'home-library')));
+patch('index.html',b=>before(b,'<section class="enquiry-band">',band('看看、聽聽、翻翻',`<div class="route-list"><a href="videos.html"><h3>影片</h3><p>長笛、笛子、洞簫與空靈鼓的演奏，以及吹奏教學和大師班。</p><span>去聽聽</span></a><a href="gallery.html"><h3>相片集</h3><p>課堂留影、演出照片、學生成績，以及合作過的學校與機構。</p><span>看相片</span></a><a href="scores.html"><h3>樂譜</h3><p>流行曲、笛子班與空靈鼓曲譜，在課堂上使用。</p><span>翻樂譜</span></a><a href="archive.html"><h3>舊站手記</h3><p>來自 oliverflute.com 的二十篇文章，由學長笛到標準音。</p><span>讀舊文</span></a></div>`,'home-library')));
 }
