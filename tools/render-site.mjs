@@ -103,6 +103,7 @@ const moved=(to,canon)=>`<!doctype html><html lang="zh-Hant-HK"><head><meta char
 for(const [old,to] of Object.entries(REDIRECTS))await write(`blog/${old}.html`,moved(to,`${ORIGIN}/blog/${to.split('#')[0]}`));
 await rm(path.join(ROOT,'archive'),{recursive:true,force:true});
 for(const p of legacyPosts)await write(`archive/${p.slug}.html`,moved(`../${p.url}`,`${ORIGIN}/${p.url}`));
+await write('archive/hulusi.html',moved('../topic-dizi.html',`${ORIGIN}/topic-dizi.html`));
 const helpers={posts,notes,REDIRECTS,LEGACY_LINKS,CATS,ART,art,card,esc,WA,BRAND,read,ORIGIN,BASE_PATH,brk,crumbLd,askCard,topicFile,catName};
 const pages=await makePages(helpers);
 for(const p of pages)await write(p.file,shell(p));
