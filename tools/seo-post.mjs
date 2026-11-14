@@ -71,7 +71,9 @@ export async function seoPost({ assets, origin, oldUrls }) {
       add += ldTag({ "@context": "https://schema.org", "@type": "WebSite", name: "張老師音樂工作室", alternateName: ["Oliver Music Studio", "Oliver Flute"], url: `${origin}/`, inLanguage: "zh-Hant-HK", publisher: { "@id": `${origin}/#org` } });
     } else if (!h.includes("ld+json")) {
       const url = canonical;
-      const crumb = f === "index.html" ? null : { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "張老師音樂工作室", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: title.split("｜")[0], item: url }] };
+      const short = meta(h, /<meta property="og:title" content="([^"]*)"/) || title.split("｜")[0];
+      const up = ["pujian.html", "flute-cards.html"].includes(f) ? [["出品", `${origin}/works.html`]] : [];
+      const crumb = f === "index.html" ? null : { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [["張老師音樂工作室", `${origin}/`], ...up, [short, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) };
       const course = COURSES.find((c) => c[0] === f);
       let main;
       if (course) main = { "@context": "https://schema.org", "@type": "Course", name: course[1], description: desc, url, inLanguage: "zh-Hant-HK", provider: { "@type": "EducationalOrganization", name: "張老師音樂工作室", url: `${origin}/` }, instructor: { "@type": "Person", name: "張家詠", alternateName: "Oliver Cheung" }, about: course[2] };
@@ -82,6 +84,14 @@ export async function seoPost({ assets, origin, oldUrls }) {
         main = { "@context": "https://schema.org", "@type": "FAQPage", url, mainEntity: qa };
       } else main = { "@context": "https://schema.org", "@type": "WebPage", url, name: title, description: desc, inLanguage: "zh-Hant-HK", isPartOf: { "@type": "WebSite", url: `${origin}/` } };
       add += ldTag(main) + (crumb ? ldTag(crumb) : "");
+      if (f !== "faq.html") {
+        const qa = [...h.matchAll(/<summary>([^<]*)<\/summary><div><p>([^<]*)<\/p>/g)].map((m) => ({ "@type": "Question", name: m[1], acceptedAnswer: { "@type": "Answer", text: m[2] } }));
+        if (qa.length >= 2) add += ldTag({ "@context": "https://schema.org", "@type": "FAQPage", url, mainEntity: qa });
+      }
+    } else if (!h.includes('"BreadcrumbList"')) {
+      const parent = ["tuner.html", "metronome.html", "flute-fingering.html", "long-tone.html"].includes(f) ? ["練習室", "studio.html"] : ["pujian.html", "flute-cards.html"].includes(f) ? ["出品", "works.html"] : null;
+      const items = [["張老師音樂工作室", `${origin}/`], ...(parent ? [[parent[0], `${origin}/${parent[1]}`]] : []), [meta(h, /<meta property="og:title" content="([^"]*)"/) || title.split("｜")[0], canonical]];
+      add += ldTag({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: items.map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) });
     }
     if (add) h = h.replace("</head>", add + "</head>");
     await writeFile(p, h, "utf8");

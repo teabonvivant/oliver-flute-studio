@@ -264,3 +264,15 @@ html { scroll-padding-top: 96px; }
   .article-side a { display: flex; align-items: center; min-height: 44px; margin: 0; font-size: 16px; }
   .article-side .side-course { margin-top: 6px; }
 }
+
+/* 2026-11-14 清晰度：標題斷行、課程速覽、課程問答、家長評語 */
+.page-hero h1 { word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; }
+.course-quick { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; padding: 0; }
+.course-quick span { display: inline-block; padding: 6px 12px; border: 1px solid var(--line, rgba(0,0,0,.12)); border-radius: 999px; background: rgba(255,255,255,.7); color: var(--ink); font-size: 15px; line-height: 1.5; }
+.course-quick span:first-child { border-color: var(--accent, #b2533c); color: var(--accent, #b2533c); }
+.voices .voice-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.voice { margin: 0; padding: 24px; border-radius: 20px; background: rgba(255,255,255,.72); border: 1px solid var(--line, rgba(0,0,0,.08)); }
+.voice blockquote { margin: 0 0 16px; font-size: 18px; line-height: 1.9; }
+.voice blockquote p::before { content: "「"; } .voice blockquote p::after { content: "」"; }
+.voice figcaption b { display: block; font-weight: 600; }
+.voice figcaption span { color: var(--muted); font-size: 15px; }
