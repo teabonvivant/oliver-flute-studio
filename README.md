@@ -38,3 +38,10 @@ node tools/verify_site.cjs
 ## 音樂手記文內插圖
 
 144 張仿 2015 年手機相的插圖（`assets/images/notes/<slug>-<序號>[-640].webp`），插入位置在 `content/note-figures.json`（`after`＝段落開頭文字，找不到段落時建置會報錯）。改了文章段落開頭要同步改這個檔。提示詞、濾鏡及驗收記錄不放公開 repo，見本機 `_team_runs/note-illustrations-20261031/` 及私人 repo `oliver-flute-academy` 分支 `note-illustrations-20261031`。
+
+## 五級樂理內部預覽（/theory/，2026-11-16）
+
+- 網址 https://www.oliverflute.com/theory/ ，未公開：沒有選單連結、noindex、不在 sitemap；由 `functions/theory/_middleware.js` 在伺服器端以密碼把關（未登入時頁面、題庫、譜圖一律 401）。密碼是 Pages secret `THEORY_PASSWORD`（正式／預覽兩環境），改密碼＝`wrangler pages secret put THEORY_PASSWORD --project-name oliverflute-studio [--env preview]` 後重新部署；未設定時整個路徑回 503。
+- 內容在 `theory/`（不入這個公開 repo），由 `Projects/abrsm-g5-theory/tools/export_site.py` 生成（頁面源碼在該專案 `site/`）。`build.mjs` 只在 `WITH_THEORY=1` 時收錄（`cf-deploy.sh` 已帶），所以 GitHub Pages 預覽（`deploy-pages.sh`）不會有這些內容。
+- 改題庫或頁面後：在 abrsm-g5-theory 跑 `python3 tools/export_site.py`，再 `sh tools/cf-deploy.sh preview|production`。
+- 正式公開前要做：張老師審閱內容、定是否仍要密碼、加入選單及 sitemap、頁尾保留 G5MT 的 MIT 聲明。
