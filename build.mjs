@@ -66,10 +66,19 @@ for (const [slug, to] of Object.entries(emptyPosts)) await writeFile(join(assets
 }
 await writeFile(join(assets, ".nojekyll"), "", "utf8");
 await seoPost({ assets, origin: (process.env.SITE_ORIGIN || "https://teabonvivant.github.io/oliver-flute-studio").replace(/\/$/, "") });
+// ABRSM 五級樂理（內部預覽）：theory/ 不入公開 repo，只在 WITH_THEORY=1（Cloudflare 部署）時收錄，並由 functions/theory/_middleware.js 以密碼把關
+if (process.env.WITH_THEORY === "1") {
+  await cp(join(root, "theory"), join(assets, "theory"), { recursive: true });
+  const shell = (await readFile(join(assets, "studio.html"), "utf8")).replace(/(href|src)="(?!https?:|#|\/|mailto:|tel:)/g, '$1="/');
+  const page = (await readFile(join(assets, "theory/index.html"), "utf8"))
+    .replace("<!--SITE_HEADER-->", () => shell.match(/<header class="site-header">[\s\S]*?<\/header>/)[0])
+    .replace("<!--SITE_FOOTER-->", () => shell.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]);
+  await writeFile(join(assets, "theory/index.html"), page, "utf8");
+}
 const covered = new Set(await readFile(join(root, "assets/fonts/site/coverage.txt"), "utf8"));
 const missing = new Set();
 for (const file of await readdir(assets, { recursive: true })) {
-  if (!/\.(?:html|js)$/.test(file)) continue;
+  if (!/\.(?:html|js)$/.test(file) || file.startsWith('theory')) continue;
   for (const ch of await readFile(join(assets, file), "utf8")) if (ch.codePointAt(0) > 0x2e7f && !covered.has(ch)) missing.add(ch);
 }
 if (missing.size) console.warn(`字型未收錄 ${missing.size} 字（${[...missing].join("")}），請重跑 python3 tools/build_fonts.py <NotoSerifTC[wght].ttf>`);

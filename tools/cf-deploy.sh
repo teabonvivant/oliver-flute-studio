@@ -11,7 +11,7 @@ tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 tar -C "$src" --exclude=./dist --exclude=./_team_runs --exclude=./.git --exclude=./node_modules -cf - . | tar -C "$tmp" -xf -
 cd "$tmp"
-SITE_ORIGIN=https://www.oliverflute.com node build.mjs
+WITH_THEORY=1 SITE_ORIGIN=https://www.oliverflute.com node build.mjs
 CLOUDFLARE_API_TOKEN="$CF_OLIVERFLUTE_TOKEN" CLOUDFLARE_ACCOUNT_ID="$CF_OLIVERFLUTE_ACCOUNT_ID" \
   node /home/workspace/Projects/whatsapp-cs-v2/node_modules/wrangler/bin/wrangler.js pages deploy dist/assets \
   --project-name oliverflute-studio --branch "$branch" --commit-dirty=true --commit-message "admin ${1} $(date -u +%Y%m%dT%H%MZ)"
