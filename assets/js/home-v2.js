@@ -159,40 +159,41 @@
     breath.addEventListener('pointerleave', () => { lastP = null; });
   }
 
-  /* 按住聽一個音 */
+  /* 首屏：隨機聽聽樂器的聲音 */
   const hold = $('[data-hold]');
   const status = $('[data-hold-status]');
+  const label = $('[data-hold-label]');
   const idleText = status.textContent;
+  const idleLabel = label.textContent;
+  const VOICES = [['flute', '長笛'], ['dizi', '笛子'], ['xiao', '洞簫'], ['tongue-drum', '空靈鼓']];
+  let lastVoice = -1;
   let holding = false;
+  const resetHold = () => { holding = false; hold.classList.remove('on'); hold.setAttribute('aria-pressed', 'false'); status.textContent = idleText; label.textContent = idleLabel; };
   const startHold = () => {
-    if (holding) return;
-    holding = true; hold.classList.add('on');
+    holding = true; hold.classList.add('on'); hold.setAttribute('aria-pressed', 'true');
+    resetPlays();
+    let i = Math.floor(Math.random() * (VOICES.length - 1));
+    if (i >= lastVoice && lastVoice >= 0) i += 1;
+    lastVoice = i;
+    const [name, zh] = VOICES[i];
+    label.textContent = `張老師${zh}演奏`;
     status.textContent = '載入中…';
-    load(hold.dataset.hold).then((b) => {
+    load(name).then((b) => {
       if (!holding) return;
-      status.textContent = '聽：氣流穩定，音便穩定';
-      play(b, hero, () => {});
-    }).catch(() => { status.textContent = '未能載入聲音，請稍後再試'; holding = false; hold.classList.remove('on'); });
+      status.textContent = '播放中，再按一下即停';
+      play(b, hero, resetHold);
+    }).catch(() => { resetHold(); status.textContent = '未能載入聲音，請稍後再試'; });
   };
   const endHold = () => {
     if (!holding) return;
-    holding = false; hold.classList.remove('on');
     stopCurrent(.5);
-    status.textContent = idleText;
+    resetHold();
   };
-  hold.addEventListener('pointerdown', (e) => { e.preventDefault(); hold.setPointerCapture?.(e.pointerId); audioCtx(); startHold(); });
-  hold.addEventListener('pointerup', endHold);
-  hold.addEventListener('pointercancel', endHold);
-  hold.addEventListener('lostpointercapture', endHold);
-  hold.addEventListener('contextmenu', (e) => e.preventDefault());
-  hold.addEventListener('keydown', (e) => { if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) { e.preventDefault(); audioCtx(); startHold(); } });
-  hold.addEventListener('keyup', (e) => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); endHold(); } });
-  hold.addEventListener('blur', endHold);
-  addEventListener('blur', endHold);
+  hold.addEventListener('click', () => { if (holding) { endHold(); return; } audioCtx(); startHold(); });
 
   /* 四種聲音：聽一句 */
   const plays = $$('[data-play]');
-  const resetPlays = () => plays.forEach((p) => p.setAttribute('aria-pressed', 'false'));
+  function resetPlays() { plays.forEach((p) => p.setAttribute('aria-pressed', 'false')); }
   plays.forEach((btn) => btn.addEventListener('click', () => {
     if (btn.getAttribute('aria-pressed') === 'true') { stopCurrent(.3); resetPlays(); return; }
     audioCtx();
