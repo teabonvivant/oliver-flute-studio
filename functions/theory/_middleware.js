@@ -14,6 +14,8 @@ export async function onRequest({ request, env, next }) {
   const got = (request.headers.get("cookie") || "").match(new RegExp(`(?:^|; )${COOKIE}=([a-f0-9]{64})`));
   if (got && got[1] === want) {
     const res = await next();
+    if (res.status === 404 && (request.headers.get("accept") || "").includes("text/html"))
+      return new Response(null, { status: 302, headers: { location: "/theory/", "cache-control": "no-store" } });
     const out = new Response(res.body, res);
     out.headers.set("cache-control", "private, no-cache");
     out.headers.set("x-robots-tag", "noindex, nofollow");
@@ -22,7 +24,7 @@ export async function onRequest({ request, env, next }) {
   if (request.method === "POST") {
     const form = await request.formData().catch(() => null);
     if (form && form.get("password") === env.THEORY_PASSWORD)
-      return new Response(null, { status: 303, headers: { location: new URL(request.url).pathname, "set-cookie": `${COOKIE}=${want}; Path=/theory; HttpOnly; Secure; SameSite=Lax; Max-Age=2592000`, "cache-control": "no-store" } });
+      return new Response(null, { status: 303, headers: { location: "/theory/", "set-cookie": `${COOKIE}=${want}; Path=/theory; HttpOnly; Secure; SameSite=Lax; Max-Age=2592000`, "cache-control": "no-store" } });
     return page("密碼不正確，請再試。", 401);
   }
   return page("", 401);
