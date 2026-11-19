@@ -4,3 +4,4 @@ __pycache__/
 _team_runs/
 .wrangler/
 /theory/
+/.theory-export-*/
